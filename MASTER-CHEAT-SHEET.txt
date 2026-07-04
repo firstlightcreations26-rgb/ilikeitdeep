@@ -1,0 +1,150 @@
+ILIKEITDEEP.US — MASTER CHEAT SHEET (save this!)
+============================================================
+
+For each journal below:
+1) Make a Stripe Payment Link, price $8, name = journal title
+2) In the Payment Link settings, set 'after payment' to redirect
+   the customer to the SECRET DOWNLOAD PAGE shown below
+3) Send Claude the payment links and Claude wires in the buttons
+
+------------------------------------------------------------
+
+01. Quiet Moments
+    PDF file name (must match exactly): Quiet-Moments-Journal.pdf
+    Secret download page: https://ilikeitdeep.us/thanks/quiet-moments-og6wsz.html
+    Buy button placeholder in site code: STRIPE_LINK_01
+
+02. The Game of Life Journal
+    PDF file name (must match exactly): Florence-Scovel-Shin-Journal.pdf
+    Secret download page: https://ilikeitdeep.us/thanks/the-game-of-life-journal-4ye9ef.html
+    Buy button placeholder in site code: STRIPE_LINK_02
+
+03. Meet Your Shadow
+    PDF file name (must match exactly): Carl-Jung-Journal.pdf
+    Secret download page: https://ilikeitdeep.us/thanks/meet-your-shadow-goyffq.html
+    Buy button placeholder in site code: STRIPE_LINK_03
+
+04. Little Me
+    PDF file name (must match exactly): Inner-Child-Journal.pdf
+    Secret download page: https://ilikeitdeep.us/thanks/little-me-5c6i5h.html
+    Buy button placeholder in site code: STRIPE_LINK_04
+
+05. Shame Work
+    PDF file name (must match exactly): Shame-Work-Journal.pdf
+    Secret download page: https://ilikeitdeep.us/thanks/shame-work-799x82.html
+    Buy button placeholder in site code: STRIPE_LINK_05
+
+06. For the Heavy Days
+    PDF file name (must match exactly): Depression-Support-Journal.pdf
+    Secret download page: https://ilikeitdeep.us/thanks/for-the-heavy-days-arnnsr.html
+    Buy button placeholder in site code: STRIPE_LINK_06
+
+07. 30 Days Free
+    PDF file name (must match exactly): 30-Days-Free-Recovery-Journal.pdf
+    Secret download page: https://ilikeitdeep.us/thanks/30-days-free-nepl4a.html
+    Buy button placeholder in site code: STRIPE_LINK_07
+
+08. 30 Days Clear
+    PDF file name (must match exactly): 30-Days-Clear-Journal.pdf
+    Secret download page: https://ilikeitdeep.us/thanks/30-days-clear-etdkz9.html
+    Buy button placeholder in site code: STRIPE_LINK_08
+
+09. The Code Journal
+    PDF file name (must match exactly): Code-Memorization-Journal.pdf
+    Secret download page: https://ilikeitdeep.us/thanks/the-code-journal-naqmlw.html
+    Buy button placeholder in site code: STRIPE_LINK_09
+
+10. 30 Days Food Freedom
+    PDF file name (must match exactly): 30-Days-Food-Freedom-Journal.pdf
+    Secret download page: https://ilikeitdeep.us/thanks/30-days-food-freedom-nmysum.html
+    Buy button placeholder in site code: STRIPE_LINK_10
+
+11. 30 Days Whole
+    PDF file name (must match exactly): 30-Days-Clear-Sex-Addiction-Journal.pdf
+    Secret download page: https://ilikeitdeep.us/thanks/30-days-whole-rw8273.html
+    Buy button placeholder in site code: STRIPE_LINK_11
+
+12. 30 Days Present
+    PDF file name (must match exactly): 30-Days-Present-Phone-Journal.pdf
+    Secret download page: https://ilikeitdeep.us/thanks/30-days-present-bliq1z.html
+    Buy button placeholder in site code: STRIPE_LINK_12
+
+13. The Story of You
+    PDF file name (must match exactly): story_of_you_journal.pdf
+    Secret download page: https://ilikeitdeep.us/thanks/the-story-of-you-cblbuh.html
+    Buy button placeholder in site code: STRIPE_LINK_13
+
+14. Understanding Us
+    PDF file name (must match exactly): understanding_us_journal.pdf
+    Secret download page: https://ilikeitdeep.us/thanks/understanding-us-9x0pre.html
+    Buy button placeholder in site code: STRIPE_LINK_14
+
+15. When I Couldn't Say It
+    PDF file name (must match exactly): when_i_couldnt_say_it_journal.pdf
+    Secret download page: https://ilikeitdeep.us/thanks/when-i-couldn-t-say-it-n880ye.html
+    Buy button placeholder in site code: STRIPE_LINK_15
+
+16. The Space Between
+    PDF file name (must match exactly): the_space_between_journal.pdf
+    Secret download page: https://ilikeitdeep.us/thanks/the-space-between-96kwk5.html
+    Buy button placeholder in site code: STRIPE_LINK_16
+
+17. Right Now I'm Okay
+    PDF file name (must match exactly): right_now_im_okay_journal.pdf
+    Secret download page: https://ilikeitdeep.us/thanks/right-now-i-m-okay-k56g0b.html
+    Buy button placeholder in site code: STRIPE_LINK_17
+
+18. Let It Out
+    PDF file name (must match exactly): let_it_out_journal.pdf
+    Secret download page: https://ilikeitdeep.us/thanks/let-it-out-lhovgt.html
+    Buy button placeholder in site code: STRIPE_LINK_18
+
+19. Love From a Distance
+    PDF file name (must match exactly): love_from_a_distance_journal.pdf
+    Secret download page: https://ilikeitdeep.us/thanks/love-from-a-distance-oyzi5b.html
+    Buy button placeholder in site code: STRIPE_LINK_19
+
+20. Pull Your Head Out
+    PDF file name (must match exactly): Pull_Your_Head_Out_Journal.pdf
+    Secret download page: https://ilikeitdeep.us/thanks/pull-your-head-out-7nl5mp.html
+    Buy button placeholder in site code: STRIPE_LINK_20
+
+21. LESS
+    PDF file name (must match exactly): LESS_Harm_Reduction_Journal.pdf
+    Secret download page: https://ilikeitdeep.us/thanks/less-yo3lol.html
+    Buy button placeholder in site code: STRIPE_LINK_21
+
+22. LESS: 60 Days
+    PDF file name (must match exactly): LESS_60_Day_Step_Down_Journal.pdf
+    Secret download page: https://ilikeitdeep.us/thanks/less-60-days-ngkl80.html
+    Buy button placeholder in site code: STRIPE_LINK_22
+
+23. WHY
+    PDF file name (must match exactly): WHY_Emotional_Root_Journal.pdf
+    Secret download page: https://ilikeitdeep.us/thanks/why-15h3eg.html
+    Buy button placeholder in site code: STRIPE_LINK_23
+
+24. What They Knew
+    PDF file name (must match exactly): WHAT_THEY_KNEW_Parents_Journal.pdf
+    Secret download page: https://ilikeitdeep.us/thanks/what-they-knew-d0qyh9.html
+    Buy button placeholder in site code: STRIPE_LINK_24
+
+25. Deserve Better
+    PDF file name (must match exactly): DESERVE_BETTER_Boundaries_Journal.pdf
+    Secret download page: https://ilikeitdeep.us/thanks/deserve-better-qexh2f.html
+    Buy button placeholder in site code: STRIPE_LINK_25
+
+26. They Told.
+    PDF file name (must match exactly): THEY_TOLD_Broken_Trust_Journal.pdf
+    Secret download page: https://ilikeitdeep.us/thanks/they-told-k0yseg.html
+    Buy button placeholder in site code: STRIPE_LINK_26
+
+27. Still Standing
+    PDF file name (must match exactly): STILL_STANDING_Cheated_On_Journal.pdf
+    Secret download page: https://ilikeitdeep.us/thanks/still-standing-6mtzjk.html
+    Buy button placeholder in site code: STRIPE_LINK_27
+
+28. Before the Storm
+    PDF file name (must match exactly): BEFORE_THE_STORM_PMDD_Journal.pdf
+    Secret download page: https://ilikeitdeep.us/thanks/before-the-storm-54npat.html
+    Buy button placeholder in site code: STRIPE_LINK_28
