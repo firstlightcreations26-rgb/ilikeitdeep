@@ -31,6 +31,9 @@ window.LINKS = {
   "the-story-of-you": "https://buy.stripe.com/28EaEZ0DV6IXcoa4vTgUM0B",   // The Story of You — $17
   "business-idea": "https://buy.stripe.com/fZudRbgCTaZd2NA3rPgUM0C",   // The Business Idea Journal — $17
   "pull-your-head-out": "https://buy.stripe.com/28E7sNeuLebp4VIaUhgUM0D",   // Pull Your Head Out — $17
-  "full-collection": "https://buy.stripe.com/bJe4gB86n6IXfAm0fDgUM0E",   // Whole collection — $44
-  "merch": "https://ilikeitdeep.printify.me/"   // Your Printify store
+  "bundle-healing": "https://buy.stripe.com/9B67sNbiz7N1coa7I5gUM0G",   // Healing & Inner Work bundle — $80
+  "bundle-resets": "https://buy.stripe.com/aFa5kF9ar4AP3RE4vTgUM0H",   // 30-Day Resets & Recovery bundle — $62
+  "bundle-family": "https://buy.stripe.com/cNi5kF9argjx2NAgeBgUM0I",   // Family & Relationships bundle — $71
+  "bundle-faith": "https://buy.stripe.com/8x2fZj2M35ET73Q5zXgUM0J",   // Faith, Mindset & Life bundle — $53
+  "merch": "https://ilikeitdeep.printify.me/"   // Your Printify store (not linked on site yet)
 };
