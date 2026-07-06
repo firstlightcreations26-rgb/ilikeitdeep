@@ -1,128 +1,188 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>I Like It Deep — Guided Journals for Real Life</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Karla:wght@400;500;700;800&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#F5F1EE;--card:#FFFFFF;--ink:#3A3532;--rose:#C9557F;--soft:#D98BAC;
---blush:#F7E4ED;--line:#E7DCD6;--smoke:#8E827C;}
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font-family:'Karla',sans-serif;line-height:1.6}
-img{max-width:100%;display:block} a{color:inherit;text-decoration:none}
-header{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;
-position:sticky;top:0;background:rgba(245,241,238,.95);backdrop-filter:blur(6px);z-index:10;border-bottom:1px solid var(--line)}
-.hl img{width:50px;height:50px} nav{display:flex;gap:18px;font-size:14px;color:var(--smoke)}
-nav a:hover{color:var(--rose)}
-.hero{max-width:660px;margin:0 auto;text-align:center;padding:54px 22px 30px}
-.hero img{width:190px;height:190px;margin:0 auto 24px;filter:drop-shadow(0 12px 28px rgba(201,85,127,.18))}
-h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(32px,7vw,46px)}
-h1 em{font-style:italic;color:var(--rose)}
-.hero p{color:var(--smoke);max-width:430px;margin:12px auto 26px;font-size:16.5px}
-.cta{display:inline-block;background:var(--rose);color:#fff;font-weight:700;padding:13px 32px;border-radius:999px;font-size:15px}
-.cta:hover{background:var(--soft)} .cta.ghost{background:transparent;border:1.5px solid var(--rose);color:var(--rose);margin-left:8px}
-.heartline{display:flex;align-items:center;gap:14px;max-width:480px;margin:0 auto;padding:30px 24px}
-.heartline::before,.heartline::after{content:"";flex:1;height:1px;background:var(--line)}
-.heartline svg{width:30px;height:26px;stroke:var(--rose);fill:none;stroke-width:2.2;stroke-linecap:round}
-section{max-width:1040px;margin:0 auto;padding:22px 20px 50px}
-.eyebrow{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--rose);margin-bottom:6px;text-align:center}
-h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(26px,4.5vw,34px);text-align:center;margin-bottom:6px}
-.sub{color:var(--smoke);max-width:520px;margin:0 auto 28px;text-align:center}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-@media(min-width:760px){.grid{grid-template-columns:repeat(4,1fr);gap:24px}.grid.g2{grid-template-columns:repeat(2,1fr);max-width:640px;margin:0 auto}}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;
-box-shadow:0 4px 18px rgba(58,53,50,.05);transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}
-.card:hover{transform:translateY(-4px);box-shadow:0 10px 26px rgba(201,85,127,.14)}
-.card img{aspect-ratio:17/22;object-fit:cover;width:100%}
-.cb{padding:12px 14px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
-.cb .t{font-weight:700;font-size:14.5px;line-height:1.3}
-.cb .d{font-size:12.5px;color:var(--smoke);flex:1}
-.row{display:flex;justify-content:space-between;align-items:center}
-.p{color:var(--rose);font-weight:800;font-size:15px}
-.buy{font-size:13px;background:var(--rose);color:#fff;font-weight:700;padding:8px 16px;border-radius:999px}
-.buy:hover{background:var(--soft)}
-.center{text-align:center;margin-top:26px}
-.band{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:34px 24px;box-shadow:0 4px 18px rgba(58,53,50,.05)}
-input,textarea,select{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:10px;color:var(--ink);
-padding:12px 14px;font-family:'Karla',sans-serif;font-size:15px;margin-bottom:12px}
-textarea{min-height:90px;resize:vertical}
-button{background:var(--rose);border:none;color:#fff;font-weight:700;padding:12px 30px;border-radius:999px;font-size:15px;cursor:pointer;font-family:'Karla',sans-serif}
-button:hover{background:var(--soft)}
-.hearts{color:var(--rose);letter-spacing:3px;font-size:18px}
-footer{border-top:1px solid var(--line);padding:36px 22px 46px;text-align:center;color:var(--smoke);font-size:13px;max-width:720px;margin:0 auto}
-footer img{width:46px;height:46px;margin:0 auto 14px}
-.note{font-size:12.5px;line-height:1.7;margin-top:10px}
-.cattitle{margin-top:34px}
-</style></head><body>
-<header><a class="hl" href="index.html"><img src="logo.png" alt="I like it deep"></a>
-<nav><a href="all.html">All Journals</a><a href="index.html#request">Request</a><a href="index.html#merch">Merch</a></nav></header>
-<div class="hero"><img src="logo.png" alt="I like it deep — logo">
-<h1>Write it. Feel it. <em>Heal it.</em></h1>
-<p>Your journal knows the real you. Guided printable journals for the thoughts you don't say out loud — instant download, print at home, yours in minutes.</p>
-<a class="cta" href="all.html">Shop all journals</a><a class="cta ghost" href="#request">Request one</a></div>
-<div class="heartline"><svg viewBox="0 0 40 34"><path d="M20 29C10 21 4 15 4 9.5 4 5 8 2 12 2c3.4 0 6.3 2 8 5 1.7-3 4.6-5 8-5 4 0 8 3 8 7.5C36 15 30 21 20 29z"/></svg></div>
-<section id="journals"><div class="eyebrow">the collection</div><h2>Start where it hurts</h2>
-<p class="sub">Every journal is $17 — a full guided experience you can print tonight.</p>
-<div class="grid"><div class="card"><img src="cover-Little-Me-Journal.jpg" alt="Little Me journal cover" loading="lazy">
-<div class="cb"><div class="t">Little Me</div><div class="d">Go back for the child you were — and reparent her now.</div>
-<div class="row"><div class="p">$17</div><a class="buy" data-buy="little-me" href="#">Buy</a></div></div></div><div class="card"><img src="cover-Quiet-Moments-Journal.jpg" alt="Quiet Moments journal cover" loading="lazy">
-<div class="cb"><div class="t">Quiet Moments</div><div class="d">Five minutes of stillness at a time, on purpose.</div>
-<div class="row"><div class="p">$17</div><a class="buy" data-buy="quiet-moments" href="#">Buy</a></div></div></div><div class="card"><img src="cover-Still-Standing-Journal.jpg" alt="Still Standing journal cover" loading="lazy">
-<div class="cb"><div class="t">Still Standing</div><div class="d">Their choice. Not your worth. Take your story back.</div>
-<div class="row"><div class="p">$17</div><a class="buy" data-buy="still-standing" href="#">Buy</a></div></div></div><div class="card"><img src="cover-WHY-Journal.jpg" alt="WHY journal cover" loading="lazy">
-<div class="cb"><div class="t">WHY</div><div class="d">Your purpose was never missing. It was waiting to be asked.</div>
-<div class="row"><div class="p">$17</div><a class="buy" data-buy="why" href="#">Buy</a></div></div></div></div>
-<div class="center"><a class="cta" href="all.html">See all 32 journals</a></div>
-<div class="center" style="margin-top:14px;color:var(--smoke);font-size:13.5px">
-Bundles: any 2 for $26 · any 3 for $35 · <b>the whole collection for $44</b> &nbsp;<a class="buy" data-buy="full-collection" href="#">Get everything</a></div>
-</section>
-<div class="heartline"><svg viewBox="0 0 40 34"><path d="M20 29C10 21 4 15 4 9.5 4 5 8 2 12 2c3.4 0 6.3 2 8 5 1.7-3 4.6-5 8-5 4 0 8 3 8 7.5C36 15 30 21 20 29z"/></svg></div>
-<section id="request"><div class="band">
-<div class="eyebrow">custom requests</div><h2>Don't see the journal you need?</h2>
-<p class="sub">Tell me the situation you're working through. Real requests here become real journals — made specifically for it.</p>
-<input id="rq-name" placeholder="Your first name">
-<input id="rq-email" placeholder="Your email">
-<textarea id="rq-idea" placeholder="The journal I wish existed is..."></textarea>
-<div class="center" style="margin-top:0"><button onclick="mailtoForm('Journal Request \uD83D\uDC97',[['Name','rq-name'],['Email','rq-email'],['Journal idea','rq-idea']])">Send my request</button></div>
-</div></section>
-<section id="reviews"><div class="eyebrow">from the readers</div><h2>Real hearts only</h2>
-<p class="sub">Every review here is from a real reader — no fillers, no fakes. Be the first to share yours.</p>
-<div class="band" style="text-align:center">
-<div class="hearts">&#9829; &#9829; &#9829; &#9829; &#9829;</div>
-<p class="sub" style="margin:12px auto 18px">Bought a journal? Tell us what it did for you.</p>
-<input id="rv-name" placeholder="Your first name" style="max-width:380px">
-<input id="rv-hearts" placeholder="How many hearts? (1-5)" style="max-width:380px">
-<textarea id="rv-words" placeholder="Your honest words..." style="max-width:380px"></textarea>
-<div><button onclick="mailtoForm('Journal Review \u2764',[['Name','rv-name'],['Hearts','rv-hearts'],['Review','rv-words']])">Send my review</button></div>
-</div></section>
-<div class="heartline"><svg viewBox="0 0 40 34"><path d="M20 29C10 21 4 15 4 9.5 4 5 8 2 12 2c3.4 0 6.3 2 8 5 1.7-3 4.6-5 8-5 4 0 8 3 8 7.5C36 15 30 21 20 29z"/></svg></div>
-<section id="merch"><div class="eyebrow">beyond the page</div><h2>The merch</h2>
-<p class="sub">Candles and tees with the ilikeitdeep look — printed and shipped for you.</p>
-<div class="grid g2">
-<div class="card"><div style="aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;background:var(--blush)">
-<svg viewBox="0 0 24 24" style="width:42%;height:42%;stroke:var(--rose);fill:none;stroke-width:1.5"><path d="M12 3c1.5 2 2.5 3.2 2.5 4.7A2.5 2.5 0 0 1 12 10a2.5 2.5 0 0 1-2.5-2.3C9.5 6.2 10.5 5 12 3z"/><rect x="7" y="11" width="10" height="10" rx="1.5"/></svg></div>
-<div class="cb"><div class="t">Logo Candle</div><div class="row"><div class="p">$17</div><a class="buy" data-buy="merch" href="#">Shop</a></div></div></div>
-<div class="card"><div style="aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;background:var(--blush)">
-<svg viewBox="0 0 24 24" style="width:42%;height:42%;stroke:var(--rose);fill:none;stroke-width:1.5"><path d="M8 4 4 7l2 3 2-1v11h8V9l2 1 2-3-4-3a4 4 0 0 1-8 0z"/></svg></div>
-<div class="cb"><div class="t">"Write it. Feel it. Heal it." Tee</div><div class="row"><div class="p">$26</div><a class="buy" data-buy="merch" href="#">Shop</a></div></div></div>
-</div></section>
-<section><div class="band" style="text-align:center;background:var(--blush);border-color:#EFD3E0">
-<div class="eyebrow">new arrivals</div><h2>Be first to the next journal</h2>
-<p class="sub" style="margin-bottom:18px">New journals drop on the 8th. Leave your email and you'll know before anyone.</p>
-<input id="nl-email" placeholder="you@email.com" style="max-width:360px;background:#fff">
-<div><button onclick="mailtoForm('Add me to the list \uD83D\uDC97',[['Email','nl-email']])">Keep me posted</button></div>
-</div></section>
-<footer><img src="logo.png" alt="">
-<div>ilikeitdeep.us &nbsp;·&nbsp; every journal $17 &nbsp;·&nbsp; stay deep</div>
-<div class="note">These journals are here to help you grow and work through life's challenges — they aren't professional or medical advice.
-They began as journals one woman made for herself, then decided to share and grow so they'd fit other people's situations too.
-Because we all deserve to be truly happy — and to like being in the skin we chose. &#128151;</div></footer>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>I Like It Deep — Guided Printable Journals</title>
+<meta name="description" content="Guided printable journals to help you write it, feel it, and heal it — I Like It Deep.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="logo.png">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html"><img class="logo-mark" src="logo.png" alt="I Like It Deep logo"></a>
+    <div class="wordmark">I Like It Deep</div>
+  </div>
+</header>
+<nav class="subnav">
+  <a href="index.html#featured">Journals</a>
+  <a href="collection.html">All Journals</a>
+  <a href="index.html#request">Request a Journal</a>
+  <a href="index.html#merch">Merch</a>
+</nav>
+
+<div class="container">
+
+  <section class="hero">
+    <div class="eyebrow">Guided Printable Journals</div>
+    <h1>Write it. Feel it. Heal it.</h1>
+    <div class="tagline-sub">Your journal knows the real you.</div>
+  </section>
+
+  <div class="heart-divider"><span class="line"></span><svg viewBox="0 0 32 29" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 27S2 18.5 2 9.5C2 4.8 5.6 2 9.3 2c2.7 0 5.1 1.5 6.7 4 1.6-2.5 4-4 6.7-4C26.4 2 30 4.8 30 9.5 30 18.5 16 27 16 27z"/></svg><span class="line"></span></div>
+
+  <section id="featured">
+    <h2 class="section-title">A Few to Start With</h2>
+    <p class="section-sub">Twenty-eight guided pages each — a welcome page, three themed sections, and a keepsake page to close it out.</p>
+    <div class="grid">
+
+  <div class="card">
+    <a href="collection.html#behind-the-fire"><img src="cover-behind-the-fire.jpg" alt="Behind the Fire journal cover" loading="lazy"></a>
+    <div class="card-body">
+      <div class="card-cat">Healing & Inner Work</div>
+      <h3 class="card-title">Behind the Fire</h3>
+      <div class="price">$17</div>
+      <a class="btn buy-btn" data-slug="behind-the-fire" href="#">Buy the PDF</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <a href="collection.html#30-days-free"><img src="cover-30-days-free.jpg" alt="30 Days Free journal cover" loading="lazy"></a>
+    <div class="card-body">
+      <div class="card-cat">30-Day Resets & Recovery</div>
+      <h3 class="card-title">30 Days Free</h3>
+      <div class="price">$17</div>
+      <a class="btn buy-btn" data-slug="30-days-free" href="#">Buy the PDF</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <a href="collection.html#understanding-us"><img src="cover-understanding-us.jpg" alt="Understanding Us journal cover" loading="lazy"></a>
+    <div class="card-body">
+      <div class="card-cat">Family & Relationships</div>
+      <h3 class="card-title">Understanding Us</h3>
+      <div class="price">$17</div>
+      <a class="btn buy-btn" data-slug="understanding-us" href="#">Buy the PDF</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <a href="collection.html#the-story-of-you"><img src="cover-the-story-of-you.jpg" alt="The Story of You journal cover" loading="lazy"></a>
+    <div class="card-body">
+      <div class="card-cat">Faith, Mindset & Life</div>
+      <h3 class="card-title">The Story of You</h3>
+      <div class="price">$17</div>
+      <a class="btn buy-btn" data-slug="the-story-of-you" href="#">Buy the PDF</a>
+    </div>
+  </div>
+    </div>
+    <div class="center mt-big">
+      <a class="btn btn-solid" href="collection.html">See all 32 journals</a>
+    </div>
+  </section>
+
+  <div class="heart-divider"><span class="line"></span><svg viewBox="0 0 32 29" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 27S2 18.5 2 9.5C2 4.8 5.6 2 9.3 2c2.7 0 5.1 1.5 6.7 4 1.6-2.5 4-4 6.7-4C26.4 2 30 4.8 30 9.5 30 18.5 16 27 16 27z"/></svg><span class="line"></span></div>
+
+  <section id="request">
+    <h2 class="section-title">Don't See Your Situation?</h2>
+    <p class="section-sub">Tell me what you're working through and I'll consider it for the next journal.</p>
+    <div class="panel">
+      <form action="mailto:ilikeitdeep26@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your name (optional)">
+        <input type="email" name="email" placeholder="Your email" required>
+        <textarea name="idea" placeholder="What journal would help you right now?" required></textarea>
+        <button type="submit" class="btn btn-solid">Send My Idea</button>
+      </form>
+    </div>
+  </section>
+
+  <div class="heart-divider"><span class="line"></span><svg viewBox="0 0 32 29" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 27S2 18.5 2 9.5C2 4.8 5.6 2 9.3 2c2.7 0 5.1 1.5 6.7 4 1.6-2.5 4-4 6.7-4C26.4 2 30 4.8 30 9.5 30 18.5 16 27 16 27z"/></svg><span class="line"></span></div>
+
+  <section id="reviews">
+    <h2 class="section-title">From People Who've Used Them</h2>
+    <p class="section-sub">Real words only — every review here comes straight from a customer.</p>
+    <div class="panel">
+      <div class="reviews-empty">Be the first to share how a journal helped you.</div>
+      <form action="mailto:ilikeitdeep26@gmail.com" method="post" enctype="text/plain">
+        <div class="heart-rate" id="heartRate">
+          <span onclick="rate(1)"><svg viewBox="0 0 32 29" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 27S2 18.5 2 9.5C2 4.8 5.6 2 9.3 2c2.7 0 5.1 1.5 6.7 4 1.6-2.5 4-4 6.7-4C26.4 2 30 4.8 30 9.5 30 18.5 16 27 16 27z"/></svg></span><span onclick="rate(2)"><svg viewBox="0 0 32 29" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 27S2 18.5 2 9.5C2 4.8 5.6 2 9.3 2c2.7 0 5.1 1.5 6.7 4 1.6-2.5 4-4 6.7-4C26.4 2 30 4.8 30 9.5 30 18.5 16 27 16 27z"/></svg></span><span onclick="rate(3)"><svg viewBox="0 0 32 29" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 27S2 18.5 2 9.5C2 4.8 5.6 2 9.3 2c2.7 0 5.1 1.5 6.7 4 1.6-2.5 4-4 6.7-4C26.4 2 30 4.8 30 9.5 30 18.5 16 27 16 27z"/></svg></span><span onclick="rate(4)"><svg viewBox="0 0 32 29" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 27S2 18.5 2 9.5C2 4.8 5.6 2 9.3 2c2.7 0 5.1 1.5 6.7 4 1.6-2.5 4-4 6.7-4C26.4 2 30 4.8 30 9.5 30 18.5 16 27 16 27z"/></svg></span><span onclick="rate(5)"><svg viewBox="0 0 32 29" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 27S2 18.5 2 9.5C2 4.8 5.6 2 9.3 2c2.7 0 5.1 1.5 6.7 4 1.6-2.5 4-4 6.7-4C26.4 2 30 4.8 30 9.5 30 18.5 16 27 16 27z"/></svg></span>
+        </div>
+        <input type="hidden" name="rating" id="ratingInput" value="5">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="text" name="journal" placeholder="Which journal?" required>
+        <textarea name="review" placeholder="How did it help you?" required></textarea>
+        <button type="submit" class="btn btn-solid">Submit Review</button>
+      </form>
+    </div>
+    <script>
+      function rate(n){
+        document.getElementById('ratingInput').value = n;
+        document.querySelectorAll('#heartRate span').forEach(function(el,i){
+          el.classList.toggle('active', i < n);
+        });
+      }
+      rate(5);
+    </script>
+  </section>
+
+  <div class="heart-divider"><span class="line"></span><svg viewBox="0 0 32 29" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 27S2 18.5 2 9.5C2 4.8 5.6 2 9.3 2c2.7 0 5.1 1.5 6.7 4 1.6-2.5 4-4 6.7-4C26.4 2 30 4.8 30 9.5 30 18.5 16 27 16 27z"/></svg><span class="line"></span></div>
+
+  <section id="merch">
+    <h2 class="section-title">Merch</h2>
+    <p class="section-sub">Candles and tees to go with the work.</p>
+    <div class="merch-grid">
+      <div class="merch-card">
+        <h3 class="serif">Signature Candle</h3>
+        <div class="price">$17</div>
+        <a class="btn btn-solid" data-slug="merch" href="#">Shop Candles</a>
+      </div>
+      <div class="merch-card">
+        <h3 class="serif">Logo Tee</h3>
+        <div class="price">$26</div>
+        <a class="btn btn-solid" data-slug="merch" href="#">Shop Tees</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="heart-divider"><span class="line"></span><svg viewBox="0 0 32 29" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 27S2 18.5 2 9.5C2 4.8 5.6 2 9.3 2c2.7 0 5.1 1.5 6.7 4 1.6-2.5 4-4 6.7-4C26.4 2 30 4.8 30 9.5 30 18.5 16 27 16 27z"/></svg><span class="line"></span></div>
+
+  <section id="signup">
+    <h2 class="section-title">Get Notified of New Journals</h2>
+    <p class="section-sub">New journals launch on the 8th of the month. Get an email when they drop.</p>
+    <div class="panel">
+      <form action="mailto:ilikeitdeep26@gmail.com" method="post" enctype="text/plain">
+        <input type="email" name="email" placeholder="Your email" required>
+        <button type="submit" class="btn btn-solid">Notify Me</button>
+      </form>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="container">
+    <div class="grow">We all deserve to feel truly happy, and at home in the skin we chose.</div>
+    <p class="fine">These journals are here to help you grow, reflect, and work through challenges — they are not a replacement for professional advice or therapy. Every journal started as something one woman made for herself, then decided to share and shape so it could fit other people's situations too.</p>
+    <div class="foot-links">
+      <a href="mailto:ilikeitdeep26@gmail.com">Contact</a>
+      <a href="index.html#signup">New Arrivals</a>
+      <a href="index.html#merch">Merch</a>
+      <a href="collection.html">All Journals</a>
+    </div>
+  </div>
+</footer>
+
+
 <script src="stripe-links.js"></script>
 <script>
-document.querySelectorAll('[data-buy]').forEach(function(a){
-  var k=a.getAttribute('data-buy');
-  if(window.LINKS && LINKS[k] && LINKS[k].indexOf('PASTE')===-1){a.href=LINKS[k];}
-  else{a.addEventListener('click',function(e){e.preventDefault();alert('This checkout opens on launch day — come back soon! \uD83D\uDC97');});}
+document.querySelectorAll('.buy-btn').forEach(function(btn){
+  var link = window.LINKS[btn.dataset.slug];
+  if(link && link.indexOf('PASTE') === -1){ btn.setAttribute('href', link); btn.target = '_self'; }
 });
-function mailtoForm(subject, fields){
-  var body=fields.map(function(f){var el=document.getElementById(f[1]);return f[0]+': '+(el?el.value:'');}).join('%0D%0A');
-  window.location.href='mailto:ilikeitdeep26@gmail.com?subject='+encodeURIComponent(subject)+'&body='+body;
-}
-</script></body></html>
+</script>
+</body>
+</html>

@@ -1,76 +1,63 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Your Download — Right Now I'm Okay</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Karla:wght@400;500;700;800&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#F5F1EE;--card:#FFFFFF;--ink:#3A3532;--rose:#C9557F;--soft:#D98BAC;
---blush:#F7E4ED;--line:#E7DCD6;--smoke:#8E827C;}
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font-family:'Karla',sans-serif;line-height:1.6}
-img{max-width:100%;display:block} a{color:inherit;text-decoration:none}
-header{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;
-position:sticky;top:0;background:rgba(245,241,238,.95);backdrop-filter:blur(6px);z-index:10;border-bottom:1px solid var(--line)}
-.hl img{width:50px;height:50px} nav{display:flex;gap:18px;font-size:14px;color:var(--smoke)}
-nav a:hover{color:var(--rose)}
-.hero{max-width:660px;margin:0 auto;text-align:center;padding:54px 22px 30px}
-.hero img{width:190px;height:190px;margin:0 auto 24px;filter:drop-shadow(0 12px 28px rgba(201,85,127,.18))}
-h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(32px,7vw,46px)}
-h1 em{font-style:italic;color:var(--rose)}
-.hero p{color:var(--smoke);max-width:430px;margin:12px auto 26px;font-size:16.5px}
-.cta{display:inline-block;background:var(--rose);color:#fff;font-weight:700;padding:13px 32px;border-radius:999px;font-size:15px}
-.cta:hover{background:var(--soft)} .cta.ghost{background:transparent;border:1.5px solid var(--rose);color:var(--rose);margin-left:8px}
-.heartline{display:flex;align-items:center;gap:14px;max-width:480px;margin:0 auto;padding:30px 24px}
-.heartline::before,.heartline::after{content:"";flex:1;height:1px;background:var(--line)}
-.heartline svg{width:30px;height:26px;stroke:var(--rose);fill:none;stroke-width:2.2;stroke-linecap:round}
-section{max-width:1040px;margin:0 auto;padding:22px 20px 50px}
-.eyebrow{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--rose);margin-bottom:6px;text-align:center}
-h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(26px,4.5vw,34px);text-align:center;margin-bottom:6px}
-.sub{color:var(--smoke);max-width:520px;margin:0 auto 28px;text-align:center}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-@media(min-width:760px){.grid{grid-template-columns:repeat(4,1fr);gap:24px}.grid.g2{grid-template-columns:repeat(2,1fr);max-width:640px;margin:0 auto}}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;
-box-shadow:0 4px 18px rgba(58,53,50,.05);transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}
-.card:hover{transform:translateY(-4px);box-shadow:0 10px 26px rgba(201,85,127,.14)}
-.card img{aspect-ratio:17/22;object-fit:cover;width:100%}
-.cb{padding:12px 14px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
-.cb .t{font-weight:700;font-size:14.5px;line-height:1.3}
-.cb .d{font-size:12.5px;color:var(--smoke);flex:1}
-.row{display:flex;justify-content:space-between;align-items:center}
-.p{color:var(--rose);font-weight:800;font-size:15px}
-.buy{font-size:13px;background:var(--rose);color:#fff;font-weight:700;padding:8px 16px;border-radius:999px}
-.buy:hover{background:var(--soft)}
-.center{text-align:center;margin-top:26px}
-.band{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:34px 24px;box-shadow:0 4px 18px rgba(58,53,50,.05)}
-input,textarea,select{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:10px;color:var(--ink);
-padding:12px 14px;font-family:'Karla',sans-serif;font-size:15px;margin-bottom:12px}
-textarea{min-height:90px;resize:vertical}
-button{background:var(--rose);border:none;color:#fff;font-weight:700;padding:12px 30px;border-radius:999px;font-size:15px;cursor:pointer;font-family:'Karla',sans-serif}
-button:hover{background:var(--soft)}
-.hearts{color:var(--rose);letter-spacing:3px;font-size:18px}
-footer{border-top:1px solid var(--line);padding:36px 22px 46px;text-align:center;color:var(--smoke);font-size:13px;max-width:720px;margin:0 auto}
-footer img{width:46px;height:46px;margin:0 auto 14px}
-.note{font-size:12.5px;line-height:1.7;margin-top:10px}
-.cattitle{margin-top:34px}
-</style></head><body>
-<header><a class="hl" href="index.html"><img src="logo.png" alt="I like it deep"></a>
-<nav><a href="all.html">All Journals</a><a href="index.html#request">Request</a><a href="index.html#merch">Merch</a></nav></header>
-<div class="hero"><img src="logo.png" alt=""><h1>It's <em>yours.</em></h1>
-<p>Thank you for your purchase. Tap below to download — then print at home or at any print shop. Save this page's link in case you need it again.</p>
-<div style="margin:10px 0"><a class="cta" href="Right-Now-Im-Okay-Journal.pdf" download>Download Right Now I'm Okay</a></div>
-<p class="sub" style="margin-top:22px">Love it? <a href="index.html#reviews" style="color:var(--rose);font-weight:700">Leave a heart review</a> — it means everything to a small shop. &#128151;</p>
-</div><footer><img src="logo.png" alt="">
-<div>ilikeitdeep.us &nbsp;·&nbsp; every journal $17 &nbsp;·&nbsp; stay deep</div>
-<div class="note">These journals are here to help you grow and work through life's challenges — they aren't professional or medical advice.
-They began as journals one woman made for herself, then decided to share and grow so they'd fit other people's situations too.
-Because we all deserve to be truly happy — and to like being in the skin we chose. &#128151;</div></footer>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thank You — Right Now I'm Okay</title>
+<meta name="description" content="Guided printable journals to help you write it, feel it, and heal it — I Like It Deep.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="logo.png">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html"><img class="logo-mark" src="logo.png" alt="I Like It Deep logo"></a>
+    <div class="wordmark">I Like It Deep</div>
+  </div>
+</header>
+<nav class="subnav">
+  <a href="index.html#featured">Journals</a>
+  <a href="collection.html">All Journals</a>
+  <a href="index.html#request">Request a Journal</a>
+  <a href="index.html#merch">Merch</a>
+</nav>
+
+<div class="container">
+  <div class="heart-divider"><span class="line"></span><svg viewBox="0 0 32 29" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 27S2 18.5 2 9.5C2 4.8 5.6 2 9.3 2c2.7 0 5.1 1.5 6.7 4 1.6-2.5 4-4 6.7-4C26.4 2 30 4.8 30 9.5 30 18.5 16 27 16 27z"/></svg><span class="line"></span></div>
+  <section class="hero">
+    <div class="eyebrow">Thank You</div>
+    <h1>Your journal is ready</h1>
+    <p class="section-sub">"Right Now I'm Okay" is ready to download. Save it somewhere safe — this link is just for you.</p>
+    <div class="center" style="margin-top:24px;">
+      <a class="btn btn-solid" href="Right-Now-Im-Okay-Journal.pdf" download>Download Your PDF</a>
+    </div>
+  </section>
+  <div class="heart-divider"><span class="line"></span><svg viewBox="0 0 32 29" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 27S2 18.5 2 9.5C2 4.8 5.6 2 9.3 2c2.7 0 5.1 1.5 6.7 4 1.6-2.5 4-4 6.7-4C26.4 2 30 4.8 30 9.5 30 18.5 16 27 16 27z"/></svg><span class="line"></span></div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="grow">We all deserve to feel truly happy, and at home in the skin we chose.</div>
+    <p class="fine">These journals are here to help you grow, reflect, and work through challenges — they are not a replacement for professional advice or therapy. Every journal started as something one woman made for herself, then decided to share and shape so it could fit other people's situations too.</p>
+    <div class="foot-links">
+      <a href="mailto:ilikeitdeep26@gmail.com">Contact</a>
+      <a href="index.html#signup">New Arrivals</a>
+      <a href="index.html#merch">Merch</a>
+      <a href="collection.html">All Journals</a>
+    </div>
+  </div>
+</footer>
+
+
 <script src="stripe-links.js"></script>
 <script>
-document.querySelectorAll('[data-buy]').forEach(function(a){
-  var k=a.getAttribute('data-buy');
-  if(window.LINKS && LINKS[k] && LINKS[k].indexOf('PASTE')===-1){a.href=LINKS[k];}
-  else{a.addEventListener('click',function(e){e.preventDefault();alert('This checkout opens on launch day — come back soon! \uD83D\uDC97');});}
+document.querySelectorAll('.buy-btn').forEach(function(btn){
+  var link = window.LINKS[btn.dataset.slug];
+  if(link && link.indexOf('PASTE') === -1){ btn.setAttribute('href', link); btn.target = '_self'; }
 });
-function mailtoForm(subject, fields){
-  var body=fields.map(function(f){var el=document.getElementById(f[1]);return f[0]+': '+(el?el.value:'');}).join('%0D%0A');
-  window.location.href='mailto:ilikeitdeep26@gmail.com?subject='+encodeURIComponent(subject)+'&body='+body;
-}
-</script></body></html>
+</script>
+</body>
+</html>
