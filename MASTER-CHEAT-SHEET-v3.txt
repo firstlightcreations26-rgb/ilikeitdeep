@@ -12,201 +12,201 @@ Then paste the Stripe link into the stripe-links.js file on GitHub
     PDF file:            Little-Me-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-little-me-pgm7f.html
     Label in stripe-links.js:  "little-me"
-    My Stripe link:      _______________________________________
+    My Stripe link:      https://buy.stripe.com/00w8wR0DVd7l5ZM1jHgUM08
 
 02. Quiet Moments  —  $17
     PDF file:            Quiet-Moments-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-quiet-moments-xat3z.html
     Label in stripe-links.js:  "quiet-moments"
-    My Stripe link:      _______________________________________
+    My Stripe link:    https://buy.stripe.com/3cI5kF0DV8R5ewi3rPgUM09
 
 03. Inner Work  —  $17
     PDF file:            Carl-Jung-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-inner-work-a6myr.html
     Label in stripe-links.js:  "inner-work"
-    My Stripe link:      _______________________________________
+    My Stripe link:     https://buy.stripe.com/28E00l4UbgjxgEq0fDgUM0a
 
 04. Finding My Way Back  —  $17
     PDF file:            Depression-Support-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-finding-my-way-back-eh9dz.html
     Label in stripe-links.js:  "finding-my-way-back"
-    My Stripe link:      _______________________________________
+    My Stripe link:      https://buy.stripe.com/6oU28t5Yf6IXag25zXgUM0b
 
 05. Shame Work  —  $17
     PDF file:            Shame-Work-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-shame-work-ewfrq.html
     Label in stripe-links.js:  "shame-work"
-    My Stripe link:      _______________________________________
+    My Stripe link:    https://buy.stripe.com/fZu9AV1HZ0kzdse4vTgUM0c
 
 06. Let It Out  —  $17
     PDF file:            Let-It-Out-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-let-it-out-myqek.html
     Label in stripe-links.js:  "let-it-out"
-    My Stripe link:      _______________________________________
+    My Stripe link:      https://buy.stripe.com/3cI00l0DV6IXfAme6tgUM0d
 
 07. Behind the Fire  —  $17
     PDF file:            Behind-the-Fire-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-behind-the-fire-fdr56.html
     Label in stripe-links.js:  "behind-the-fire"
-    My Stripe link:      _______________________________________
+    My Stripe link:     https://buy.stripe.com/7sYcN786nfftbk64vTgUM0e
 
 08. Right Now I'm Okay  —  $17
     PDF file:            Right-Now-Im-Okay-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-right-now-im-okay-mbe79.html
     Label in stripe-links.js:  "right-now-im-okay"
-    My Stripe link:      _______________________________________
+    My Stripe link:      https://buy.stripe.com/7sYcN7fyP5ETgEq5zXgUM0f
 
 09. The Space Between  —  $17
     PDF file:            The-Space-Between-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-the-space-between-hr7gh.html
     Label in stripe-links.js:  "the-space-between"
-    My Stripe link:      _______________________________________
+    My Stripe link:      https://buy.stripe.com/5kQ4gB4Ub2sH1Jw3rPgUM0g
 
 10. When I Couldn't Say It  —  $17
     PDF file:            When-I-Couldnt-Say-It-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-when-i-couldnt-say-it-f8ah9.html
     Label in stripe-links.js:  "when-i-couldnt-say-it"
-    My Stripe link:      _______________________________________
+    My Stripe link:      https://buy.stripe.com/3cI7sN86ngjxgEqgeBgUM0h
 
 11. Before the Storm  —  $17
     PDF file:            Before-the-Storm-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-before-the-storm-xt9r4.html
     Label in stripe-links.js:  "before-the-storm"
-    My Stripe link:      _______________________________________
+    My Stripe link:     https://buy.stripe.com/eVq14p72jfftfAmaUhgUM0i
 
 12. 30 Days Present  —  $17
     PDF file:            30-Days-Present-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-30-days-present-ta5sz.html
     Label in stripe-links.js:  "30-days-present"
-    My Stripe link:      _______________________________________
+    My Stripe link:      https://buy.stripe.com/cNi14pcmD5ET73Q2nLgUM0j
 
 13. 30 Days Free  —  $17
     PDF file:            30-Days-Free-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-30-days-free-ptpst.html
     Label in stripe-links.js:  "30-days-free"
-    My Stripe link:      _______________________________________
+    My Stripe link:    https://buy.stripe.com/aFaeVf4Ubebp5ZM7I5gUM0k
 
 14. 30 Days Clear  —  $17
     PDF file:            30-Days-Clear-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-30-days-clear-csepa.html
     Label in stripe-links.js:  "30-days-clear"
-    My Stripe link:      _______________________________________
+    My Stripe link:      https://buy.stripe.com/9B600lbizgjxdseaUhgUM0l
 
 15. 30 Days Whole  —  $17
     PDF file:            30-Days-Whole-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-30-days-whole-eeq7k.html
     Label in stripe-links.js:  "30-days-whole"
-    My Stripe link:      _______________________________________
+    My Stripe link:      https://buy.stripe.com/7sYeVfaev0kzfAm4vTgUM0m
 
 16. 30 Days Food Freedom  —  $17
     PDF file:            30-Days-Food-Freedom-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-30-days-food-freedom-z6xa7.html
     Label in stripe-links.js:  "30-days-food-freedom"
-    My Stripe link:      _______________________________________
+    My Stripe link:     https://buy.stripe.com/bJe9AV72j3wL2NA1jHgUM0n
 
 17. LESS  —  $17
     PDF file:            LESS-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-less-edutc.html
     Label in stripe-links.js:  "less"
-    My Stripe link:      _______________________________________
+    My Stripe link:      https://buy.stripe.com/dRmdRb0DVc3h5ZMaUhgUM0o
 
 18. LESS 60 Days  —  $17
     PDF file:            LESS-60-Days-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-less-60-pkmzg.html
     Label in stripe-links.js:  "less-60"
-    My Stripe link:      _______________________________________
+    My Stripe link:     https://buy.stripe.com/5kQ5kF72j9V9bk6aUhgUM0p
 
 19. Understanding Us  —  $17
     PDF file:            Understanding-Us-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-understanding-us-qnta6.html
     Label in stripe-links.js:  "understanding-us"
-    My Stripe link:      _______________________________________
+    My Stripe link:      https://buy.stripe.com/dRm5kFaevebp0FsfaxgUM0q
 
 20. Still Standing  —  $17
     PDF file:            Still-Standing-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-still-standing-rznvm.html
     Label in stripe-links.js:  "still-standing"
-    My Stripe link:      _______________________________________
+    My Stripe link:     https://buy.stripe.com/eVqaEZ5Yf3wLcoa7I5gUM0r
 
 21. Deserve Better  —  $17
     PDF file:            Deserve-Better-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-deserve-better-wwwpf.html
     Label in stripe-links.js:  "deserve-better"
-    My Stripe link:      _______________________________________
+    My Stripe link:      https://buy.stripe.com/8x2dRb9ar1oDgEq3rPgUM0s
 
 22. They Told  —  $17
     PDF file:            They-Told-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-they-told-nkyqt.html
     Label in stripe-links.js:  "they-told"
-    My Stripe link:      _______________________________________
+    My Stripe link:   https://buy.stripe.com/4gM5kFcmD7N187U8M9gUM0t
 
 23. Love From a Distance  —  $17
     PDF file:            Love-From-a-Distance-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-love-from-a-distance-3v4mq.html
     Label in stripe-links.js:  "love-from-a-distance"
-    My Stripe link:      _______________________________________
+    My Stripe link:     https://buy.stripe.com/14AeVffyPebp5ZM5zXgUM0u
 
 24. What They Knew  —  $17
     PDF file:            What-They-Knew-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-what-they-knew-sbxk9.html
     Label in stripe-links.js:  "what-they-knew"
-    My Stripe link:      _______________________________________
+    My Stripe link:      https://buy.stripe.com/7sY28t0DV4AP9bYd2pgUM0v
 
 25. The Words I Owe You  —  $17
     PDF file:            The-Words-I-Owe-You-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-the-words-i-owe-you-q4h8q.html
     Label in stripe-links.js:  "the-words-i-owe-you"
-    My Stripe link:      _______________________________________
+    My Stripe link:     https://buy.stripe.com/9B6cN71HZaZdag2aUhgUM0w
 
 26. I Was There Too  —  $17
     PDF file:            I-Was-There-Too-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-i-was-there-too-5nbbm.html
     Label in stripe-links.js:  "i-was-there-too"
-    My Stripe link:      _______________________________________
+    My Stripe link:      https://buy.stripe.com/bJeeVf4Ub0kz1JwaUhgUM0x
 
 27. The Game of Life  —  $17
     PDF file:            The-Game-of-Life-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-the-game-of-life-htrz3.html
     Label in stripe-links.js:  "the-game-of-life"
-    My Stripe link:      _______________________________________
+    My Stripe link:      https://buy.stripe.com/dRm8wR9ar4AP9bYfaxgUM0y
 
 28. The Code Journal  —  $17
     PDF file:            The-Code-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-the-code-journal-4zkcu.html
     Label in stripe-links.js:  "the-code-journal"
-    My Stripe link:      _______________________________________
+    My Stripe link: https://buy.stripe.com/5kQeVffyP7N1ewi1jHgUM0z
 
 29. WHY  —  $17
     PDF file:            WHY-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-why-b2keb.html
     Label in stripe-links.js:  "why"
-    My Stripe link:      _______________________________________
+    My Stripe link:     https://buy.stripe.com/dRm4gBcmD6IX87U1jHgUM0A
 
 30. The Story of You  —  $17
     PDF file:            The-Story-of-You-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-the-story-of-you-nu7g8.html
     Label in stripe-links.js:  "the-story-of-you"
-    My Stripe link:      _______________________________________
+    My Stripe link:     https://buy.stripe.com/28EaEZ0DV6IXcoa4vTgUM0B
 
 31. The Business Idea Journal  —  $17
     PDF file:            Business-Idea-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-business-idea-3yh2a.html
     Label in stripe-links.js:  "business-idea"
-    My Stripe link:      _______________________________________
+    My Stripe link:     https://buy.stripe.com/fZudRbgCTaZd2NA3rPgUM0C
 
 32. Pull Your Head Out  —  $17
     PDF file:            Pull-Your-Head-Out-Journal.pdf
     Secret download link: https://ilikeitdeep.us/dl-pull-your-head-out-qs8ex.html
     Label in stripe-links.js:  "pull-your-head-out"
-    My Stripe link:      _______________________________________
+    My Stripe link:     https://buy.stripe.com/28E7sNeuLebp4VIaUhgUM0D
 
 33. THE WHOLE COLLECTION  —  $44
     Secret download link: https://ilikeitdeep.us/dl-full-collection-pb992.html
     Label in stripe-links.js:  "full-collection"
-    My Stripe link:      _______________________________________
+    My Stripe link:      https://buy.stripe.com/bJe4gB86n6IXfAm0fDgUM0E
 
 MERCH  —  Printify store link goes on the "merch" line
-    My Printify link:    _______________________________________
+    My Printify link:   https://ilikeitdeep.printify.me/
 
 BUNDLES (optional, later): any 2 = $26, any 3 = $35.
   Easiest way for now: buyer emails you their picks after paying,
