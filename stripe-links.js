@@ -41,5 +41,5 @@ window.LINKS = {
   "business-idea": https://buy.stripe.com/fZudRbgCTaZd2NA3rPgUM0C,   // The Business Idea Journal — $17
   "pull-your-head-out":  https://buy.stripe.com/28E7sNeuLebp4VIaUhgUM0D,   // Pull Your Head Out — $17
   "full-collection":  https://buy.stripe.com/bJe4gB86n6IXfAm0fDgUM0E,   // Whole collection — $44
-  "merch": "PASTE-PRINTIFY-STORE-LINK-HERE"   // Your Printify store
+  "merch": https://ilikeitdeep.printify.me/   // Your Printify store
 };
