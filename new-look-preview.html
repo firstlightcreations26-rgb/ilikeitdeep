@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ilikeitdeep — the new look</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#2F2C31;          /* dark warm gray — NOT black */
+    --panel:#3A363C;       /* card gray */
+    --line:#4A454D;
+    --rose:#D9739F;        /* calmer rose instead of neon pink */
+    --blush:#F2CDDC;       /* soft blush */
+    --cream:#F4EFF1;       /* main text */
+    --smoke:#B3A8B0;       /* quiet text */
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}*{transition:none!important;}}
+  body{background:var(--bg);color:var(--cream);font-family:'Karla',sans-serif;line-height:1.6;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+
+  /* ---------- header ---------- */
+  header{display:flex;align-items:center;justify-content:space-between;padding:16px 22px;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(47,44,49,.94);backdrop-filter:blur(6px);z-index:10;}
+  .h-logo img{width:52px;height:52px;}
+  nav{display:flex;gap:20px;font-size:14px;letter-spacing:.04em;color:var(--smoke);}
+  nav a:hover{color:var(--blush);}
+
+  /* ---------- hero ---------- */
+  .hero{max-width:680px;margin:0 auto;padding:64px 24px 48px;text-align:center;}
+  .hero img{width:180px;height:180px;margin:0 auto 26px;filter:drop-shadow(0 10px 30px rgba(0,0,0,.35));}
+  .hero h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(30px,6vw,44px);letter-spacing:.01em;}
+  .hero h1 em{font-style:italic;color:var(--blush);}
+  .hero p{color:var(--smoke);max-width:460px;margin:14px auto 28px;font-size:16.5px;}
+  .cta{display:inline-block;background:var(--rose);color:#2A1520;font-weight:700;padding:13px 34px;border-radius:999px;font-size:15px;letter-spacing:.03em;transition:background .2s;}
+  .cta:hover{background:var(--blush);}
+  .cta.ghost{background:transparent;border:1px solid var(--rose);color:var(--blush);margin-left:10px;}
+
+  /* signature: single-line heart divider */
+  .heartline{display:flex;align-items:center;gap:14px;max-width:520px;margin:0 auto;padding:34px 24px;}
+  .heartline::before,.heartline::after{content:"";flex:1;height:1px;background:var(--line);}
+  .heartline svg{width:34px;height:30px;stroke:var(--rose);fill:none;stroke-width:2.2;stroke-linecap:round;}
+
+  /* ---------- section shells ---------- */
+  section{max-width:1060px;margin:0 auto;padding:28px 22px 56px;}
+  .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--rose);margin-bottom:8px;}
+  h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(26px,4.5vw,34px);margin-bottom:6px;}
+  .sub{color:var(--smoke);max-width:520px;margin-bottom:30px;}
+
+  /* ---------- journal grid ---------- */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:26px;}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:transform .2s, border-color .2s;}
+  .card:hover{transform:translateY(-4px);border-color:var(--rose);}
+  .cover{aspect-ratio:4/5;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:22px;gap:10px;}
+  .cover .ct{font-family:'Cormorant Garamond',serif;font-size:22px;line-height:1.2;}
+  .cover .cs{font-size:11px;letter-spacing:.18em;text-transform:uppercase;opacity:.75;}
+  .v1{background:linear-gradient(160deg,#F6DCE7,#EFC3D6);color:#4A2033;}
+  .v2{background:linear-gradient(160deg,#443F47,#332F36);color:var(--blush);}
+  .v3{background:linear-gradient(160deg,#E8A9C4,#D9739F);color:#3A1226;}
+  .cbody{padding:16px 18px 20px;display:flex;justify-content:space-between;align-items:center;}
+  .cbody .t{font-weight:700;font-size:15px;}
+  .cbody .p{color:var(--blush);font-weight:700;}
+  .buy{font-size:13px;background:var(--rose);color:#2A1520;font-weight:700;padding:8px 18px;border-radius:999px;}
+
+  /* ---------- request band ---------- */
+  .band{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:38px 28px;display:grid;gap:22px;grid-template-columns:1fr;align-items:center;}
+  @media(min-width:760px){.band{grid-template-columns:1.1fr .9fr;padding:44px 40px;}}
+  .band input,.band textarea{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:10px;color:var(--cream);padding:12px 14px;font-family:'Karla',sans-serif;font-size:15px;margin-bottom:12px;}
+  .band textarea{min-height:90px;resize:vertical;}
+  .band input::placeholder,.band textarea::placeholder{color:#8d8290;}
+  .band button{background:var(--rose);border:none;color:#2A1520;font-weight:700;padding:12px 30px;border-radius:999px;font-size:15px;cursor:pointer;font-family:'Karla',sans-serif;}
+
+  /* ---------- merch ---------- */
+  .merch{display:grid;gap:26px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));}
+  .mcard{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;}
+  .mimg{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#3E3941,#332F36);}
+  .mimg svg{width:44%;height:44%;stroke:var(--blush);fill:none;stroke-width:1.6;}
+  .mcard .cbody{padding:16px 18px 20px;}
+
+  /* ---------- email band ---------- */
+  .signup{text-align:center;background:linear-gradient(160deg,#3A3238,#332C33);border:1px solid var(--line);border-radius:18px;padding:44px 26px;}
+  .signup h2{margin-bottom:4px;}
+  .signup .row{display:flex;gap:10px;max-width:440px;margin:22px auto 0;flex-wrap:wrap;justify-content:center;}
+  .signup input{flex:1;min-width:220px;background:var(--bg);border:1px solid var(--line);border-radius:999px;color:var(--cream);padding:12px 18px;font-size:15px;font-family:'Karla',sans-serif;}
+  .signup button{background:var(--rose);border:none;color:#2A1520;font-weight:700;padding:12px 26px;border-radius:999px;font-size:15px;cursor:pointer;font-family:'Karla',sans-serif;}
+
+  footer{border-top:1px solid var(--line);padding:34px 22px 44px;text-align:center;color:var(--smoke);font-size:13.5px;}
+  footer img{width:44px;height:44px;margin:0 auto 12px;opacity:.9;}
+</style>
+</head>
+<body>
+
+<header>
+  <a class="h-logo" href="#"><img src="logo-circle.png" alt="I like it deep"></a>
+  <nav>
+    <a href="#journals">Journals</a>
+    <a href="#request">Request</a>
+    <a href="#merch">Merch</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <img src="logo-circle.png" alt="I like it deep — script logo with hearts">
+  <h1>Write it. Feel it. <em>Heal it.</em></h1>
+  <p>Your journal knows the real you. Guided pages for the thoughts you don't say out loud — instant download, print at home, yours in minutes.</p>
+  <a class="cta" href="#journals">Shop the journals</a><a class="cta ghost" href="#request">Request one</a>
+</div>
+
+<div class="heartline" aria-hidden="true">
+  <svg viewBox="0 0 40 34"><path d="M20 29C10 21 4 15 4 9.5 4 5 8 2 12 2c3.4 0 6.3 2 8 5 1.7-3 4.6-5 8-5 4 0 8 3 8 7.5C36 15 30 21 20 29z"/></svg>
+</div>
+
+<section id="journals">
+  <div class="eyebrow">The collection</div>
+  <h2>Choose your journal</h2>
+  <p class="sub">Every journal is $17. Instant download, print at home or any print shop.</p>
+  <div class="grid">
+    <div class="card"><div class="cover v1"><div class="cs">ilikeitdeep</div><div class="ct">Before the Storm</div><div class="cs">A PMDD Journal</div></div><div class="cbody"><div><div class="t">Before the Storm</div><div class="p">$17</div></div><a class="buy" href="#">Buy</a></div></div>
+    <div class="card"><div class="cover v2"><div class="cs">ilikeitdeep</div><div class="ct">30 Days Present</div><div class="cs">The Phone Journal</div></div><div class="cbody"><div><div class="t">30 Days Present</div><div class="p">$17</div></div><a class="buy" href="#">Buy</a></div></div>
+    <div class="card"><div class="cover v3"><div class="cs">ilikeitdeep</div><div class="ct">Business Idea Journal</div><div class="cs">Build the Thing</div></div><div class="cbody"><div><div class="t">Business Idea Journal</div><div class="p">$17</div></div><a class="buy" href="#">Buy</a></div></div>
+    <div class="card"><div class="cover v2"><div class="cs">ilikeitdeep</div><div class="ct">Your Cover Here</div><div class="cs">All 29 journals</div></div><div class="cbody"><div><div class="t">…and 26 more</div><div class="p">$17</div></div><a class="buy" href="#">Buy</a></div></div>
+  </div>
+</section>
+
+<div class="heartline" aria-hidden="true">
+  <svg viewBox="0 0 40 34"><path d="M20 29C10 21 4 15 4 9.5 4 5 8 2 12 2c3.4 0 6.3 2 8 5 1.7-3 4.6-5 8-5 4 0 8 3 8 7.5C36 15 30 21 20 29z"/></svg>
+</div>
+
+<section id="request">
+  <div class="band">
+    <div>
+      <div class="eyebrow">Custom requests</div>
+      <h2>Don't see the journal you need?</h2>
+      <p class="sub" style="margin-bottom:0">Tell me what you're going through or what you want to work on, and I'll consider it for the next release. Real requests become real journals here.</p>
+    </div>
+    <div>
+      <input type="text" placeholder="Your first name">
+      <input type="email" placeholder="Your email">
+      <textarea placeholder="The journal I wish existed is…"></textarea>
+      <button>Send my request</button>
+    </div>
+  </div>
+</section>
+
+<section id="merch">
+  <div class="eyebrow">Beyond the page</div>
+  <h2>The merch</h2>
+  <p class="sub">Candles and tees with the ilikeitdeep logo — printed and shipped for you.</p>
+  <div class="merch">
+    <div class="mcard"><div class="mimg"><svg viewBox="0 0 24 24"><path d="M12 3c1.5 2 2.5 3.2 2.5 4.7A2.5 2.5 0 0 1 12 10a2.5 2.5 0 0 1-2.5-2.3C9.5 6.2 10.5 5 12 3z"/><rect x="7" y="11" width="10" height="10" rx="1.5"/></svg></div><div class="cbody"><div><div class="t">Logo Candle</div><div class="p">$17</div></div><a class="buy" href="#">Shop</a></div></div>
+    <div class="mcard"><div class="mimg"><svg viewBox="0 0 24 24"><path d="M8 4 4 7l2 3 2-1v11h8V9l2 1 2-3-4-3a4 4 0 0 1-8 0z"/></svg></div><div class="cbody"><div><div class="t">Logo Tee</div><div class="p">$26</div></div><a class="buy" href="#">Shop</a></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="signup">
+    <div class="eyebrow">New arrivals</div>
+    <h2>Be first to the next journal</h2>
+    <p class="sub" style="margin:6px auto 0;max-width:420px;">New journals drop on the 8th. Leave your email and you'll know before anyone else.</p>
+    <div class="row">
+      <input type="email" placeholder="you@email.com">
+      <button>Keep me posted</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img src="logo-circle.png" alt="">
+  ilikeitdeep.us · every journal $17 · stay deep
+</footer>
+
+</body>
+</html>
