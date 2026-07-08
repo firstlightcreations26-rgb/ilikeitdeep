@@ -13,6 +13,7 @@
   --cat-family: #C9B6DE;
   --cat-faith: #E8D9A8;
   --cat-grief: #B9C9B4;
+  --cat-daily: #F0B7A0;
 }
 *{box-sizing:border-box;}
 body{margin:0;background:var(--bg);color:var(--cream);font-family:'Karla',sans-serif;-webkit-font-smoothing:antialiased;}
@@ -35,7 +36,7 @@ h1 em{color:var(--rose);font-style:italic;}
 .tagline{margin-top:26px;font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--muted);font-size:19px;line-height:1.5;}
 
 .categories{padding:50px 0 90px;}
-.cat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:36px;}
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px;}
 .cat-card{background:var(--bg-soft);border:1px solid var(--line);border-radius:18px;padding:30px 20px 26px;text-align:center;text-decoration:none;display:block;}
 .cat-card svg{width:56px;height:56px;margin-bottom:14px;}
 .cat-card h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:20px;margin:0 0 6px;color:var(--cream);}

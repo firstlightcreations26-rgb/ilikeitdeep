@@ -43,5 +43,9 @@ const STRIPE_LINKS = {
   "losing-a-sibling": "https://buy.stripe.com/14A5kFgCTc3h4VIe6tgUM0M",
   "losing-a-best-friend": "https://buy.stripe.com/3cI28t72jaZd5ZM4vTgUM0N",
   "who-i-used-to-be": "https://buy.stripe.com/dRm7sN5Yf5ET1Jw5zXgUM0O",
-  "the-parent-i-didnt-have": "https://buy.stripe.com/00w00l2M39V9coa3rPgUM0P"
+  "the-parent-i-didnt-have": "https://buy.stripe.com/00w00l2M39V9coa3rPgUM0P",
+
+  // --- DAILY JOURNALS — need real Stripe links from Steph, currently placeholders ---
+  "choose-joy": "https://buy.stripe.com/8x2fZjcmDebp1Jw1jHgUM0Q",
+  "hello-gorgeous": "https://buy.stripe.com/9B63cx5Yf3wL4VI3rPgUM0R"
 };
