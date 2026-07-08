@@ -35,5 +35,13 @@ const STRIPE_LINKS = {
   "the-story-of-you": "https://buy.stripe.com/28EaEZ0DV6IXcoa4vTgUM0B",
   "business-idea": "https://buy.stripe.com/fZudRbgCTaZd2NA3rPgUM0C",
   "pull-your-head-out": "https://buy.stripe.com/28E7sNeuLebp4VIaUhgUM0D",
-  "full-collection": "https://buy.stripe.com/bJe4gB86n6IXfAm0fDgUM0E"
+  "full-collection": "https://buy.stripe.com/bJe4gB86n6IXfAm0fDgUM0E",
+
+  // --- GRIEF JOURNALS — need real Stripe links from Steph, currently placeholders ---
+  "losing-a-pet": "https://buy.stripe.com/bJe8wR3Q73wL5ZM1jHgUM0K",
+  "losing-a-parent": "https://buy.stripe.com/7sY6oJ1HZ9V99bY1jHgUM0L",
+  "losing-a-sibling": "https://buy.stripe.com/14A5kFgCTc3h4VIe6tgUM0M",
+  "losing-a-best-friend": "https://buy.stripe.com/3cI28t72jaZd5ZM4vTgUM0N",
+  "who-i-used-to-be": "https://buy.stripe.com/dRm7sN5Yf5ET1Jw5zXgUM0O",
+  "the-parent-i-didnt-have": "https://buy.stripe.com/00w00l2M39V9coa3rPgUM0P"
 };
