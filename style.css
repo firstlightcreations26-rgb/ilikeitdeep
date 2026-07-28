@@ -50,4 +50,12 @@ footer p{color:var(--smoke);font-size:.85rem;margin-top:10px;}
 .tcard h1 span{color:var(--pink);}
 .tcard p{color:var(--smoke);margin-top:12px;font-size:.95rem;}
 .tcard .cta{margin-top:28px;}
-.tcard .tip{font-size:.8rem;margin-top:22px;color:var(--smoke);font-style:italic;}
+.tcard .tip{font-size:.8rem;margin-top:22px;color:var(--smoke);font-style:italic;}#packets .journal-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin: 8px 0 10px;
+  box-shadow: 0 4px 14px rgba(138,47,75,0.15);
+}
