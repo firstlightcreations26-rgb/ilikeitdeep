@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Printable Bookmarks — I Like It Deep</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lora:ital@1&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #FAF6EF; font-family: 'Poppins', sans-serif; color: #4a3b2a; }
+  .wrap { max-width: 800px; margin: 0 auto; padding: 30px 20px 60px; text-align: center; }
+  h1 { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 36px; color: #8a2f4b; margin-bottom: 6px; }
+  .sub { font-family: 'Lora', serif; font-style: italic; font-size: 17px; margin-bottom: 40px; }
+  .sheet { margin-bottom: 50px; }
+  .sheet img { width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.12); margin-bottom: 16px; }
+  .download-btn { display: inline-block; background: #8a2f4b; color: #fff; padding: 12px 30px; border-radius: 30px; text-decoration: none; font-weight: 500; }
+  .note { font-size: 14px; color: #7a6a5a; margin-top: 40px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Free Printable Bookmarks</h1>
+  <p class="sub">Print at home, cut along the lines, and keep your place.</p>
+
+  <div class="sheet">
+    <img src="images/bookmarks-sheet-1-thumb.jpg" alt="Bookmark sheet 1">
+    <br>
+    <a class="download-btn" href="images/bookmarks-sheet-1.pdf" download>Download Sheet 1</a>
+  </div>
+
+  <div class="sheet">
+    <img src="images/bookmarks-sheet-2-thumb.jpg" alt="Bookmark sheet 2">
+    <br>
+    <a class="download-btn" href="images/bookmarks-sheet-2.pdf" download>Download Sheet 2</a>
+  </div>
+
+  <p class="note">Print on cardstock for best results, then trim along the edges.</p>
+</div>
+</body>
+</html>
