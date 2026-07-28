@@ -3,268 +3,118 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Little Me — I Like It Deep</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Lora:ital@1&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<title>Little Me Journal — Details</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lora:ital@1&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --yellow: #FFFBEA;
-    --yellow-deep: #FFF3C4;
-    --card: #FFFFFF;
-    --rose: #8a2f4b;
-    --rose-soft: #b4577a;
-    --gold: #D9B65C;
-    --ink: #3B2E2A;
-    --ink-soft: #7A6A5D;
+  body {
+    margin: 0;
+    background: #FFF9E5; /* pastel yellow */
+    font-family: 'Poppins', sans-serif;
+    color: #4a3b2a;
   }
-  *{box-sizing:border-box;}
-  body{
-    margin:0;
-    background:var(--yellow);
-    color:var(--ink);
-    font-family:'Poppins', sans-serif;
-    -webkit-font-smoothing:antialiased;
+  .wrap {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 24px 20px 60px;
   }
-  a{color:inherit;text-decoration:none;}
-
-  /* ---- top bar ---- */
-  .topbar{
-    display:flex; align-items:center; justify-content:space-between;
-    padding:18px 20px;
-    max-width:1000px; margin:0 auto;
+  .back-link {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: #8a2f4b;
+    text-decoration: none;
+    font-size: 14px;
   }
-  .brand{
-    font-family:'Cormorant Garamond', serif;
-    font-weight:700; font-size:20px; letter-spacing:0.03em;
-    color:var(--rose);
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 34px;
+    color: #8a2f4b;
+    margin: 0 0 4px;
   }
-  .back-link{
-    font-size:13px; color:var(--ink-soft);
-    display:flex; align-items:center; gap:6px;
+  .price {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
   }
-
-  /* ---- hero ---- */
-  .hero{
-    max-width:1000px; margin:10px auto 0; padding:20px;
-    display:grid; grid-template-columns: 1fr; gap:32px;
+  .cover-img {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
   }
-  @media(min-width:760px){
-    .hero{ grid-template-columns: 340px 1fr; align-items:center; gap:48px; }
+  .description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 28px;
   }
-  .cover-wrap{
-    display:flex; justify-content:center;
+  .description em {
+    font-family: 'Lora', serif;
+    font-style: italic;
   }
-  .cover{
-    width:230px; aspect-ratio: 1179/1620;
-    background: linear-gradient(160deg, var(--rose) 0%, var(--rose-soft) 100%);
-    border-radius:6px;
-    box-shadow: 0 18px 40px rgba(138,47,75,0.28), 0 3px 10px rgba(0,0,0,0.08);
-    transform: rotate(-4deg);
-    display:flex; align-items:center; justify-content:center;
-    text-align:center; padding:24px;
-    position:relative;
-    border: 6px solid #fff;
+  .buy-btn {
+    display: block;
+    text-align: center;
+    background: #8a2f4b;
+    color: #fff;
+    padding: 14px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 40px;
   }
-  .cover::after{
-    content:"";
-    position:absolute; inset:10px;
-    border:1px solid rgba(255,255,255,0.5);
-    border-radius:2px;
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    color: #8a2f4b;
+    margin-bottom: 12px;
+    text-align: center;
   }
-  .cover-eyebrow{
-    position:absolute; top:26px; left:0; right:0;
-    font-size:8.5px; letter-spacing:0.18em; color:#f2d9e0;
-    text-transform:uppercase;
+  .flip-scroll {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    padding: 10px 4px 20px;
+    -webkit-overflow-scrolling: touch;
   }
-  .cover-title{
-    font-family:'Cormorant Garamond', serif;
-    font-weight:600; font-size:30px; color:#fff; line-height:1.15;
-  }
-  .cover-sub{
-    font-family:'Lora', serif; font-style:italic;
-    font-size:12px; color:#f6e3ea; margin-top:10px;
-  }
-  .cover-note{
-    position:absolute; bottom:16px; left:0; right:0;
-    font-size:8px; letter-spacing:0.12em; color:#f2d9e0;
-  }
-
-  .hero-copy .eyebrow{
-    font-size:12px; letter-spacing:0.16em; text-transform:uppercase;
-    color:var(--rose); font-weight:600; margin-bottom:10px;
-  }
-  .hero-copy h1{
-    font-family:'Cormorant Garamond', serif;
-    font-size:44px; margin:0 0 12px; line-height:1.05; color:var(--ink);
-  }
-  .hero-copy .hook{
-    font-family:'Lora', serif; font-style:italic;
-    font-size:17px; color:var(--ink-soft); margin:0 0 22px; max-width:440px;
-  }
-  .price-row{ display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
-  .price{ font-size:20px; font-weight:600; color:var(--rose); }
-  .buy-btn{
-    display:inline-block; background:var(--rose); color:#fff;
-    padding:14px 34px; border-radius:30px; font-weight:600; font-size:15px;
-    letter-spacing:0.02em;
-    box-shadow:0 10px 24px rgba(138,47,75,0.30);
-  }
-  .buy-btn:active{ transform:translateY(1px); }
-
-  /* ---- flip preview ---- */
-  .section{ max-width:1000px; margin:0 auto; padding:44px 20px 10px; }
-  .section h2{
-    font-family:'Cormorant Garamond', serif; font-size:26px;
-    color:var(--ink); margin:0 0 6px;
-  }
-  .section .section-sub{
-    font-size:13px; color:var(--ink-soft); margin:0 0 22px;
-  }
-  .flip-row{
-    display:flex; gap:18px; overflow-x:auto; padding:20px 6px 26px;
-    scroll-snap-type:x mandatory;
-  }
-  .flip-page{
-    flex:0 0 auto; width:140px; aspect-ratio:1179/1620;
-    background:var(--card);
-    border:2px dashed #e6d9c0;
-    border-radius:4px;
-    display:flex; flex-direction:column; align-items:center; justify-content:center;
-    text-align:center; padding:10px;
-    scroll-snap-align:start;
-    box-shadow:0 8px 18px rgba(0,0,0,0.06);
-  }
-  .flip-page:nth-child(odd){ transform: rotate(-2deg); }
-  .flip-page:nth-child(even){ transform: rotate(2deg); }
-  .flip-page .num{
-    font-family:'Cormorant Garamond', serif; color:var(--rose);
-    font-size:15px; font-weight:700; margin-bottom:6px;
-  }
-  .flip-page .lbl{ font-size:10px; color:var(--ink-soft); line-height:1.4; }
-
-  /* ---- description ---- */
-  .desc-card{
-    background:var(--card); border-radius:10px; padding:30px 26px;
-    box-shadow:0 6px 20px rgba(0,0,0,0.05);
-    border:1px solid var(--yellow-deep);
-  }
-  .desc-card p{
-    font-size:15px; line-height:1.75; color:var(--ink);
-    margin:0 0 16px;
-  }
-  .desc-card p:last-child{ margin-bottom:0; }
-  .desc-buy-row{ text-align:center; margin:26px 0 6px; }
-
-  /* ---- related ---- */
-  .related-row{
-    display:flex; gap:16px; overflow-x:auto; padding:6px 6px 20px;
-  }
-  .related-card{
-    flex:0 0 auto; width:150px;
-    background:var(--card); border-radius:10px; padding:14px;
-    box-shadow:0 6px 16px rgba(0,0,0,0.06);
-    text-align:center;
-  }
-  .related-cover{
-    width:100%; aspect-ratio:1179/1620; border-radius:5px;
-    background:linear-gradient(160deg, var(--rose-soft), var(--rose));
-    margin-bottom:10px;
-    display:flex; align-items:center; justify-content:center;
-    padding:8px;
-  }
-  .related-cover span{
-    font-family:'Cormorant Garamond', serif; color:#fff; font-size:14px; line-height:1.2;
-  }
-  .related-card .r-title{ font-size:12px; font-weight:600; margin-bottom:8px; }
-  .related-card .r-link{
-    font-size:11px; color:var(--rose); font-weight:600; letter-spacing:0.03em;
-  }
-
-  footer{
-    text-align:center; padding:40px 20px 50px;
-    font-size:12px; color:var(--ink-soft);
+  .flip-scroll img {
+    height: 320px;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    flex-shrink: 0;
   }
 </style>
 </head>
 <body>
+<div class="wrap">
 
-  <div class="topbar">
-    <div class="brand">i like it deep</div>
-    <a class="back-link" href="#">&larr; Back to Healing &amp; Inner Work</a>
+  <a class="back-link" href="index.html">&larr; Back to all journals</a>
+
+  <h1>Little Me</h1>
+  <div class="price">$17</div>
+
+  <!-- SWAP THIS IMAGE: put your real cover photo in the images folder and change the file name below -->
+  <img class="cover-img" src="images/little-me-cover.jpg" alt="Little Me journal cover">
+
+  <div class="description">
+    <p>Somewhere inside you is the child you used to be — still carrying what she was handed, still hoping someone will come back for her. Little Me is an 18-page guided inner child journal that walks you gently back to her, one honest question at a time. You'll remember who you were before the world told you who to be, name what was missing, and finally give yourself the words you needed to hear back then.</p>
+    <p><em>This isn't just journaling — it's reparenting. By the last page, you won't just understand your younger self better. You'll have started healing her, and freeing the parts of you that are still waiting for that.</em></p>
   </div>
 
-  <!-- HERO -->
-  <div class="hero">
-    <div class="cover-wrap">
-      <div class="cover">
-        <div class="cover-eyebrow">ILIKEITDEEP &middot; A GUIDED JOURNAL</div>
-        <div>
-          <div class="cover-title">Little<br>Me</div>
-          <div class="cover-sub">a journal to meet the child you were</div>
-        </div>
-        <div class="cover-note">ilikeitdeep.us</div>
-      </div>
-    </div>
-    <div class="hero-copy">
-      <div class="eyebrow">Healing &amp; Inner Work</div>
-      <h1>Little Me</h1>
-      <p class="hook">A guided journal for reconnecting with your inner child — and finally giving her what she needed.</p>
-      <div class="price-row">
-        <a class="buy-btn" href="#stripe-link-goes-here">Buy Now — $17</a>
-      </div>
-    </div>
+  <a class="buy-btn" href="https://buy.stripe.com/00w8wR0DVd7l5ZM1jHgUM08">Buy Now — $17</a>
+
+  <h2>Take a peek inside</h2>
+  <div class="flip-scroll">
+    <!-- SWAP THESE 5 IMAGES: put your real page photos in the images folder -->
+    <img src="images/little-me-page1.jpg" alt="Page 1 preview">
+    <img src="images/little-me-page2.jpg" alt="Page 2 preview">
+    <img src="images/little-me-page3.jpg" alt="Page 3 preview">
+    <img src="images/little-me-page4.jpg" alt="Page 4 preview">
+    <img src="images/little-me-page5.jpg" alt="Page 5 preview">
   </div>
 
-  <!-- FLIP PREVIEW -->
-  <div class="section">
-    <h2>Take a peek inside</h2>
-    <p class="section-sub">Swipe through the first few pages before you decide.</p>
-    <div class="flip-row">
-      <div class="flip-page"><div class="num">Cover</div><div class="lbl">Replace with<br>cover photo</div></div>
-      <div class="flip-page"><div class="num">Pg 1</div><div class="lbl">Replace with<br>page 1 photo</div></div>
-      <div class="flip-page"><div class="num">Pg 2</div><div class="lbl">Replace with<br>page 2 photo</div></div>
-      <div class="flip-page"><div class="num">Pg 3</div><div class="lbl">Replace with<br>page 3 photo</div></div>
-      <div class="flip-page"><div class="num">Pg 4</div><div class="lbl">Replace with<br>page 4 photo</div></div>
-      <div class="flip-page"><div class="num">Pg 5</div><div class="lbl">Replace with<br>page 5 photo</div></div>
-    </div>
-  </div>
-
-  <!-- DESCRIPTION -->
-  <div class="section">
-    <h2>About this journal</h2>
-    <div class="desc-card">
-      <p>Little Me is a guided space to sit with the version of you who didn't get everything she needed — and give it to her now. Through gentle, honest prompts, you'll revisit old memories, name what was missing, and speak to your younger self the way you wish someone had spoken to you. This isn't about reliving pain for its own sake. It's about closing old wounds with compassion instead of judgment, so the child inside you can finally feel safe, seen, and heard.</p>
-      <p>Each page is designed to be done in your own time — there's no wrong way to move through it. By the end, many women find they carry themselves differently: softer with their own mistakes, quicker to comfort themselves the way they'd comfort a child they love, and lighter from finally putting words to things they've carried quietly for years.</p>
-      <p><em>If you're drawn to this journal, you may also connect with the ones below — pulled from the same place of gentle, honest healing.</em></p>
-      <div class="desc-buy-row">
-        <a class="buy-btn" href="#stripe-link-goes-here">Buy Now — $17</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- RELATED -->
-  <div class="section">
-    <h2>You may also like</h2>
-    <div class="related-row">
-      <a class="related-card" href="#">
-        <div class="related-cover"><span>Quiet<br>Moments</span></div>
-        <div class="r-title">Quiet Moments</div>
-        <div class="r-link">View journal &rarr;</div>
-      </a>
-      <a class="related-card" href="#">
-        <div class="related-cover"><span>The Space<br>Between</span></div>
-        <div class="r-title">The Space Between</div>
-        <div class="r-link">View journal &rarr;</div>
-      </a>
-      <a class="related-card" href="#">
-        <div class="related-cover"><span>Deserve<br>Better</span></div>
-        <div class="r-title">Deserve Better</div>
-        <div class="r-link">View journal &rarr;</div>
-      </a>
-    </div>
-  </div>
-
-  <footer>ilikeitdeep.us &middot; guided journals for going deep</footer>
-
+</div>
 </body>
 </html>
