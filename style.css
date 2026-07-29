@@ -59,3 +59,13 @@ footer p{color:var(--smoke);font-size:.85rem;margin-top:10px;}
   margin: 8px 0 10px;
   box-shadow: 0 4px 14px rgba(138,47,75,0.15);
 }
+nav a{
+  border:1.5px solid #8a2f4b;
+  border-radius:999px;
+  padding:6px 16px;
+  transition:background 0.2s ease, color 0.2s ease;
+}
+nav a:hover{
+  background:#8a2f4b;
+  color:#fff;
+}
