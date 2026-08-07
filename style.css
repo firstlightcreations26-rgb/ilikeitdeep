@@ -76,12 +76,8 @@ nav a:hover{
   gap: 20px;
   margin-top: 20px;
 }
-@media (min-width: 640px) {
-  .journal-grid { grid-template-columns: repeat(3, 1fr); }
-}
-@media (min-width: 980px) {
-  .journal-grid { grid-template-columns: repeat(4, 1fr); }
-}
+@media (min-width: 640px) { .journal-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 980px) { .journal-grid { grid-template-columns: repeat(4, 1fr); } }
 
 .journal-card {
   background: var(--charcoal);
@@ -91,64 +87,9 @@ nav a:hover{
   flex-direction: column;
   height: 100%;
 }
-
-.journal-card .card-cover {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-}
-
-.journal-card h3 {
-  font-size: 15px;
-  margin: 12px 14px 0;
-  color: var(--fog);
-}
-
-.journal-card .who-for {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  color: #e08bab;
-  font-size: 13px;
-  margin: 6px 14px 0;
-  line-height: 1.4;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.journal-card > p:not(.who-for):not(.reassure) {
-  font-size: 13px;
-  opacity: 0.8;
-  margin: 6px 14px 0;
-  line-height: 1.5;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  flex-grow: 1;
-}
-
-.journal-card .card-foot {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 12px 14px 4px;
-}
-
-.journal-card .reassure {
-  font-size: 10.5px;
-  opacity: 0.6;
-  text-align: center;
-  margin: 0 14px 14px;
-  font-family: 'Karla', sans-serif;
-}
-
-#packets .journal-card img.packet-preview {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 0;
-  margin: 0;
-}
+.journal-card .card-cover { width: 100%; height: 220px; object-fit: cover; display: block; }
+.journal-card h3 { font-size: 15px; margin: 12px 14px 0; color: var(--fog); }
+.journal-card .who-for { font-family: 'Cormorant Garamond', serif; font-style: italic; color: #e08bab; font-size: 13px; margin: 6px 14px 0; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.journal-card .card-desc { font-size: 13px; opacity: 0.8; margin: 6px 14px 0; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; flex-grow: 1; }
+.journal-card .card-foot { display: flex; justify-content: space-between; align-items: center; margin: 12px 14px 4px; }
+.journal-card .reassure { font-size: 10.5px; opacity: 0.6; text-align: center; margin: 0 14px 14px; font-family: 'Karla', sans-serif; }
