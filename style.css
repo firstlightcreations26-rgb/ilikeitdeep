@@ -69,3 +69,37 @@ nav a:hover{
   background:#8a2f4b;
   color:#fff;
 }
+/* Updated journal card layout */
+.journal-card {
+  display: flex;
+  flex-direction: column;
+}
+.journal-card .card-cover {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: block;
+}
+.journal-card .who-for {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: #8a2f4b;
+  font-size: 14px;
+  margin: 0 0 6px;
+  line-height: 1.4;
+}
+.journal-card .card-desc {
+  font-size: 14px;
+  opacity: 0.85;
+  margin: 0 0 10px;
+  line-height: 1.5;
+}
+.journal-card .reassure {
+  font-size: 11.5px;
+  opacity: 0.6;
+  text-align: center;
+  margin-top: 6px;
+  font-family: 'Karla', sans-serif;
+}
