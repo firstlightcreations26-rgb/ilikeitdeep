@@ -69,45 +69,86 @@ nav a:hover{
   background:#8a2f4b;
   color:#fff;
 }
-/* Updated journal card layout */
+/* ===== JOURNAL CARDS - FIXED UNIFORM GRID ===== */
+.journal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+@media (min-width: 640px) {
+  .journal-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 980px) {
+  .journal-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
 .journal-card {
+  background: var(--charcoal);
+  border-radius: 14px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
+
 .journal-card .card-cover {
   width: 100%;
-  aspect-ratio: 3 / 4;
+  height: 220px;
   object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 10px;
   display: block;
 }
+
+.journal-card h3 {
+  font-size: 15px;
+  margin: 12px 14px 0;
+  color: var(--fog);
+}
+
 .journal-card .who-for {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  color: #8a2f4b;
-  font-size: 14px;
-  margin: 0 0 6px;
+  color: #e08bab;
+  font-size: 13px;
+  margin: 6px 14px 0;
   line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
-.journal-card .card-desc {
-  font-size: 14px;
-  opacity: 0.85;
-  margin: 0 0 10px;
+
+.journal-card > p:not(.who-for):not(.reassure) {
+  font-size: 13px;
+  opacity: 0.8;
+  margin: 6px 14px 0;
   line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex-grow: 1;
 }
+
+.journal-card .card-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 14px 4px;
+}
+
 .journal-card .reassure {
-  font-size: 11.5px;
+  font-size: 10.5px;
   opacity: 0.6;
   text-align: center;
-  margin-top: 6px;
+  margin: 0 14px 14px;
   font-family: 'Karla', sans-serif;
 }
-.journal-card .card-cover {
+
+#packets .journal-card img.packet-preview {
   width: 100%;
-  aspect-ratio: 3 / 4;
+  height: 220px;
   object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  display: block;
+  border-radius: 0;
+  margin: 0;
 }
