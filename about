@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — I Like It Deep</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&family=Karla:wght@400;500;600&family=Poppins:wght@400;500;600&family=Lora:ital@1&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=4">
+<style>
+  .nav-wrap{position:relative;}
+  .menu-toggle{background:transparent;border:1px solid var(--line);color:var(--muted);font-family:'Karla',sans-serif;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;padding:11px 20px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;}
+  .menu-toggle:hover{color:var(--rose);border-color:var(--rose);}
+  .menu-arrow{transition:transform 0.2s ease;font-size:11px;}
+  .menu-toggle[aria-expanded="true"] .menu-arrow{transform:rotate(180deg);}
+  .dropdown-menu{display:none;flex-direction:column;position:absolute;top:calc(100% + 10px);right:0;background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:8px;min-width:210px;z-index:50;box-shadow:0 14px 34px rgba(0,0,0,0.4);}
+  .dropdown-menu.open{display:flex;}
+  .dropdown-menu a{padding:13px 16px;border-radius:10px;color:var(--muted);text-decoration:none;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;}
+  .dropdown-menu a:hover{background:var(--bg);color:var(--rose);}
+
+  .back-link{
+    display:inline-flex;align-items:center;gap:6px;
+    color:var(--smoke);text-decoration:none;font-size:.85rem;
+    padding:8px 0;margin:18px 22px 0;
+  }
+  .back-link:hover{color:var(--pink);}
+  .about-page{max-width:640px;margin:0 auto;padding:20px 22px 80px;text-align:center;}
+  .about-photo{
+    width:220px;height:220px;border-radius:50%;object-fit:cover;
+    margin:24px auto 30px;display:block;
+    box-shadow:0 14px 40px rgba(255,46,136,.18);
+    border:3px solid var(--charcoal);
+  }
+  .about-photo-placeholder{
+    width:220px;height:220px;border-radius:50%;
+    margin:24px auto 30px;display:flex;align-items:center;justify-content:center;
+    background:var(--charcoal);color:var(--smoke);font-size:.75rem;text-align:center;padding:20px;
+    border:2px dashed var(--pink);
+  }
+  .about-page h1{font-family:'Shrikhand',cursive;font-weight:400;font-size:clamp(2rem,7vw,2.6rem);color:var(--fog);margin-bottom:22px;}
+  .about-page p{color:var(--smoke);font-size:1rem;line-height:1.7;margin-bottom:18px;text-align:left;}
+  .about-signature{font-family:'Caveat',cursive;font-size:1.6rem;color:var(--pink);margin-top:20px;}
+  .about-blog-note{
+    margin-top:40px;padding:26px 24px;background:var(--charcoal);border-radius:16px;
+  }
+  .about-blog-note p{text-align:center;margin-bottom:14px;}
+  .about-blog-note a.cta{font-size:.8rem;padding:12px 24px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo"><img src="images/logo.png" alt="I Like It Deep logo" style="height:50px;"></div>
+    <div class="nav-wrap">
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainMenu" onclick="toggleMainMenu()">Menu <span class="menu-arrow">▾</span></button>
+      <nav id="mainMenu" class="dropdown-menu">
+        <a href="collection.html">Journals</a>
+        <a href="blog.html">Blog</a>
+        <a href="bookmarks.html">Bookmarks</a>
+        <a href="coloring-pages.html">Coloring Pages</a>
+        <a href="about.html">About</a>
+        <a href="index.html#request">Request a Journal</a>
+      </nav>
+    </div>
+  </header>
+
+  <a href="index.html" class="back-link">&larr; Back to Home</a>
+
+  <div class="about-page">
+    <!-- Swap this placeholder for your AI-generated image once it's ready.
+         Just replace the <div class="about-photo-placeholder">...</div> block below with:
+         <img class="about-photo" src="images/YOUR-IMAGE-FILENAME.jpg" alt="Journaling illustration"> -->
+    <div class="about-photo-placeholder">Your AI journaling image goes here</div>
+
+    <h1>Why I Made This</h1>
+    <p>These journals didn't start as a business. They started with me, trying to figure out what was actually blocking me — the patterns and old stories keeping me stuck, keeping me from the life I wanted to build.</p>
+    <p>Writing it out, question by question, was the thing that finally worked. So I made more — for the situations people I love were carrying too: grief, family, addiction, shame, all of it. Now that this site is finally live, I'm working through these pages myself right alongside you.</p>
+    <div class="about-signature">— S, founder of I Like It Deep</div>
+
+    <div class="about-blog-note">
+      <p>I also write about this stuff on the blog — what these journals mean to me, and how they connect to what I actually live with day to day.</p>
+      <a href="blog.html" class="cta">Read the Blog</a>
+    </div>
+  </div>
+</div>
+<script>
+function toggleMainMenu(){
+  var menu = document.getElementById('mainMenu');
+  var btn = document.getElementById('menuToggle');
+  var isOpen = menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+}
+document.addEventListener('click', function(e){
+  var wrap = document.querySelector('.nav-wrap');
+  if(wrap && !wrap.contains(e.target)){
+    document.getElementById('mainMenu').classList.remove('open');
+    document.getElementById('menuToggle').setAttribute('aria-expanded', 'false');
+  }
+});
+</script>
+</body>
+</html>
