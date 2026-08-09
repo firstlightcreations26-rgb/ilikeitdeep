@@ -77,3 +77,31 @@ nav a:hover{
 }
 @media (max-width: 900px) { .journal-grid { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 640px) { .journal-grid { grid-template-columns: repeat(2, 1fr); } }
+/* ===== JOURNAL CARD FIX — restores the cute compact card look ===== */
+:root{
+  --cat-healing:#FF6FA8;
+  --cat-recovery:#FF9F6F;
+  --cat-family:#FFA6C9;
+  --cat-faith:#D9A6FF;
+  --cat-grief:#B79FD9;
+  --cat-daily:#FFD166;
+}
+
+.page-head{padding:50px 22px 10px;text-align:center;}
+.page-head h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(1.8rem,7vw,2.6rem);color:var(--fog);margin:6px 0;}
+.page-sub{color:var(--smoke);margin-top:10px;font-size:.95rem;}
+
+.category-block{margin:50px 0 10px;}
+.cat-header{display:flex;align-items:flex-start;gap:16px;margin-bottom:22px;}
+.cat-header svg{width:44px;height:44px;flex-shrink:0;margin-top:2px;}
+.cat-header h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.5rem;color:var(--fog);margin-bottom:4px;}
+.cat-header p{color:var(--smoke);font-size:.88rem;max-width:44ch;}
+
+.journal-card{background:var(--charcoal);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;padding-bottom:14px;}
+.journal-card .card-cover{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;}
+.journal-card h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.05rem;color:var(--fog);margin:12px 14px 4px;}
+.journal-card .card-desc{color:var(--smoke);font-size:.82rem;margin:0 14px 8px;line-height:1.45;}
+.journal-card .who-for{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--pink);font-size:.85rem;margin:8px 14px 6px;line-height:1.4;}
+.journal-card .card-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding:8px 14px 0;}
+.journal-card .price{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--pink);}
+.journal-card .reassure{font-size:.68rem;color:var(--smoke);font-style:italic;margin:8px 14px 0;}
