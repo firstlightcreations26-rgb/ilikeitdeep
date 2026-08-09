@@ -76,3 +76,188 @@ nav a:hover{color:var(--pink);}
 .journal-card .card-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding:8px 14px 0;}
 .journal-card .price{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--pink);}
 .journal-card .reassure{font-size:.68rem;color:var(--smoke);font-style:italic;margin:8px 14px 0;}
+/* =========================================================
+   I LIKE IT DEEP — BLOG THEME / LANDING PAGE OVERRIDE
+   ========================================================= */
+
+:root {
+  --deep-bg: #2E2D33;
+  --deep-card: #38373E;
+  --deep-pink: #C9557F;
+  --deep-pink-soft: #D9789A;
+  --deep-cream: #F3EFE9;
+  --deep-gray: #B9B4BC;
+  --deep-border: #4F4D53;
+}
+
+/* ---------- MAIN PAGE ---------- */
+
+html,
+body {
+  background: var(--deep-bg) !important;
+  color: var(--deep-cream) !important;
+}
+
+/* ---------- HEADINGS ---------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--deep-cream) !important;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* ---------- MAIN HERO ---------- */
+
+.hero,
+.hero-section,
+.landing-page,
+.home-hero,
+.hero-content {
+  background: var(--deep-bg) !important;
+}
+
+/* ---------- SMALL PINK LABELS ---------- */
+
+.hero .eyebrow,
+.hero .label,
+.section-label,
+.kicker,
+.eyebrow {
+  color: var(--deep-pink) !important;
+}
+
+/* ---------- HERO TEXT ---------- */
+
+.hero p,
+.hero-section p {
+  color: var(--deep-gray) !important;
+}
+
+/* ---------- PINK ITALIC EMPHASIS ---------- */
+
+.hero em,
+.hero i,
+.highlight,
+.accent {
+  color: var(--deep-pink) !important;
+}
+
+/* ---------- BUTTONS ---------- */
+
+button,
+.btn,
+.button,
+.cta,
+.hero a.button,
+a.button {
+  background: var(--deep-pink) !important;
+  color: #FFFFFF !important;
+  border-color: var(--deep-pink) !important;
+}
+
+button:hover,
+.btn:hover,
+.button:hover,
+.cta:hover,
+.hero a.button:hover,
+a.button:hover {
+  background: var(--deep-pink-soft) !important;
+  border-color: var(--deep-pink-soft) !important;
+}
+
+/* ---------- REMOVE THE HUGE PURPLE/BURGUNDY GLOW ---------- */
+
+.hero::before,
+.hero::after,
+.hero-section::before,
+.hero-section::after {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* If the colored circle is an actual element */
+
+.hero .orb,
+.hero .glow,
+.hero .blob,
+.hero .circle,
+.hero .background-shape {
+  display: none !important;
+}
+
+/* ---------- SECTION BACKGROUNDS ---------- */
+
+section,
+.section {
+  background-color: var(--deep-bg) !important;
+}
+
+/* ---------- CARDS ---------- */
+
+.card,
+.category-card,
+.product-card,
+.journal-card {
+  background: var(--deep-card) !important;
+  border-color: var(--deep-border) !important;
+}
+
+/* ---------- CARD TEXT ---------- */
+
+.card p,
+.category-card p,
+.product-card p,
+.journal-card p {
+  color: var(--deep-gray) !important;
+}
+
+/* ---------- LINKS ---------- */
+
+a {
+  color: var(--deep-pink);
+}
+
+a:hover {
+  color: var(--deep-pink-soft);
+}
+
+/* ---------- NAVIGATION ---------- */
+
+nav,
+header {
+  background: var(--deep-bg) !important;
+  border-color: var(--deep-border) !important;
+}
+
+/* ---------- BODY COPY ---------- */
+
+p,
+li {
+  color: var(--deep-gray);
+}
+
+/* ---------- QUOTES ---------- */
+
+blockquote {
+  color: var(--deep-cream) !important;
+  border-left-color: var(--deep-pink) !important;
+}
+
+/* ---------- INPUTS ---------- */
+
+input,
+textarea,
+select {
+  background: var(--deep-card) !important;
+  color: var(--deep-cream) !important;
+  border-color: var(--deep-border) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--deep-gray) !important;
+}
