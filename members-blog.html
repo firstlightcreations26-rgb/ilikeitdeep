@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Members Blog — I Like It Deep</title>
+<meta name="robots" content="noindex, nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&family=Karla:wght@400;500;600&family=Poppins:wght@400;500;600&family=Lora:ital@1&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .blog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:36px;}
+  .blog-card{background:var(--bg-soft);border:1px solid var(--line);border-radius:18px;padding:26px 24px;text-decoration:none;display:block;}
+  .blog-card .blog-date{font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--rose);margin-bottom:10px;}
+  .blog-card h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:22px;margin:0 0 8px;color:var(--cream);}
+  .blog-card p{font-size:14px;color:var(--muted);margin:0 0 14px;line-height:1.6;}
+  .blog-card .read-more{font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--rose);}
+  .welcome-banner{max-width:560px;margin:0 auto 30px;background:var(--bg-soft);border:1px solid var(--line);border-radius:18px;padding:26px 28px;text-align:center;}
+  .welcome-banner h3{font-family:'Cormorant Garamond',serif;font-size:20px;margin:0 0 8px;color:var(--cream);}
+  .welcome-banner p{color:var(--muted);font-size:13px;margin:0;line-height:1.6;}
+  @media (max-width:720px){ .blog-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo"><img src="images/logo.png" alt="I Like It Deep logo" style="height:50px;"></div>
+  </header>
+
+  <section class="page-head">
+    <div class="eyebrow">The Full Circle</div>
+    <h1>Every post,<br>the <em>whole thing.</em></h1>
+    <p class="page-sub">Thank you for subscribing — this page is just for you. Bookmark it, since it's not linked anywhere else on the site.</p>
+  </section>
+
+  <section class="categories">
+
+    <div class="welcome-banner">
+      <h3>Welcome to the circle 💗</h3>
+      <p>Every post below is the full, uncut version — no fade, no lock box. New posts get added here the same day they go up on the main blog.</p>
+    </div>
+
+    <div class="blog-grid">
+
+      <a class="blog-card" href="member-learning-to-stay.html">
+        <div class="blog-date">August 12, 2026</div>
+        <h3>Learning to Stay When It's Easier to Cut People Off</h3>
+        <p>On BPD, cutting people off, and the loneliness of pushing friends away before they can hurt you first.</p>
+        <span class="read-more">Read the Post →</span>
+      </a>
+
+      <a class="blog-card" href="member-the-split-i-didnt-see-coming.html">
+        <div class="blog-date">August 11, 2026</div>
+        <h3>The Split I Didn't See Coming</h3>
+        <p>A raw look at what a BPD split feels like from the inside, and the DBT class I'm about to start to help manage it.</p>
+        <span class="read-more">Read the Post →</span>
+      </a>
+
+      <a class="blog-card" href="member-diagnosis-at-38.html">
+        <div class="blog-date">July 31, 2026</div>
+        <h3>At 38, I Finally Got a Name For It</h3>
+        <p>On finally being diagnosed with BPD, PMDD, and what it's taught me about the relationship I almost sabotaged.</p>
+        <span class="read-more">Read the Post →</span>
+      </a>
+
+      <!-- Add your next member post card here, same format -->
+
+    </div>
+
+  </section>
+
+  <footer>
+    <div class="footer-disclaimer">
+      These journals are meant to help you grow and work through life's challenges — they are not a substitute for professional advice. We all deserve to be truly happy and like being in the skin we chose.
+    </div>
+  </footer>
+</div>
+</body>
+</html>

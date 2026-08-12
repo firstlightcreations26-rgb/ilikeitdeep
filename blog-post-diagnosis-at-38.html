@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>At 38, I Finally Got a Name For It — I Like It Deep</title>
-  <meta name="description" content="A personal blog post on getting diagnosed with BPD and PMDD at 38 — what it's taught me about myself and my relationship, and the healing work that came after."><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&family=Karla:wght@400;500;600&family=Poppins:wght@400;500;600&family=Lora:ital@1&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<meta name="description" content="A personal blog post on getting diagnosed with BPD and PMDD at 38 — what it's taught me about myself and my relationship, and the healing work that came after.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&family=Karla:wght@400;500;600&family=Poppins:wght@400;500;600&family=Lora:ital@1&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <style>
   .post-head{max-width:640px;margin:0 auto;padding:60px 0 10px;text-align:center;}
@@ -34,20 +35,34 @@
   .comment-empty{text-align:center;color:var(--muted);font-size:13.5px;margin:24px 0;}
 
   @media (max-width:720px){ .rec-grid{grid-template-columns:1fr;} }
+
+  .nav-wrap{position:relative;}
+  .menu-toggle{background:transparent;border:1px solid var(--line);color:var(--muted);font-family:'Karla',sans-serif;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;padding:11px 20px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;}
+  .menu-toggle:hover{color:var(--rose);border-color:var(--rose);}
+  .menu-arrow{transition:transform 0.2s ease;font-size:11px;}
+  .menu-toggle[aria-expanded="true"] .menu-arrow{transform:rotate(180deg);}
+  .dropdown-menu{display:none;flex-direction:column;position:absolute;top:calc(100% + 10px);right:0;background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:8px;min-width:210px;z-index:50;box-shadow:0 14px 34px rgba(0,0,0,0.4);}
+  .dropdown-menu.open{display:flex;}
+  .dropdown-menu a{padding:13px 16px;border-radius:10px;color:var(--muted);text-decoration:none;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;}
+  .dropdown-menu a:hover{background:var(--bg);color:var(--rose);}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
     <div class="logo"><img src="images/logo.png" alt="I Like It Deep logo" style="height:50px;"></div>
-    <nav>
-      <a href="collection.html">Journals</a>
-      <a href="blog.html">Blog</a>
-      <a href="bookmarks.html">Bookmarks</a>
-      <a href="coloring-pages.html">Coloring Pages</a>
-      <a href="#about">About</a>
-      <a href="#request">Request a Journal</a>
-    </nav>
+    <div class="nav-wrap">
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainMenu" onclick="toggleMainMenu()">Menu <span class="menu-arrow">▾</span></button>
+      <nav id="mainMenu" class="dropdown-menu">
+        <a href="index.html">Home</a>
+        <a href="collection.html">Journals</a>
+        <a href="blog.html">Blog</a>
+        <a href="bookmarks.html">Bookmarks</a>
+        <a href="coloring-pages.html">Coloring Pages</a>
+        <a href="about.html">About</a>
+        <a href="request.html">Request a Journal</a>
+      </nav>
+    </div>
   </header>
 
   <article>
@@ -63,8 +78,7 @@
 
     <div class="post-body">
       <p>At 38, sitting across from the therapist I've been seeing every week, I finally got a name for something I'd been living with my whole life: BPD. I hit every checkmark on the test. Somehow, relief came before anything else did.</p>
-      <p>There's a specific kind of comfort in a diagnosis. Not because it fixes anything, but because it means you're not just "too much," or "dramatic," or "crazy" — there's an actual name for what's happening inside you, and other people have found their way through it too. Now I'm doing the work of learning how to handle it, one week at a time.</p>
-      <p>I also live with PMDD, and between the two of them, the highs and lows don't stay quiet inside me — they show up in my relationship. Three years in, with a man who is genuinely amazing, and I still sometimes can't get the right words out. "I'm fine" comes out when I'm anything but. I close off exactly when I should let him in...</p>
+      <p>There's a specific kind of comfort in a diagnosis. Not because it fixes anything, but because it means you're not just "too much," or "dramatic," or "crazy" — there's an actual name for what's happening inside you, and other people have found their way through it too. Now I'm doing the work of learning how to handle it, one week at a time...</p>
     </div>
 
     <div class="paywall">
@@ -141,6 +155,19 @@
 </div>
 
 <script>
+function toggleMainMenu(){
+  var menu = document.getElementById('mainMenu');
+  var btn = document.getElementById('menuToggle');
+  var isOpen = menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+}
+document.addEventListener('click', function(e){
+  var wrap = document.querySelector('.nav-wrap');
+  if(wrap && !wrap.contains(e.target)){
+    document.getElementById('mainMenu').classList.remove('open');
+    document.getElementById('menuToggle').setAttribute('aria-expanded', 'false');
+  }
+});
 function submitComment(){
   var name = document.getElementById('cName').value || 'Anonymous';
   var text = document.getElementById('cText').value;
