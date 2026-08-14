@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Pattern I Keep Repeating — I Like It Deep</title>
+<meta name="robots" content="noindex, nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&family=Karla:wght@400;500;600&family=Poppins:wght@400;500;600&family=Lora:ital@1&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .post-head{max-width:640px;margin:0 auto;padding:60px 0 10px;text-align:center;}
+  .post-date{font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--rose);margin-bottom:14px;}
+  .post-head h1{font-size:38px;}
+  .post-byline{color:var(--muted);font-size:13px;font-style:italic;font-family:'Cormorant Garamond',serif;}
+  .post-photo{max-width:640px;margin:34px auto;border-radius:16px;overflow:hidden;}
+  .post-photo img{width:100%;display:block;}
+  .post-body{max-width:620px;margin:0 auto;color:var(--cream);font-size:16px;line-height:1.85;}
+  .post-body p{margin:0 0 20px;}
+  .rec-section{padding:50px 0 20px;border-top:1px solid var(--line);max-width:680px;margin:0 auto;}
+  .rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px;}
+  @media (max-width:720px){ .rec-grid{grid-template-columns:1fr;} }
+  .nav-wrap{position:relative;}
+  .menu-toggle{background:transparent;border:1px solid var(--line);color:var(--muted);font-family:'Karla',sans-serif;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;padding:11px 20px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;}
+  .menu-toggle:hover{color:var(--rose);border-color:var(--rose);}
+  .menu-arrow{transition:transform 0.2s ease;font-size:11px;}
+  .menu-toggle[aria-expanded="true"] .menu-arrow{transform:rotate(180deg);}
+  .dropdown-menu{display:none;flex-direction:column;position:absolute;top:calc(100% + 10px);right:0;background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:8px;min-width:210px;z-index:50;box-shadow:0 14px 34px rgba(0,0,0,0.4);}
+  .dropdown-menu.open{display:flex;}
+  .dropdown-menu a{padding:13px 16px;border-radius:10px;color:var(--muted);text-decoration:none;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;}
+  .dropdown-menu a:hover{background:var(--bg);color:var(--rose);}
+  .back-link{display:inline-block;margin:22px 0 0;color:var(--muted);font-size:13px;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;}
+  .back-link:hover{color:var(--rose);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo"><img src="images/logo.png" alt="I Like It Deep logo" style="height:50px;"></div>
+    <div class="nav-wrap">
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainMenu" onclick="toggleMainMenu()">Menu <span class="menu-arrow">▾</span></button>
+      <nav id="mainMenu" class="dropdown-menu">
+        <a href="members-blog.html">Members Blog</a>
+        <a href="index.html">Home</a>
+      </nav>
+    </div>
+  </header>
+  <a href="members-blog.html" class="back-link">← Back to Members Blog</a>
+
+  <article>
+    <div class="post-head">
+      <div class="post-date">August 13, 2026</div>
+      <h1>The Pattern I Keep Repeating</h1>
+      <div class="post-byline">— S, founder of I Like It Deep</div>
+    </div>
+
+    <div class="post-photo">
+      <img src="images/closingpetsalon.png" alt="Woman kneeling in the rain outside a closed pet grooming salon">
+    </div>
+
+    <div class="post-body">
+      <p>Looking back at my beautiful life and all the challenges I've faced, I sure do love to self-sabotage things. It must be something wired into me — every few years, once things are going decently, some part of me says "let's fuck shit up."</p>
+      <p>A little bit about my past: I'm actually a pretty good dog groomer. Right out of high school, I went to a pretty ghetto dog grooming school. Then I worked at a few salons until I met this amazing lady named Trish. Trish was a lot older than me — maybe fifteen to twenty years — but she was really cool. I learned a lot from her, and we ended up leaving the salon where we met and opening our own little dog grooming shop together, called Precious Paws of Maplewood.</p>
+      <p>I was super young when this all began — I knew nothing other than how to groom dogs. Trish handled all the bookkeeping and the business side of things, and I loved it. An old dentist's office had been there before us, so there were already little rooms built in for us to use. We did it all ourselves, too — no loans, nothing. We saved up the money to open, and saved for all the big equipment we needed. It was badass. Young, dumb Stephanie just showed up, groomed animals, and enjoyed her life.</p>
+      <p>After two or three years of running the salon together, Trish decided to move back to Texas. I was super sad, and a little excited to have the place to myself. Well, with my awesome black-and-white thinking, some stuff hit the fan with the landlord — the strip mall got infested with mice that chewed through my phone lines. That was reason enough, in my eyes, to break the lease. With our family attorney's help, I did just that, then went looking for a new commercial space.</p>
+      <p>In the next town over, I found a building right downtown in North St. Paul, where they'd have a car show every Friday night in the summer. I loved it. I met so many new clients and had a blast. Well, give it enough time, and of course I ended up having beef with the next landlord too. Rain damage started making the inside leak, and he didn't want to pay to fix it — so I did what I do best: went looking for a new location again.</p>
+      <p>Thankfully I found one within walking distance of the last spot, just around the corner. It was a lot bigger, and by then I had a receptionist, two groomers, and a bather working for me. I was killing it, and I loved the new salon — I actually took the time to make it cute, with glitter walls and a custom-built countertop. It was amazing... until.</p>
+      <p>There was a door in the main room, right next to my grooming station, that I was told not to use — it led to a basement or something, so I didn't think much of it. Until one day the salon started to have a weird smell. It went on for a good week before I told the landlord. Turns out all the water I'd been using to bathe dogs had been flooding the basement, and it smelled like wet dog mixed with something nasty. Horrible. The landlord "took care of it" — or so I assumed. He just drained it. Months later, the smell came back. He obviously never actually fixed it.</p>
+      <p>I was furious. I'd get into screaming matches with this landlord, out in the parking lot, that bad. And if you've never met me — I can be a bit of a flirt to get my way. I may have started dating the attorney he referred to me for his own dog. I didn't realize at the time that would come in handy. Honestly, I was mostly just enjoying the free meals on dates. He was a little older, had his life together, a prosecuting attorney. That handsome man ended up helping me break my lease the legal way.</p>
+      <p>From there, I couldn't find a new salon right away, so I started working as an independent contractor out of a small salon up the road. This lady owned it, and I ran my business out of her space — paid her a flat fee, did my own clients. I did that for about five years, working alongside her, until COVID hit, and some other things came up. She wanted to leave that location and start working out of her house, so I took over the lease. And you can probably guess how this pattern usually goes.</p>
+      <p>Yep — I left that place too. This time it was because the ceiling was caving in from water damage — you could see the wires, the sheetrock coming down, all of it. It was a mess, and I may have had some personal things going on where I sort of lost myself. I'll save that for another post; I'm not sure you really want the details of my messed-up decision-making.</p>
+      <p>But this is a prime example of my self-sabotage. A therapist once told me I might be doing this subconsciously, trying to prove my mom right that I'm a failure — but I'm chalking it up to undiagnosed borderline for now. I have to investigate my patterns and dig deep to figure out how to change them. I hate that I do this. I'd love to be successful someday. I'm genuinely good at grooming, and great with customers. I'm open, I'm honest. I know exactly why this last chapter didn't go as planned, and there's no changing the past or some of those horrible decisions — but I can definitely look at my self-sabotaging patterns and start exploring how to fix them. I hate repeating history over and over.</p>
+    </div>
+
+    <section class="rec-section">
+      <div class="section-sub">If This Hit Home</div>
+      <div class="section-title">Journals that go deeper on this</div>
+      <div class="rec-grid">
+        <div class="journal-card">
+          <h3>WHY</h3>
+          <p>Recognize the behavior behind the emotion, and release it.</p>
+          <div class="card-foot"><span class="price">$17</span><a class="buy" href="https://buy.stripe.com/dRm4gBcmD6IX87U1jHgUM0A">Buy</a></div>
+        </div>
+        <div class="journal-card">
+          <h3>Pull Your Head Out</h3>
+          <p>Unpack the habits and emotions keeping you stuck.</p>
+          <div class="card-foot"><span class="price">$17</span><a class="buy" href="https://buy.stripe.com/28E7sNeuLebp4VIaUhgUM0D">Buy</a></div>
+        </div>
+        <div class="journal-card">
+          <h3>Deserve Better</h3>
+          <p>Hold yourself accountable to boundaries and to your word.</p>
+          <div class="card-foot"><span class="price">$17</span><a class="buy" href="https://buy.stripe.com/8x2dRb9ar1oDgEq3rPgUM0s">Buy</a></div>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <footer>
+    <div class="footer-disclaimer">
+      These journals are meant to help you grow and work through life's challenges — they are not a substitute for professional advice. We all deserve to be truly happy and like being in the skin we chose.
+    </div>
+  </footer>
+</div>
+<script>
+function toggleMainMenu(){
+  var menu = document.getElementById('mainMenu');
+  var btn = document.getElementById('menuToggle');
+  var isOpen = menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+}
+document.addEventListener('click', function(e){
+  var wrap = document.querySelector('.nav-wrap');
+  if(wrap && !wrap.contains(e.target)){
+    document.getElementById('mainMenu').classList.remove('open');
+    document.getElementById('menuToggle').setAttribute('aria-expanded', 'false');
+  }
+});
+</script>
+</body>
+</html>
