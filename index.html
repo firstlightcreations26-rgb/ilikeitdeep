@@ -7,7 +7,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&family=Karla:wght@400;500;600&family=Poppins:wght@400;500;600&family=Lora:ital@1&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&family=Karla:wght@400;500;600&family=Poppins:wght@400;500;600&family=Lora:ital@1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-
 <style>
   .nav-wrap{position:relative;}
   .menu-toggle{background:transparent;border:1px solid var(--line);color:var(--muted);font-family:'Karla',sans-serif;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;padding:11px 20px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;}
@@ -20,22 +19,20 @@
   .dropdown-menu a:hover{background:var(--bg);color:var(--rose);}
 </style>
 
-
 </head>
 <body>
 <div class="wrap">
   <header>
-    <div class="logo">I like it deep</div>
+   <div class="logo"><img src="images/logo.png" alt="I Like It Deep logo" style="height:50px;"></div>
     <div class="nav-wrap">
       <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainMenu" onclick="toggleMainMenu()">Menu <span class="menu-arrow">▾</span></button>
       <nav id="mainMenu" class="dropdown-menu">
-        <a href="index.html">Home</a>
         <a href="collection.html">Journals</a>
         <a href="blog.html">Blog</a>
         <a href="bookmarks.html">Bookmarks</a>
         <a href="coloring-pages.html">Coloring Pages</a>
-        <a href="about.html">About</a>
-        <a href="request.html">Request a Journal</a>
+        <a href="#about">About</a>
+        <a href="#request">Request a Journal</a>
       </nav>
     </div>
   </header>
@@ -236,19 +233,30 @@
   </script>
 
 
+  <section class="about" id="about">
+    <h2>Why I Made This</h2>
+    <p>These journals didn't start as a business. They started with me, trying to figure out what was actually blocking me — the patterns and old stories keeping me stuck, keeping me from the life I wanted to build.</p>
+    <p>Writing it out, question by question, was the thing that finally worked. So I made more — for the situations people I love were carrying too: grief, family, addiction, shame, all of it. Now that this site is finally live, I'm working through these pages myself right alongside you.</p>
+   <div class="about-signature">— S, founder of I Like It Deep</div>
+  </section>
+
   <section class="reviews">
     <div class="section-sub">In Their Words</div>
     <div class="section-title">What people are saying</div>
     <div class="reviews-empty">
       Real reviews from real people will show up here as they come in. <br>No fake ones, ever — just honest words from the people who've used these pages.
     </div>
-    <div class="review-form">
-      <h3>Bought a journal? Tell us about it.</h3>
-      <div class="star-select"><span>♥</span><span>♥</span><span>♥</span><span>♥</span><span>♥</span></div>
-      <input type="text" placeholder="S" />
-      <textarea rows="4" placeholder="What was your experience like?"></textarea>
-      <a href="mailto:ilikeitdeep26@gmail.com?subject=Journal%20Review" class="submit-review">Submit Review</a>
-      <p class="form-note">Every review goes straight to Steph's inbox and gets read by an actual person before it's posted.</p>
+  </section>
+
+  <section class="request-section" id="request">
+    <div class="section-sub">Don't See It Yet?</div>
+    <div class="section-title">Request a Journal</div>
+    <div class="request-box">
+      <p>Going through something that isn't covered yet? Tell us about it — if it fits, we'll build it.</p>
+      <input type="text" placeholder="Your name" />
+      <input type="email" placeholder="Your email" />
+      <textarea rows="4" placeholder="What kind of journal would help you?"></textarea>
+      <a href="mailto:ilikeitdeep26@gmail.com?subject=Journal%20Request" class="request-submit">Send Request</a>
     </div>
   </section>
 
@@ -273,6 +281,7 @@
   </style>
 
   <footer>
+    <div class="handwritten-quote">I'm addicted t<span class="mini-heart">♥</span> th<span class="mini-heart">♥</span>se s<span class="mini-heart">♥</span>uls wh<span class="mini-heart">♥</span> think a little deeper and l<span class="mini-heart">♥</span>ve a little harder.</div>
     <div class="footer-signup">
       <h4>Get notified about new journals</h4>
       <p>New releases drop on the 8th, 17th, or 26th. Be the first to know.</p>
@@ -282,12 +291,11 @@
       </div>
     </div>
     <div class="footer-disclaimer">
-      These journals are meant to help you grow and work through life's challenges — they are not a substitute for professional advice.
+      These journals are meant to help you grow and work through life's challenges — they are not a substitute for professional advice. We all deserve to be truly happy and like being in the skin we chose.
       <br><br><a href="privacy.html" style="color:var(--muted);">Privacy Policy</a>
     </div>
   </footer>
 </div>
-
 <script>
 function toggleMainMenu(){
   var menu = document.getElementById('mainMenu');
