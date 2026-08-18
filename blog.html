@@ -13,9 +13,32 @@
   .blog-card h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:22px;margin:0 0 8px;color:var(--cream);}
   .blog-card p{font-size:14px;color:var(--muted);margin:0 0 14px;line-height:1.6;}
   .blog-card .read-more{font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--rose);}
-  .member-banner{max-width:560px;margin:50px auto 0;background:var(--bg-soft);border:1px dashed var(--line);border-radius:18px;padding:28px 30px;text-align:center;}
-  .member-banner h3{font-family:'Cormorant Garamond',serif;font-size:22px;margin:0 0 8px;color:var(--cream);}
-  .member-banner p{color:var(--muted);font-size:13px;margin:0 0 16px;line-height:1.6;}
+
+  /* ===== Member banner (subscribe) — rose/pink gradient so it pops off the page ===== */
+  .member-banner{
+    max-width:560px;margin:56px auto 0;
+    background:linear-gradient(135deg, var(--rose), #c9668a);
+    border:none;border-radius:20px;padding:34px 30px;text-align:center;
+    box-shadow:0 14px 34px rgba(138,47,75,0.35);
+  }
+  .member-banner h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:24px;margin:0 0 8px;color:#fff;}
+  .member-banner p{color:rgba(255,255,255,0.92);font-size:13px;margin:0 0 18px;line-height:1.6;}
+  .full-bundle-btn{display:inline-block;background:#fff;color:#8a2f4b;font-family:'Karla',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:13px 28px;border-radius:999px;text-decoration:none;transition:transform 0.15s ease;}
+  .full-bundle-btn:hover{transform:translateY(-2px);}
+
+  /* ===== Promo block (journal upsell) — warm gold gradient, a different color family so it reads as its own thing ===== */
+  .promo-block{
+    max-width:560px;margin:22px auto 0;
+    background:linear-gradient(135deg,#f4d9a0,#e8b866);
+    border-radius:20px;padding:30px 28px;text-align:center;
+    box-shadow:0 14px 34px rgba(232,184,102,0.32);
+  }
+  .promo-eyebrow{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#7a4a1e;margin-bottom:8px;font-weight:700;}
+  .promo-block p{color:#3f2c10;font-size:14px;margin:0 0 18px;line-height:1.6;}
+  .promo-block strong{color:#2a1d0a;}
+  .promo-btn{display:inline-block;background:#3f2c10;color:#f4d9a0;font-family:'Karla',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:13px 28px;border-radius:999px;text-decoration:none;transition:transform 0.15s ease;}
+  .promo-btn:hover{transform:translateY(-2px);}
+
   .nav-wrap{position:relative;}
   .menu-toggle{background:transparent;border:1px solid var(--line);color:var(--muted);font-family:'Karla',sans-serif;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;padding:11px 20px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;}
   .menu-toggle:hover{color:var(--rose);border-color:var(--rose);}
@@ -48,16 +71,13 @@
     </div>
   </header>
   <a href="index.html" class="back-link">← Back to Home</a>
-
   <section class="page-head">
     <div class="eyebrow">The Blog</div>
     <h1>Thoughts from<br>the <em>deep end.</em></h1>
     <p class="page-sub">Short reads on healing, habits, and the stuff underneath. A little of every post is free — the rest is for the $5/month circle.</p>
   </section>
-
   <section class="categories">
     <div class="blog-grid">
-
       <!-- ===== POST CARD ===== -->
       <a class="blog-card" href="blog-post-diagnosis-at-38.html">
         <div class="blog-date">July 31, 2026</div>
@@ -66,7 +86,6 @@
         <span class="read-more">Read the Post →</span>
       </a>
       <!-- ===== END POST CARD ===== -->
-
       <!-- ===== POST CARD ===== -->
       <a class="blog-card" href="blog-post-the-silence-i-cant-sit-in.html">
         <div class="blog-date">August 8, 2026</div>
@@ -75,7 +94,6 @@
         <span class="read-more">Read the Post →</span>
       </a>
       <!-- ===== END POST CARD ===== -->
-
       <!-- ===== POST CARD ===== -->
       <a class="blog-card" href="blog-post-the-split-i-didnt-see-coming.html">
         <div class="blog-date">August 11, 2026</div>
@@ -84,7 +102,6 @@
         <span class="read-more">Read the Post →</span>
       </a>
       <!-- ===== END POST CARD ===== -->
-
       <!-- ===== POST CARD ===== -->
       <a class="blog-card" href="blog-post-learning-to-stay.html">
         <div class="blog-date">August 12, 2026</div>
@@ -141,25 +158,22 @@
   <span class="read-more">Read the Post →</span>
 </a>
 <!-- ===== END POST CARD ===== -->      <!-- Add your next post card here, same format -->
-
     </div>
-
     <div class="member-banner">
       <h3>Want every post, start to finish?</h3>
       <p>For $5/month you get the full version of every post, no waiting, no teaser cut-off — plus you're supporting new journals getting made.</p>
       <a href="https://buy.stripe.com/9B64gB72jc3hfAm3rPgUM16" class="full-bundle-btn">Subscribe — $5/month</a>
     </div>
-
     <div class="promo-block">
       <div class="promo-eyebrow">If this hit home</div>
       <p>Try the <strong>Self-Sabotage Journal</strong> — pages to track your own pattern and work through it, page by page.</p>
       <a href="https://buy.stripe.com/aFa3cx72j7N19bY5zXgUM19" class="promo-btn">Get the Journal — $10</a>
     </div>
   </section>
-
   <footer>
     <div class="footer-disclaimer">
-      These journals are meant to help you grow and work through life's challenges — they are not a substitute for professional advice. We all deserve to be truly happy and like being in the skin we chose.
+      This blog is where I put the parts I don't usually say out loud — the diagnosis, the split I didn't see coming, the 2am spirals and the small wins tucked in between. I started I Like It Deep to help other people process what they're carrying, and somewhere along the way this blog became part of my own process too. Some of these are hard to post. I post them anyway.
+      <br><br>Not a substitute for professional care — just one person, working through it in real time, right alongside you.
       <br><br><a href="privacy.html" style="color:var(--muted);">Privacy Policy</a>
     </div>
   </footer>
