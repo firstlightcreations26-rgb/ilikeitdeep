@@ -26,6 +26,7 @@
   --black:#141014;
   --white:#ffffff;
   --line:#f3b8d3;
+  --gold:#c9a84c;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
@@ -127,14 +128,18 @@ h2.section-title{font-family:'Cormorant Garamond',serif;font-weight:700;font-sty
 .bubble-quote{font-family:'Baloo 2',cursive;font-weight:800;font-size:1.45rem;color:var(--white);-webkit-text-stroke:2.5px var(--black);line-height:1.4;position:relative;z-index:2;}
 .color-svg{width:100%;height:auto;position:relative;z-index:2;}
 
-/* ---------- BOOKMARKS (long strip, framed) ---------- */
-.bm-sheet{max-width:920px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:16px;justify-items:center;}
-.bookmark{width:130px;min-height:440px;background:linear-gradient(180deg,var(--cream),var(--softpink) 90%);color:var(--black);border-radius:6px;padding:20px 10px;text-align:center;font-family:'Cormorant Garamond',serif;font-weight:700;font-style:italic;font-size:.98rem;display:flex;flex-direction:column;align-items:center;justify-content:space-between;border:2px solid var(--black);position:relative;box-shadow:4px 4px 0 rgba(20,16,20,.15);}
-.bookmark::before{content:"";position:absolute;inset:7px;border:1px dashed var(--hotpink);border-radius:3px;pointer-events:none;}
-.bm-hole{width:14px;height:14px;border:2px solid var(--black);border-radius:50%;background:var(--white);position:relative;z-index:2;}
-.bm-flourish{width:26px;height:26px;color:var(--hotpink);position:relative;z-index:2;}
-.bm-text{position:relative;z-index:2;line-height:1.5;}
-.bm-text span{color:var(--hotpink);font-family:'Pacifico',cursive;font-style:normal;font-size:1.05rem;display:block;margin-top:4px;}
+/* ---------- BOOKMARKS (long strip, framed, gold accents + photo slot) ---------- */
+.bm-sheet{max-width:920px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:18px;justify-items:center;}
+.bookmark{width:140px;min-height:480px;background:linear-gradient(180deg,var(--cream),var(--softpink) 90%);color:var(--black);border-radius:6px;padding:18px 10px;text-align:center;font-family:'Cormorant Garamond',serif;font-weight:700;font-style:italic;font-size:.94rem;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:12px;border:2px solid var(--black);position:relative;box-shadow:4px 4px 0 rgba(20,16,20,.15);}
+.bookmark::before{content:"";position:absolute;inset:6px;border:1px dashed var(--gold);border-radius:3px;pointer-events:none;}
+.bookmark::after{content:"";position:absolute;inset:11px;border:1px solid var(--hotpink);opacity:.35;border-radius:2px;pointer-events:none;}
+.bm-hole{width:14px;height:14px;border:2px solid var(--gold);border-radius:50%;background:var(--white);position:relative;z-index:2;margin-top:auto;}
+.bm-flourish{width:24px;height:24px;color:var(--gold);position:relative;z-index:2;}
+.bm-photo{width:76px;height:76px;border-radius:50%;border:2.5px solid var(--gold);background:var(--white);display:flex;align-items:center;justify-content:center;position:relative;z-index:2;flex-shrink:0;}
+.bm-photo svg{width:34px;height:34px;color:var(--pink);}
+.bm-photo-label{font-family:'Poppins',sans-serif;font-style:normal;font-size:.52rem;letter-spacing:.08em;text-transform:uppercase;color:var(--hotpink);position:relative;z-index:2;margin-top:-6px;}
+.bm-text{position:relative;z-index:2;line-height:1.45;}
+.bm-text span{color:var(--hotpink);font-family:'Pacifico',cursive;font-style:normal;font-size:.98rem;display:block;margin-top:4px;}
 
 /* ---------- JOURNAL PROMPTS ---------- */
 .journal-sheet{max-width:640px;margin:0 auto;background:var(--white);border:2px solid var(--black);border-radius:16px;padding:28px 30px;}
@@ -196,6 +201,14 @@ footer.gc-footer p{max-width:560px;margin:0 auto;font-size:.85rem;opacity:.85;}
   <symbol id="deco-heart" viewBox="0 0 20 20">
     <path d="M10 17 C3 12,1 7,4 4 C6.5 1.5,9.5 3,10 6 C10.5 3,13.5 1.5,16 4 C19 7,17 12,10 17 Z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
   </symbol>
+  <symbol id="deco-camera" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2.5" y="6.5" width="19" height="14" rx="2.2"/>
+      <path d="M8 6.5 L9.4 4 H14.6 L16 6.5"/>
+      <circle cx="12" cy="13.3" r="4"/>
+      <circle cx="17.6" cy="9.6" r=".6" fill="currentColor" stroke="none"/>
+    </g>
+  </symbol>
 </svg>
 
 <!-- ================= NAV / BACK BUTTON ================= -->
@@ -203,10 +216,6 @@ footer.gc-footer p{max-width:560px;margin:0 auto;font-size:.85rem;opacity:.85;}
   <a href="index.html" class="gc-logo">I like it <span>deep</span></a>
   <nav class="gc-nav">
     <a href="index.html" class="back-btn">← Back to Main Page</a>
-    <a href="collection.html">Journals</a>
-    <a href="blog.html">Blog</a>
-    <a href="bookmarks.html">Bookmarks</a>
-    <a href="about.html">About</a>
   </nav>
 </header>
 
@@ -433,6 +442,12 @@ footer.gc-footer p{max-width:560px;margin:0 auto;font-size:.85rem;opacity:.85;}
       <button class="btn btn-black print-btn" onclick="printSection('cp6')">Print This Page</button>
     </div>
 
+    <!-- Real detailed coloring page (uploaded by Steph) -->
+    <div class="color-page" id="cp7" style="grid-column:1 / -1;">
+      <img src="images/girl-code-coloring-friends.png" alt="Girl Code friendship flat-lay coloring page" style="width:100%;height:auto;border-radius:6px;position:relative;z-index:2;">
+      <button class="btn btn-black print-btn" onclick="printSection('cp7')">Print This Page</button>
+    </div>
+
   </div>
 </section>
 
@@ -444,32 +459,44 @@ footer.gc-footer p{max-width:560px;margin:0 auto;font-size:.85rem;opacity:.85;}
 
   <div class="bm-sheet" id="bmSheet">
     <div class="bookmark">
-      <svg class="bm-flourish" style="color:var(--hotpink)"><use href="#deco-flower"/></svg>
+      <div class="bm-photo"><svg><use href="#deco-camera"/></svg></div>
+      <div class="bm-photo-label">Your Photo Here</div>
+      <svg class="bm-flourish"><use href="#deco-flower"/></svg>
       <div class="bm-text">LOYALTY<br>OVER<span>Everything</span></div>
       <div class="bm-hole"></div>
     </div>
     <div class="bookmark">
-      <svg class="bm-flourish" style="color:var(--hotpink)"><use href="#deco-star"/></svg>
+      <div class="bm-photo"><svg><use href="#deco-camera"/></svg></div>
+      <div class="bm-photo-label">Your Photo Here</div>
+      <svg class="bm-flourish"><use href="#deco-star"/></svg>
       <div class="bm-text">SHE BELIEVED SHE COULD, SO<span>Her Girls Showed Up</span></div>
       <div class="bm-hole"></div>
     </div>
     <div class="bookmark">
-      <svg class="bm-flourish" style="color:var(--hotpink)"><use href="#deco-heart"/></svg>
+      <div class="bm-photo"><svg><use href="#deco-camera"/></svg></div>
+      <div class="bm-photo-label">Your Photo Here</div>
+      <svg class="bm-flourish"><use href="#deco-heart"/></svg>
       <div class="bm-text">REAL ONES DON'T NEED A<span>Reason To Show Up</span></div>
       <div class="bm-hole"></div>
     </div>
     <div class="bookmark">
-      <svg class="bm-flourish" style="color:var(--hotpink)"><use href="#deco-flower"/></svg>
+      <div class="bm-photo"><svg><use href="#deco-camera"/></svg></div>
+      <div class="bm-photo-label">Your Photo Here</div>
+      <svg class="bm-flourish"><use href="#deco-flower"/></svg>
       <div class="bm-text">GIRL CODE &gt; HIS CODE<span>Always Has, Always Will</span></div>
       <div class="bm-hole"></div>
     </div>
     <div class="bookmark">
-      <svg class="bm-flourish" style="color:var(--hotpink)"><use href="#deco-star"/></svg>
+      <div class="bm-photo"><svg><use href="#deco-camera"/></svg></div>
+      <div class="bm-photo-label">Your Photo Here</div>
+      <svg class="bm-flourish"><use href="#deco-star"/></svg>
       <div class="bm-text">PROTECT YOUR PEACE<span>&amp; Your People</span></div>
       <div class="bm-hole"></div>
     </div>
     <div class="bookmark">
-      <svg class="bm-flourish" style="color:var(--hotpink)"><use href="#deco-heart"/></svg>
+      <div class="bm-photo"><svg><use href="#deco-camera"/></svg></div>
+      <div class="bm-photo-label">Your Photo Here</div>
+      <svg class="bm-flourish"><use href="#deco-heart"/></svg>
       <div class="bm-text">LEVEL UP. GLOW UP.<span>Never Shut Up For A Man.</span></div>
       <div class="bm-hole"></div>
     </div>
@@ -477,6 +504,7 @@ footer.gc-footer p{max-width:560px;margin:0 auto;font-size:.85rem;opacity:.85;}
   <div style="text-align:center;margin-top:26px;">
     <button class="btn btn-white" onclick="printSection('bmSheet')">Print This Sheet</button>
   </div>
+  <p class="wall-note" style="color:var(--pink);">Each bookmark has a round photo spot near the top — swap in a real picture (yours, a flower, whatever fits) once you've got the image ready, and gold trim to make them feel a little more finished.</p>
 </section>
 
 <!-- ================= JOURNAL PROMPTS ================= -->
@@ -770,7 +798,7 @@ function printSection(id){
   var content = document.getElementById(id).innerHTML;
   var sprite = document.getElementById('svgSprite').outerHTML;
   var w = window.open('', '_blank');
-  w.document.write('<html><head><title>Print</title><style>' +
+  w.document.write('<html><head><title>Print</title><base href="' + document.baseURI + '"><style>' +
     'body{font-family:sans-serif;padding:30px;text-align:center;background:#fff;color:#141014;}' +
     '.bubble-quote{font-family:Georgia,serif;font-weight:800;font-size:2rem;-webkit-text-stroke:2px #141014;line-height:1.4;position:relative;z-index:2;}' +
     '.print-btn{display:none;} .story-del{display:none;} button{display:none;}' +
@@ -779,8 +807,11 @@ function printSection(id){
     '.corner-deco.tl{top:4px;left:4px;} .corner-deco.tr{top:4px;right:4px;transform:scaleX(-1);}' +
     '.corner-deco.bl{bottom:4px;left:4px;transform:scaleY(-1);} .corner-deco.br{bottom:4px;right:4px;transform:scale(-1,-1);}' +
     '.bm-sheet{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;justify-items:center;}' +
-    '.bookmark{width:130px;min-height:440px;border:2px solid #141014;border-radius:6px;padding:20px 10px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;font-family:Georgia,serif;font-style:italic;font-weight:700;position:relative;}' +
-    '.bm-flourish{width:26px;height:26px;color:#ff2f8f;} .bm-hole{width:14px;height:14px;border:2px solid #141014;border-radius:50%;}' +
+    '.bookmark{width:140px;min-height:480px;border:2px solid #141014;border-radius:6px;padding:18px 10px;display:flex;flex-direction:column;align-items:center;gap:12px;font-family:Georgia,serif;font-style:italic;font-weight:700;position:relative;}' +
+    '.bm-flourish{width:24px;height:24px;color:#c9a84c;} .bm-hole{width:14px;height:14px;border:2px solid #c9a84c;border-radius:50%;margin-top:auto;}' +
+    '.bm-photo{width:76px;height:76px;border-radius:50%;border:2.5px solid #c9a84c;display:flex;align-items:center;justify-content:center;}' +
+    '.bm-photo svg{width:34px;height:34px;color:#ff8fc4;}' +
+    '.bm-photo-label{font-family:sans-serif;font-style:normal;font-size:.5rem;letter-spacing:.08em;text-transform:uppercase;color:#ff2f8f;margin-top:-6px;}' +
     '.bm-text span{color:#ff2f8f;display:block;margin-top:4px;font-style:normal;}' +
     '.journal-sheet{text-align:left;max-width:600px;margin:0 auto;} .ruled-line{border-bottom:1px solid #999;height:26px;} h4{margin:18px 0 4px;}' +
     '.color-svg{width:100%;max-width:420px;}' +
