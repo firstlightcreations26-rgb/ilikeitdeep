@@ -4,86 +4,44 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About — I Like It Deep</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&family=Karla:wght@400;500;600&family=Poppins:wght@400;500;600&family=Lora:ital@1&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&family=Karla:wght@400;500;600&family=Poppins:wght@400;500;600&family=Lora:ital@1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-<style>
-  .nav-wrap{position:relative;}
-  .menu-toggle{background:transparent;border:1px solid var(--line);color:var(--muted);font-family:'Karla',sans-serif;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;padding:11px 20px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;}
-  .menu-toggle:hover{color:var(--rose);border-color:var(--rose);}
-  .menu-arrow{transition:transform 0.2s ease;font-size:11px;}
-  .menu-toggle[aria-expanded="true"] .menu-arrow{transform:rotate(180deg);}
-  .dropdown-menu{display:none;flex-direction:column;position:absolute;top:calc(100% + 10px);right:0;background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:8px;min-width:210px;z-index:50;box-shadow:0 14px 34px rgba(0,0,0,0.4);}
-  .dropdown-menu.open{display:flex;}
-  .dropdown-menu a{padding:13px 16px;border-radius:10px;color:var(--muted);text-decoration:none;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;}
-  .dropdown-menu a:hover{background:var(--bg);color:var(--rose);}
-  .back-link{display:inline-block;margin:22px 0 0;color:var(--muted);font-size:13px;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;}
-  .back-link:hover{color:var(--rose);}
-  .about-page{padding:20px 0 90px;max-width:640px;margin:0 auto;text-align:center;}
-  .about-photo{width:100%;max-width:420px;border-radius:18px;margin:30px auto 34px;display:block;box-shadow:0 14px 40px rgba(0,0,0,0.35);}
-  .about-page h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:34px;margin:20px 0 24px;color:var(--cream);}
-  .about-page p{color:var(--muted);font-size:15px;line-height:1.75;margin:0 0 18px;text-align:left;}
-  .about-signature{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--rose);font-size:16px;margin-top:10px;}
-</style>
 </head>
 <body>
 <div class="wrap">
   <header>
     <div class="logo"><img src="images/logo.png" alt="I Like It Deep logo" style="height:50px;"></div>
-    <div class="nav-wrap">
-      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainMenu" onclick="toggleMainMenu()">Menu <span class="menu-arrow">▾</span></button>
-      <nav id="mainMenu" class="dropdown-menu">
-        <a href="index.html">Home</a>
-        <a href="collection.html">Journals</a>
-        <a href="blog.html">Blog</a>
-        <a href="bookmarks.html">Bookmarks</a>
-        <a href="coloring-pages.html">Coloring Pages</a>
-        <a href="about.html">About</a>
-        <a href="request.html">Request a Journal</a>
-      </nav>
-    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="collection.html">Journals</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="index.html#request">Request a Journal</a>
+    </nav>
   </header>
 
-  <section class="about-page">
-    <a href="index.html" class="back-link">← Back to Home</a>
+  <div class="page-head">
+    <div class="eyebrow">About</div>
     <h1>Why I Made This</h1>
-    <img src="images/about-photo.png" alt="Woman journaling at her desk" class="about-photo">
-    <p>Why I Made This
+  </div>
 
-Hi, I'm S — the person behind I Like It Deep.
-
-This didn't start as a business plan. It started on a random night when I couldn't sleep, sitting with a notebook, trying to figure out why I kept ending up in the same painful patterns over and over — the same fights, the same shame spirals, the same old stories about myself that I never actually chose, I just inherited them. I wasn't looking to build a brand. I was just trying to survive my own head for one more night.
-
-Writing it down — actually writing it, not just thinking about it — was the first thing that ever cracked something open. Not in a "and then everything was fixed" way. In a "okay, now I can see it, now I can breathe" way. Question by question, page by page, I started understanding myself instead of just reacting to myself.
-
-Somewhere along the way I realized I wasn't the only one carrying this stuff. People I love were white-knuckling through addiction, grief they never got to talk about, families that left marks nobody warned them about, shame they'd never said out loud to another human being. So I kept writing — not just for me anymore, but for them. For you.
-
-Every journal on this site started as something real. Not a template pulled from a productivity blog. These are the actual questions I wish someone had handed me on the nights I needed them most — the ones that don't let you skate by with a surface-level answer, because you and I both know surface-level was never going to get you unstuck.
-
-I'm not a therapist, and I'm not pretending to be one. I'm just someone who believes you shouldn't have to have it all figured out before you're allowed to start healing. You can be a mess and still pick up a pen. You can be mid-relapse, mid-grief, mid-identity-crisis, mid-everything, and these pages will still meet you exactly where you are — no judgment, no small talk, no pretending you're fine when you're not.
-
-This site is finally live, but I want to be honest with you: I'm not writing this from some finished, healed-up version of myself looking back. I'm still in it. I'm still working through these same pages, right alongside you, one messy honest page at a time. If that sounds like your kind of deep, you're exactly who this was made for.
-
-— S, founder of I Like It Deep</p>
-
+  <section class="about" id="about">
+    <p>Hi, I'm S — the person behind I Like It Deep.</p>
+    <p>This didn't start as a business plan. It started on a random night when I couldn't sleep, sitting with a notebook, trying to figure out why I kept ending up in the same painful patterns over and over — the same fights, the same shame spirals, the same old stories about myself that I never actually chose, I just inherited them. I wasn't looking to build a brand. I was just trying to survive my own head for one more night.</p>
+    <p>Writing it down — actually writing it, not just thinking about it — was the first thing that ever cracked something open. Not in a "and then everything was fixed" way. In a "okay, now I can see it, now I can breathe" way. Question by question, page by page, I started understanding myself instead of just reacting to myself.</p>
+    <p>Somewhere along the way I realized I wasn't the only one carrying this stuff. People I love were white-knuckling through addiction, grief they never got to talk about, families that left marks nobody warned them about, shame they'd never said out loud to another human being. So I kept writing — not just for me anymore, but for them. For you.</p>
+    <p>Every journal on this site started as something real. Not a template pulled from a productivity blog. These are the actual questions I wish someone had handed me on the nights I needed them most — the ones that don't let you skate by with a surface-level answer, because you and I both know surface-level was never going to get you unstuck.</p>
+    <p>I'm not a therapist, and I'm not pretending to be one. I'm just someone who believes you shouldn't have to have it all figured out before you're allowed to start healing. You can be a mess and still pick up a pen. You can be mid-relapse, mid-grief, mid-identity-crisis, mid-everything, and these pages will still meet you exactly where you are — no judgment, no small talk, no pretending you're fine when you're not.</p>
+    <p>This site is finally live, but I want to be honest with you: I'm not writing this from some finished, healed-up version of myself looking back. I'm still in it. I'm still working through these same pages, right alongside you, one messy honest page at a time. If that sounds like your kind of deep, you're exactly who this was made for.</p>
     <div class="about-signature">— S, founder of I Like It Deep</div>
-    <p style="margin-top:24px;text-align:center;">If you have any questions or concerns, please email me at <a href="mailto:ilikeitdeep26@gmail.com" style="color:var(--rose);">ilikeitdeep26@gmail.com</a></p>
   </section>
 
+  <footer>
+    <div class="footer-disclaimer">
+      These journals are meant to help you grow and work through life's challenges — they are not a substitute for professional advice. We all deserve to be truly happy and like being in the skin we chose.
+      <br><br><a href="index.html">&larr; Back to Home</a>
+    </div>
+  </footer>
 </div>
-<script>
-function toggleMainMenu(){
-  var menu = document.getElementById('mainMenu');
-  var btn = document.getElementById('menuToggle');
-  var isOpen = menu.classList.toggle('open');
-  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-}
-document.addEventListener('click', function(e){
-  var wrap = document.querySelector('.nav-wrap');
-  if(wrap && !wrap.contains(e.target)){
-    document.getElementById('mainMenu').classList.remove('open');
-    document.getElementById('menuToggle').setAttribute('aria-expanded', 'false');
-  }
-});
-</script>
 </body>
 </html>
