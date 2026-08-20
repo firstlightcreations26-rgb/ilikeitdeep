@@ -6,23 +6,52 @@
 <title>About — I Like It Deep</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&family=Karla:wght@400;500;600&family=Poppins:wght@400;500;600&family=Lora:ital@1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+  /* Tap-to-open "Menu ▾" — same drop-down the rest of your site uses */
+  .nav-wrap{position:relative;}
+  .menu-toggle{background:transparent;border:1px solid var(--line);color:var(--muted);font-family:'Karla',sans-serif;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;padding:11px 20px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;}
+  .menu-toggle:hover{color:var(--rose);border-color:var(--rose);}
+  .menu-arrow{transition:transform 0.2s ease;font-size:11px;}
+  .menu-toggle[aria-expanded="true"] .menu-arrow{transform:rotate(180deg);}
+  .dropdown-menu{display:none;flex-direction:column;position:absolute;top:calc(100% + 10px);right:0;background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:8px;min-width:210px;z-index:50;box-shadow:0 14px 34px rgba(0,0,0,0.4);}
+  .dropdown-menu.open{display:flex;}
+  .dropdown-menu a{padding:13px 16px;border-radius:10px;color:var(--muted);text-decoration:none;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;}
+  .dropdown-menu a:hover{background:var(--bg);color:var(--rose);}
+
+  /* Your photo */
+  .about-photo{max-width:290px;margin:32px auto 0;}
+  .about-photo img{width:100%;display:block;border-radius:18px;box-shadow:0 14px 34px rgba(0,0,0,0.35);}
+
+  /* Bigger, easier-to-read text on this page */
+  .about p{font-size:18.5px;line-height:1.9;color:var(--cream);}
+  .about-signature{font-size:20px;}
+</style>
 </head>
 <body>
 <div class="wrap">
   <header>
     <div class="logo"><img src="images/logo.png" alt="I Like It Deep logo" style="height:50px;"></div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="collection.html">Journals</a>
-      <a href="blog.html">Blog</a>
-      <a href="about.html">About</a>
-      <a href="index.html#request">Request a Journal</a>
-    </nav>
+    <div class="nav-wrap">
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainMenu" onclick="toggleMainMenu()">Menu <span class="menu-arrow">▾</span></button>
+      <nav id="mainMenu" class="dropdown-menu">
+        <a href="index.html">Home</a>
+        <a href="collection.html">Journals</a>
+        <a href="blog.html">Blog</a>
+        <a href="bookmarks.html">Bookmarks</a>
+        <a href="coloring-pages.html">Coloring Pages</a>
+        <a href="about.html">About</a>
+        <a href="index.html#request">Request a Journal</a>
+      </nav>
+    </div>
   </header>
 
   <div class="page-head">
     <div class="eyebrow">About</div>
     <h1>Why I Made This</h1>
+  </div>
+
+  <div class="about-photo">
+    <img src="images/about-me.jpg" alt="S, founder of I Like It Deep">
   </div>
 
   <section class="about" id="about">
@@ -43,5 +72,20 @@
     </div>
   </footer>
 </div>
+<script>
+function toggleMainMenu(){
+  var menu = document.getElementById('mainMenu');
+  var btn = document.getElementById('menuToggle');
+  var isOpen = menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+}
+document.addEventListener('click', function(e){
+  var wrap = document.querySelector('.nav-wrap');
+  if(wrap && !wrap.contains(e.target)){
+    document.getElementById('mainMenu').classList.remove('open');
+    document.getElementById('menuToggle').setAttribute('aria-expanded', 'false');
+  }
+});
+</script>
 </body>
 </html>
