@@ -1,265 +1,151 @@
-/* =========================================================
-   I LIKE IT DEEP — ORIGINAL BLOG-STYLE LANDING PAGE
-   ========================================================= */
+/* ilikeitdeep.us — shared styles */
+:root{
+  --bg: #2E2D33;
+  --bg-soft: #38373E;
+  --rose: #D9789A;
+  --rose-deep: #C9557F;
+  --cream: #F3EFE9;
+  --muted: #B9B4BC;
+  --line: rgba(243,239,233,0.12);
 
-.landing-page {
-  background: #2E2D33 !important;
-  color: #F3EFE9 !important;
+  --cat-healing: #E8B4C4;
+  --cat-recovery: #A9C6D8;
+  --cat-family: #C9B6DE;
+  --cat-faith: #E8D9A8;
+  --cat-grief: #B9C9B4;
+  --cat-daily: #F0B7A0;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--cream);font-family:'Karla',sans-serif;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
+a{color:inherit;}
+
+header{padding:22px 0;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);}
+.logo-img{height:38px;}
+.logo{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:22px;color:var(--rose);}
+nav a{color:var(--muted);text-decoration:none;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;margin-left:28px;}
+nav a:hover{color:var(--rose);}
+
+.hero{padding:90px 0 70px;text-align:center;}
+.eyebrow{color:var(--rose);font-size:15px;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:18px;}
+h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:56px;line-height:1.1;margin:0 0 22px;color:var(--cream);}
+h1 em{color:var(--rose);font-style:italic;}
+.sub{max-width:480px;margin:0 auto 34px;color:var(--muted);font-size:16px;line-height:1.6;}
+.cta{display:inline-block;background:var(--rose-deep);color:var(--cream);padding:14px 34px;border-radius:30px;text-decoration:none;font-size:14px;letter-spacing:0.05em;text-transform:uppercase;font-weight:600;}
+.cta:hover{background:var(--rose);}
+.tagline{margin-top:26px;font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--muted);font-size:19px;line-height:1.5;}
+
+.categories{padding:50px 0 90px;}
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px;}
+.cat-card{background:var(--bg-soft);border:1px solid var(--line);border-radius:18px;padding:30px 20px 26px;text-align:center;text-decoration:none;display:block;}
+.cat-card svg{width:56px;height:56px;margin-bottom:14px;}
+.cat-card h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:20px;margin:0 0 6px;color:var(--cream);}
+.cat-card p{font-size:12.5px;color:var(--muted);margin:0;line-height:1.5;}
+
+.section-title{text-align:center;font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;color:var(--cream);}
+.section-sub{text-align:center;color:var(--muted);font-size:13px;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;}
+
+.about{padding:70px 0;border-top:1px solid var(--line);max-width:620px;margin:0 auto;text-align:center;}
+.about h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:30px;margin:0 0 20px;}
+.about p{color:var(--muted);font-size:15px;line-height:1.75;margin:0 0 18px;}
+.about-signature{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--rose);font-size:16px;margin-top:10px;}
+
+.reviews{padding:70px 0 90px;border-top:1px solid var(--line);}
+.reviews-empty{text-align:center;color:var(--muted);font-size:14px;line-height:1.7;max-width:440px;margin:34px auto 44px;}
+.review-form{max-width:420px;margin:0 auto;background:var(--bg-soft);border:1px solid var(--line);border-radius:18px;padding:32px 28px;text-align:center;}
+.review-form h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:21px;margin:0 0 16px;}
+.star-select{font-size:22px;letter-spacing:6px;color:var(--rose);margin-bottom:18px;}
+.review-form input,.review-form textarea{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:10px;color:var(--cream);font-family:'Karla',sans-serif;font-size:14px;padding:12px 14px;margin-bottom:12px;resize:none;}
+.review-form input::placeholder,.review-form textarea::placeholder{color:var(--muted);}
+.submit-review{display:inline-block;background:var(--rose-deep);color:var(--cream);text-decoration:none;font-size:13px;letter-spacing:0.05em;text-transform:uppercase;font-weight:600;padding:12px 30px;border-radius:26px;margin-top:4px;}
+.form-note{font-size:11px;color:var(--muted);margin:14px 0 0;line-height:1.5;}
+
+.request-section{padding:70px 0 90px;border-top:1px solid var(--line);}
+.request-box{max-width:460px;margin:34px auto 0;background:var(--bg-soft);border:1px solid var(--line);border-radius:18px;padding:32px 28px;text-align:center;}
+.request-box p{color:var(--muted);font-size:14px;line-height:1.6;margin:0 0 20px;}
+.request-box input,.request-box textarea{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:10px;color:var(--cream);font-family:'Karla',sans-serif;font-size:14px;padding:12px 14px;margin-bottom:12px;resize:none;}
+.request-box input::placeholder,.request-box textarea::placeholder{color:var(--muted);}
+.request-submit{display:inline-block;background:var(--rose-deep);color:var(--cream);text-decoration:none;font-size:13px;letter-spacing:0.05em;text-transform:uppercase;font-weight:600;padding:12px 30px;border-radius:26px;margin-top:4px;}
+
+footer{border-top:1px solid var(--line);padding:44px 0 30px;text-align:center;color:var(--muted);font-size:11.5px;}
+.footer-signup{max-width:420px;margin:0 auto 34px;}
+.footer-signup h4{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:19px;color:var(--cream);margin:0 0 8px;}
+.footer-signup p{color:var(--muted);font-size:12.5px;margin:0 0 16px;}
+.signup-row{display:flex;gap:8px;}
+.signup-row input{flex:1;background:var(--bg-soft);border:1px solid var(--line);border-radius:24px;color:var(--cream);font-family:'Karla',sans-serif;font-size:13px;padding:11px 16px;}
+.signup-row input::placeholder{color:var(--muted);}
+.signup-btn{background:var(--rose-deep);color:var(--cream);border:none;border-radius:24px;padding:11px 22px;font-size:12px;letter-spacing:0.05em;text-transform:uppercase;font-weight:600;cursor:pointer;white-space:nowrap;}
+.footer-disclaimer{max-width:520px;margin:0 auto;padding-top:24px;border-top:1px solid var(--line);line-height:1.6;}
+
+/* Collection page */
+.page-head{text-align:center;padding:60px 0 20px;}
+.page-sub{color:var(--muted);font-size:15px;max-width:460px;margin:0 auto;line-height:1.6;}
+.category-block{padding:56px 0 10px;}
+.cat-header{display:flex;align-items:center;gap:16px;margin-bottom:28px;border-bottom:1px solid var(--line);padding-bottom:18px;}
+.cat-header svg{width:40px;height:40px;flex-shrink:0;}
+.cat-header h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:26px;margin:0;}
+.cat-header p{color:var(--muted);font-size:12.5px;margin:2px 0 0;}
+.journal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:24px;}
+.journal-card{background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:18px 20px;}
+.journal-card h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:23px;margin:0 0 8px;}
+.journal-card p{font-size:15px;color:var(--muted);margin:0 0 14px;line-height:1.55;}
+.card-foot{display:flex;align-items:center;justify-content:space-between;}
+.price{font-size:13px;color:var(--cream);font-weight:600;}
+.buy{font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--rose);text-decoration:none;border:1px solid var(--rose);padding:6px 14px;border-radius:20px;}
+
+.full-bundle{max-width:560px;margin:60px auto 0;background:var(--bg-soft);border:1px dashed var(--line);border-radius:18px;padding:30px;text-align:center;}
+.full-bundle h3{font-family:'Cormorant Garamond',serif;font-size:22px;margin:0 0 8px;}
+.full-bundle p{color:var(--muted);font-size:13px;margin:0 0 16px;}
+.full-bundle-btn{display:inline-block;background:var(--rose-deep);color:var(--cream);text-decoration:none;font-size:13px;letter-spacing:0.05em;text-transform:uppercase;font-weight:600;padding:12px 30px;border-radius:26px;}
+
+@media (max-width:720px){
+  .cat-grid{grid-template-columns:repeat(2,1fr);}
+  .journal-grid{grid-template-columns:1fr;}
+  h1{font-size:38px;}
 }
 
-/* ---------- PAGE BACKGROUND ---------- */
-
-.landing-page .wrap {
-  background: #2E2D33;
+/* Blog post "journals that relate" cards — spiced up */
+.rec-grid .journal-card{
+  position:relative;
+  background:linear-gradient(160deg, var(--bg-soft) 0%, #403847 100%);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:24px 20px 20px;
+  overflow:hidden;
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
-
-.landing-page section {
-  background: #2E2D33 !important;
+.rec-grid .journal-card::before{
+  content:"";
+  position:absolute;
+  top:0;left:0;right:0;
+  height:5px;
+  background:linear-gradient(90deg, var(--rose), var(--cat-healing));
 }
+.rec-grid .journal-card:nth-child(2)::before{background:linear-gradient(90deg, var(--cat-family), var(--cat-recovery));}
+.rec-grid .journal-card:nth-child(3)::before{background:linear-gradient(90deg, var(--cat-faith), var(--rose-deep));}
+.rec-grid .journal-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,0.35);border-color:var(--rose);}
+.rec-grid .journal-card h3{color:var(--rose);font-size:21px;}
+.rec-grid .journal-card .buy{background:var(--rose-deep);color:var(--cream);border-color:var(--rose-deep);font-weight:700;}
+.rec-grid .journal-card .buy:hover{background:var(--rose);border-color:var(--rose);}
 
-/* ---------- HEADER ---------- */
+/* Self-sabotage promo block on blog page */
+.promo-block{max-width:600px;margin:40px auto 0;padding:30px 28px;background:var(--bg-soft);border:1px solid var(--line);border-radius:18px;text-align:center;}
+.promo-block .promo-eyebrow{text-transform:uppercase;letter-spacing:0.14em;font-size:11px;color:var(--rose);margin-bottom:10px;}
+.promo-block p{font-size:15px;color:var(--cream);line-height:1.6;margin:0 0 18px;}
+.promo-block .promo-btn{display:inline-block;background:var(--rose-deep);color:var(--cream);padding:12px 28px;text-decoration:none;border-radius:26px;font-size:13px;letter-spacing:0.05em;text-transform:uppercase;font-weight:600;}
+.promo-block .promo-btn:hover{background:var(--rose);}
 
-.landing-page header {
-  background: rgba(46, 45, 51, 0.96) !important;
-  border-bottom: 1px solid #4F4D53 !important;
+/* ===== Journal cover photos on the Journals page ===== */
+/* Keeps every cover inside its box and all the exact same size (fixes huge/uneven covers on phones) */
+.journal-card .card-cover{
+  width:100%;
+  aspect-ratio:1179 / 1620;   /* the shape of your covers */
+  object-fit:cover;
+  border-radius:10px;
+  display:block;
+  margin-bottom:14px;
+  box-shadow:0 4px 14px rgba(0,0,0,0.25);
+  background:var(--bg-soft);
 }
-
-.landing-page .logo {
-  color: #C9557F !important;
-}
-
-.landing-page nav a {
-  color: #B9B4BC !important;
-}
-
-.landing-page nav a:hover {
-  color: #D9789A !important;
-}
-
-/* ---------- HERO ---------- */
-
-.landing-page .hero {
-  background: #2E2D33 !important;
-}
-
-/* REMOVE THE GIANT PURPLE CIRCLE */
-
-.landing-page .hero::after {
-  display: none !important;
-}
-
-.landing-page .eyebrow {
-  color: #C9557F !important;
-}
-
-.landing-page .hero h1 {
-  color: #F3EFE9 !important;
-  font-family: 'Cormorant Garamond', serif !important;
-}
-
-.landing-page .hero h1 em {
-  color: #C9557F !important;
-}
-
-.landing-page .hero h1 em::after {
-  background: #C9557F !important;
-  opacity: .35;
-}
-
-.landing-page .hero p {
-  color: #B9B4BC !important;
-}
-
-/* ---------- BUTTONS ---------- */
-
-.landing-page .cta {
-  background: #C9557F !important;
-  color: #F3EFE9 !important;
-}
-
-.landing-page .cta:hover {
-  background: #D9789A !important;
-}
-
-/* ---------- TAGLINE ---------- */
-
-.landing-page .tagline {
-  color: #F3EFE9 !important;
-}
-
-/* ---------- CATEGORY SECTION ---------- */
-
-.landing-page .section-sub,
-.landing-page .depth-label {
-  color: #C9557F !important;
-}
-
-.landing-page .section-title,
-.landing-page section.depth h2 {
-  color: #F3EFE9 !important;
-  font-family: 'Cormorant Garamond', serif !important;
-}
-
-.landing-page .section-sub {
-  color: #C9557F !important;
-}
-
-/* ---------- CATEGORY CARDS ---------- */
-
-.landing-page .cat-card,
-.landing-page .card,
-.landing-page .journal-card {
-  background: #38373E !important;
-  border: 1px solid #4F4D53 !important;
-}
-
-.landing-page .cat-card h3,
-.landing-page .card h3,
-.landing-page .journal-card h3 {
-  color: #F3EFE9 !important;
-  font-family: 'Cormorant Garamond', serif !important;
-}
-
-.landing-page .cat-card p,
-.landing-page .card p,
-.landing-page .journal-card p {
-  color: #B9B4BC !important;
-}
-
-/* ---------- CATEGORY ICONS ---------- */
-
-.landing-page .cat-card svg {
-  opacity: .85;
-}
-
-/* ---------- PREVIEW SECTION ---------- */
-
-.landing-page .preview-section {
-  background: #2E2D33 !important;
-}
-
-.landing-page .flipbook-caption {
-  color: #C9557F !important;
-}
-
-.landing-page .flipbook-title {
-  color: #F3EFE9 !important;
-}
-
-.landing-page .flipbook-price {
-  color: #B9B4BC !important;
-}
-
-/* ---------- FLIPBOOK BUTTONS ---------- */
-
-.landing-page .fb-btn {
-  background: #38373E !important;
-  color: #C9557F !important;
-  border-color: #4F4D53 !important;
-}
-
-.landing-page .fb-btn:hover {
-  background: #45444B !important;
-}
-
-/* ---------- REVIEWS ---------- */
-
-.landing-page .reviews {
-  background: #2E2D33 !important;
-}
-
-.landing-page .reviews-empty {
-  color: #B9B4BC !important;
-}
-
-.landing-page .review-form {
-  background: #38373E !important;
-  border: 1px solid #4F4D53 !important;
-}
-
-.landing-page .review-form h3 {
-  color: #F3EFE9 !important;
-  font-family: 'Cormorant Garamond', serif !important;
-}
-
-.landing-page .star-select span {
-  color: #C9557F !important;
-}
-
-/* ---------- REQUEST SECTION ---------- */
-
-.landing-page .request-section {
-  background: #2E2D33 !important;
-}
-
-.landing-page .request-box {
-  background: #38373E !important;
-  border: 1px solid #4F4D53 !important;
-}
-
-.landing-page .request-box p {
-  color: #B9B4BC !important;
-}
-
-/* ---------- INPUTS ---------- */
-
-.landing-page input,
-.landing-page textarea,
-.landing-page select {
-  background: #2E2D33 !important;
-  color: #F3EFE9 !important;
-  border: 1px solid #4F4D53 !important;
-}
-
-.landing-page input::placeholder,
-.landing-page textarea::placeholder {
-  color: #8F8A92 !important;
-}
-
-/* ---------- FOOTER ---------- */
-
-.landing-page footer {
-  background: #2E2D33 !important;
-  border-top: 1px solid #4F4D53 !important;
-}
-
-.landing-page footer .f-logo {
-  color: #F3EFE9 !important;
-}
-
-.landing-page footer .f-logo span {
-  color: #C9557F !important;
-}
-
-.landing-page footer p {
-  color: #B9B4BC !important;
-}
-
-.landing-page .handwritten-quote {
-  color: #C9557F !important;
-}
-
-/* ---------- GENERAL TEXT ---------- */
-
-.landing-page p {
-  color: #B9B4BC;
-}
-
-.landing-page h1,
-.landing-page h2,
-.landing-page h3,
-.landing-page h4,
-.landing-page h5,
-.landing-page h6 {
-  color: #F3EFE9;
-}
-
-/* ---------- LINK COLOR ---------- */
-
-.landing-page a {
-  color: #C9557F;
-}
-
-.landing-page a:hover {
-  color: #D9789A;
-}
+/* Safety net so no image on a card can ever blow past its box */
+.journal-card img{max-width:100%;height:auto;}
