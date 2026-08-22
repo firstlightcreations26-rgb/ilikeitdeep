@@ -122,13 +122,13 @@
 
   <style>
   /* Colorful category tiles — main page only */
-  .categories .cat-grid{ grid-template-columns:1fr !important; gap:14px !important; }
+  .categories .cat-grid{ grid-template-columns:1fr !important; gap:14px !important; margin-left:-16px !important; margin-right:-16px !important; }
   .categories .cat-card{
-    background:var(--tile-bg) !important;
-    border:none !important;
+    background:var(--bg-soft) !important;
+    border:2.5px solid var(--tile-bg) !important;
     border-radius:14px;
     transition:transform 0.15s ease, box-shadow 0.15s ease;
-    box-shadow:0 0 18px var(--tile-glow), 0 0 6px var(--tile-glow) !important;
+    box-shadow:0 0 15px var(--tile-glow), 0 0 4px var(--tile-glow) !important;
     display:grid !important;
     grid-template-columns:auto 1fr;
     column-gap:18px;
@@ -137,11 +137,11 @@
     text-align:left !important;
     padding:22px 20px !important;
   }
-  .categories .cat-card:hover{ transform:translateY(-2px); box-shadow:0 0 26px var(--tile-glow), 0 0 9px var(--tile-glow) !important; }
-  .categories .cat-card svg{ stroke:var(--tile-ink) !important; grid-column:1; grid-row:1 / span 2; align-self:center; width:46px !important; height:46px !important; margin:0 !important; }
-  .categories .cat-card svg [fill]:not([fill="none"]){ fill:var(--tile-ink) !important; }
-  .categories .cat-card h3{ color:var(--tile-ink) !important; grid-column:2; grid-row:1; margin:0 !important; font-size:19px !important; }
-  .categories .cat-card p{ color:var(--tile-ink) !important; opacity:0.8; grid-column:2; grid-row:2; margin:0 !important; }
+  .categories .cat-card:hover{ transform:translateY(-2px); box-shadow:0 0 22px var(--tile-glow), 0 0 7px var(--tile-glow) !important; }
+  .categories .cat-card svg{ stroke:var(--tile-bg) !important; grid-column:1; grid-row:1 / span 2; align-self:center; width:46px !important; height:46px !important; margin:0 !important; }
+  .categories .cat-card svg [fill]:not([fill="none"]){ fill:var(--tile-bg) !important; }
+  .categories .cat-card h3{ color:var(--cream) !important; grid-column:2; grid-row:1; margin:0 !important; font-size:19px !important; }
+  .categories .cat-card p{ color:var(--muted) !important; grid-column:2; grid-row:2; margin:0 !important; }
   </style>
 
   <section class="categories">
