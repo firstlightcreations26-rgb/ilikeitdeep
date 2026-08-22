@@ -18,6 +18,7 @@
     --muted:#b9b4bc;
     --line:rgba(250,246,239,0.10);
   }
+  html{scroll-behavior:smooth;}
   .nav-wrap{position:relative;}
   .menu-toggle{background:transparent;border:1px solid var(--line);color:var(--muted);font-family:'Karla',sans-serif;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;padding:11px 20px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;}
   .menu-toggle:hover{color:var(--rose);border-color:var(--rose);}
@@ -40,7 +41,7 @@
   .post-body p{margin-bottom:22px;}
   .post-aside{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--muted);border-top:1px solid var(--line);padding-top:22px;margin-top:8px;}
 
-  .related-wrap{max-width:1000px;margin:60px auto 0;padding:0 22px 70px;}
+  .related-wrap{max-width:1000px;margin:60px auto 0;padding:0 22px 40px;}
   .related-eyebrow{text-align:center;font-family:'Karla',sans-serif;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:var(--rose-soft);margin-bottom:8px;}
   .related-title{text-align:center;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(22px,4vw,30px);color:var(--cream);margin-bottom:34px;}
   .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
@@ -53,10 +54,18 @@
   .journal-card .price{font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--rose-soft);}
   .journal-card .buy{background:var(--rose);color:var(--cream);font-weight:700;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;padding:9px 18px;border-radius:999px;text-decoration:none;}
   .journal-card .reassure{font-family:'Karla',sans-serif;font-size:11.5px;color:var(--muted);opacity:0.75;}
+
+  /* bottom back buttons */
+  .post-nav-bottom{max-width:700px;margin:0 auto;padding:0 22px 64px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .pnb-btn{font-family:'Karla',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:13px 26px;border-radius:999px;text-decoration:none;}
+  .pnb-primary{background:var(--rose);color:var(--cream);}
+  .pnb-primary:hover{background:var(--rose-soft);color:var(--bg);}
+  .pnb-ghost{border:1px solid var(--line);color:var(--muted);}
+  .pnb-ghost:hover{color:var(--rose);border-color:var(--rose);}
 </style>
 </head>
 <body>
-<div class="wrap">
+<div class="wrap" id="top">
   <header>
    <div class="logo"><img src="images/logo.png" alt="I Like It Deep logo" style="height:50px;"></div>
     <div class="nav-wrap">
@@ -79,7 +88,7 @@
     <p class="post-byline">— S, founder of I Like It Deep</p>
 
     <div class="post-image">
-      <img src="images/sister.pgn" alt="Bike ride along the shore looking for agates">
+      <img src="images/sister.png" alt="Bike ride along the shore looking for agates">
     </div>
 
     <div class="post-body">
@@ -140,8 +149,12 @@
     </div>
   </div>
 
+  <div class="post-nav-bottom">
+    <a href="blog.html" class="pnb-btn pnb-primary">&larr; Back to Blog</a>
+    <a href="#top" class="pnb-btn pnb-ghost">&uarr; Back to Top</a>
+  </div>
+
   <footer>
-    <div class="handwritten-quote" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:var(--rose-soft);text-align:center;max-width:480px;margin:0 auto 26px;line-height:1.5;">I'm addicted to these souls who think a little deeper and love a little harder.</div>
     <div class="footer-disclaimer">
       These journals are meant to help you grow and work through life's challenges — they are not a substitute for professional advice. We all deserve to be truly happy and like being in the skin we chose.
       <br><br><a href="privacy.html" style="color:var(--muted);">Privacy Policy</a>
