@@ -8,12 +8,46 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=5">
 <script src="details-buttons.js" defer></script>
+<style>
+  /* dropdown menu */
+  .nav-wrap{position:relative;}
+  .menu-toggle{background:transparent;border:1px solid var(--line);color:var(--muted);font-family:'Karla',sans-serif;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;padding:11px 20px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;}
+  .menu-toggle:hover{color:var(--rose);border-color:var(--rose);}
+  .menu-arrow{transition:transform 0.2s ease;font-size:11px;}
+  .menu-toggle[aria-expanded="true"] .menu-arrow{transform:rotate(180deg);}
+  .dropdown-menu{display:none;flex-direction:column;position:absolute;top:calc(100% + 10px);right:0;background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:8px;min-width:210px;z-index:50;box-shadow:0 14px 34px rgba(0,0,0,0.4);}
+  .dropdown-menu.open{display:flex;}
+  .dropdown-menu a{padding:13px 16px;border-radius:10px;color:var(--muted);text-decoration:none;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;}
+  .dropdown-menu a:hover{background:var(--bg);color:var(--rose);}
+
+  /* soft category-color outline on each journal card */
+  #healing .journal-card{border:1.5px solid var(--cat-healing);}
+  #healing-after-harm .journal-card{border:1.5px solid #9BC4D4;}
+  #recovery .journal-card{border:1.5px solid var(--cat-recovery);}
+  #family .journal-card{border:1.5px solid var(--cat-family);}
+  #faith .journal-card{border:1.5px solid var(--cat-faith);}
+  #grief .journal-card{border:1.5px solid var(--cat-grief);}
+  #daily .journal-card{border:1.5px solid var(--cat-daily);}
+  #badbitch .journal-card{border:1.5px solid #8a2f4b;}
+  #packets .journal-card{border:1.5px solid var(--cat-daily);}
+</style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <div class="logo">I like it deep</div>
-    <nav><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="about.html">About</a><a href="index.html#request">Request a Journal</a></nav>
+   <div class="logo"><img src="images/logo.png" alt="I Like It Deep logo" style="height:50px;"></div>
+    <div class="nav-wrap">
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainMenu" onclick="toggleMainMenu()">Menu <span class="menu-arrow">▾</span></button>
+      <nav id="mainMenu" class="dropdown-menu">
+        <a href="collection.html">Journals</a>
+        <a href="blog.html">Blog</a>
+        <a href="girl-code.html">Girl Code</a>
+        <a href="bookmarks.html">Bookmarks</a>
+        <a href="coloring-pages.html">Coloring Pages</a>
+        <a href="about.html">About</a>
+        <a href="index.html#request">Request a Journal</a>
+      </nav>
+    </div>
   </header>
 
   <div class="page-head">
@@ -23,18 +57,18 @@
   </div>
 
   <style>
-  .feat-journal{max-width:680px;margin:0 auto 24px;background:var(--bg-soft);border:1px solid var(--rose);border-radius:16px;padding:20px 22px;}
-  .feat-label{text-align:center;color:var(--rose);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;margin-bottom:16px;}
-  .feat-row{display:flex;gap:18px;align-items:center;}
-  .feat-cover{width:120px;flex-shrink:0;}
-  .feat-cover img{width:100%;aspect-ratio:1179/1620;object-fit:cover;border-radius:10px;display:block;box-shadow:0 6px 18px rgba(0,0,0,0.3);}
-  .feat-info h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:24px;color:var(--cream);margin:0 0 8px;}
-  .feat-info p{font-size:14px;color:var(--muted);line-height:1.6;margin:0 0 14px;}
-  .feat-foot{display:flex;align-items:center;gap:14px;}
-  .feat-price{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--cream);font-weight:600;}
-  .feat-buy{background:var(--rose-deep);color:var(--cream);font-family:'Karla',sans-serif;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;font-weight:700;padding:10px 22px;border-radius:24px;text-decoration:none;}
+  .feat-journal{max-width:700px;margin:0 auto 30px;background:linear-gradient(160deg,#332a33,#221d27);border:2px solid var(--rose);border-radius:20px;padding:26px 24px;box-shadow:0 0 40px rgba(138,47,75,0.35),0 14px 34px rgba(0,0,0,0.4);}
+  .feat-label{text-align:center;color:var(--rose);font-size:13px;letter-spacing:0.22em;text-transform:uppercase;font-weight:700;margin-bottom:20px;}
+  .feat-row{display:flex;gap:22px;align-items:center;}
+  .feat-cover{width:150px;flex-shrink:0;}
+  .feat-cover img{width:100%;aspect-ratio:1179/1620;object-fit:cover;border-radius:12px;display:block;box-shadow:0 10px 26px rgba(0,0,0,0.45);}
+  .feat-info h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:30px;color:var(--cream);margin:0 0 10px;}
+  .feat-info p{font-size:14.5px;color:var(--muted);line-height:1.65;margin:0 0 18px;}
+  .feat-foot{display:flex;align-items:center;gap:16px;}
+  .feat-price{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--cream);font-weight:600;}
+  .feat-buy{background:var(--rose-deep);color:var(--cream);font-family:'Karla',sans-serif;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;font-weight:700;padding:12px 28px;border-radius:24px;text-decoration:none;}
   .feat-buy:hover{background:var(--rose);}
-  @media(max-width:520px){ .feat-cover{width:98px;} .feat-info h3{font-size:20px;} }
+  @media(max-width:520px){ .feat-row{flex-direction:column;text-align:center;} .feat-foot{justify-content:center;} }
   </style>
   <section class="feat-journal">
     <div class="feat-label">&#10022; Featured this month &#10022;</div>
@@ -662,5 +696,20 @@
   </div>
 
 </div>
+<script>
+function toggleMainMenu(){
+  var menu = document.getElementById('mainMenu');
+  var btn = document.getElementById('menuToggle');
+  var isOpen = menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+}
+document.addEventListener('click', function(e){
+  var wrap = document.querySelector('.nav-wrap');
+  if(wrap && !wrap.contains(e.target)){
+    document.getElementById('mainMenu').classList.remove('open');
+    document.getElementById('menuToggle').setAttribute('aria-expanded', 'false');
+  }
+});
+</script>
 </body>
 </html>
