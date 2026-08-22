@@ -47,6 +47,54 @@
   </section>
 
   <style>
+  /* Most Loved shop row — main page only */
+  .loved-section{ padding:8px 24px 18px; }
+  .loved-section .section-sub{ margin-bottom:4px; }
+  .loved-row{ display:flex; gap:14px; overflow-x:auto; padding:6px 2px 12px; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; }
+  .loved-row::-webkit-scrollbar{ height:0; }
+  .loved-card{ flex:0 0 auto; width:150px; scroll-snap-align:start; }
+  .loved-card > a{ display:block; }
+  .loved-card img{ width:150px; aspect-ratio:1179/1620; object-fit:cover; border-radius:10px; display:block; box-shadow:0 8px 20px rgba(0,0,0,0.35); }
+  .loved-title{ font-family:'Cormorant Garamond',serif; font-weight:600; font-size:17px; color:var(--cream); margin:9px 0 5px; line-height:1.15; }
+  .loved-foot{ display:flex; align-items:center; justify-content:space-between; }
+  .loved-price{ font-family:'Cormorant Garamond',serif; font-size:16px; color:var(--cream); }
+  .loved-buy{ background:var(--rose-deep); color:var(--cream); font-family:'Karla',sans-serif; font-size:11px; letter-spacing:0.05em; text-transform:uppercase; font-weight:700; padding:7px 16px; border-radius:20px; text-decoration:none; }
+  .loved-buy:hover{ background:var(--rose); }
+  </style>
+
+  <section class="loved-section">
+    <div class="section-sub">Most Loved Right Now</div>
+    <div class="section-title">Start here</div>
+    <div class="loved-row">
+
+      <div class="loved-card">
+        <a href="https://buy.stripe.com/6oUdRb72jebpfAm9QdgUM17"><img src="images/deepdive-cover.jpg" alt="The Deep Dive journal cover" loading="lazy"></a>
+        <div class="loved-title">The Deep Dive</div>
+        <div class="loved-foot"><span class="loved-price">$17</span><a class="loved-buy" href="https://buy.stripe.com/6oUdRb72jebpfAm9QdgUM17">Buy</a></div>
+      </div>
+
+      <div class="loved-card">
+        <a href="https://buy.stripe.com/8x2fZjcmDebp1Jw1jHgUM0Q"><img src="images/cover-choose-joy.jpg" alt="Choose Joy journal cover" loading="lazy"></a>
+        <div class="loved-title">Choose Joy</div>
+        <div class="loved-foot"><span class="loved-price">$26</span><a class="loved-buy" href="https://buy.stripe.com/8x2fZjcmDebp1Jw1jHgUM0Q">Buy</a></div>
+      </div>
+
+      <div class="loved-card">
+        <a href="https://buy.stripe.com/3cI5kF0DV8R5ewi3rPgUM09"><img src="images/Quiet-Moments-Cover.jpg" alt="Quiet Moments journal cover" loading="lazy"></a>
+        <div class="loved-title">Quiet Moments</div>
+        <div class="loved-foot"><span class="loved-price">$17</span><a class="loved-buy" href="https://buy.stripe.com/3cI5kF0DV8R5ewi3rPgUM09">Buy</a></div>
+      </div>
+
+      <div class="loved-card">
+        <a href="https://buy.stripe.com/28E00l4UbgjxgEq0fDgUM0a"><img src="images/inner-work-cover.jpg" alt="Inner Work journal cover" loading="lazy"></a>
+        <div class="loved-title">Inner Work</div>
+        <div class="loved-foot"><span class="loved-price">$17</span><a class="loved-buy" href="https://buy.stripe.com/28E00l4UbgjxgEq0fDgUM0a">Buy</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <style>
   /* Colorful category tiles — main page only */
   .categories .cat-card{
     background:var(--tile-bg) !important;
