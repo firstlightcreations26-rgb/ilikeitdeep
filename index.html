@@ -46,12 +46,27 @@
    <div class="tagline">"Write it. Feel it. Heal it.<br>Your journal knows the real you."</div>
   </section>
 
+  <style>
+  /* Colorful category tiles — main page only */
+  .categories .cat-card{
+    background:var(--tile-bg) !important;
+    border:none !important;
+    border-radius:14px;
+    transition:transform 0.15s ease;
+  }
+  .categories .cat-card:hover{ transform:translateY(-2px); }
+  .categories .cat-card svg{ stroke:var(--tile-ink) !important; }
+  .categories .cat-card svg [fill]:not([fill="none"]){ fill:var(--tile-ink) !important; }
+  .categories .cat-card h3{ color:var(--tile-ink) !important; }
+  .categories .cat-card p{ color:var(--tile-ink) !important; opacity:0.8; }
+  </style>
+
   <section class="categories">
     <div class="section-sub">Depth 1 · Wading In</div>
     <div class="section-title">Choose where you start</div>
     <div class="cat-grid">
 
-      <a class="cat-card" href="collection.html#healing">
+      <a class="cat-card" href="collection.html#healing" style="--tile-bg:#E8B4C4;--tile-ink:#3d2432;">
         <svg viewBox="0 0 64 64" fill="none" stroke="var(--cat-healing)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
           <path d="M32 12 C 26 18, 26 26, 32 32 C 38 26, 38 18, 32 12 Z"/>
           <path d="M32 32 C 26 38, 18 38, 12 32 C 18 26, 26 26, 32 32 Z"/>
@@ -63,7 +78,7 @@
         <p>Shadow work, shame, the parts of you that need a witness.</p>
       </a>
 
-      <a class="cat-card" href="collection.html#recovery">
+      <a class="cat-card" href="collection.html#recovery" style="--tile-bg:#A9C6D8;--tile-ink:#1f3b48;">
         <svg viewBox="0 0 64 64" fill="none" stroke="var(--cat-recovery)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
           <path d="M32 10 C 28 14, 28 20, 32 24 C 36 20, 36 14, 32 10 Z"/>
           <path d="M32 24 C 24 24, 20 28, 18 32 C 24 34, 30 30, 32 24 Z"/>
@@ -74,7 +89,7 @@
         <p>Step-down journals for cutting back, one day at a time.</p>
       </a>
 
-      <a class="cat-card" href="collection.html#family">
+      <a class="cat-card" href="collection.html#family" style="--tile-bg:#C9B6DE;--tile-ink:#372549;">
         <svg viewBox="0 0 64 64" fill="none" stroke="var(--cat-family)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="32" cy="20" r="8"/>
           <path d="M20 30 C 16 26, 16 20, 20 16"/>
@@ -85,7 +100,7 @@
         <p>The people who shaped you — and the pages that untangle it.</p>
       </a>
 
-      <a class="cat-card" href="collection.html#faith">
+      <a class="cat-card" href="collection.html#faith" style="--tile-bg:#E8D9A8;--tile-ink:#4a3c16;">
         <svg viewBox="0 0 64 64" fill="none" stroke="var(--cat-faith)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
           <path d="M32 8 C 28 12, 28 16, 32 20 C 36 16, 36 12, 32 8 Z"/>
           <path d="M20 22 C 24 18, 28 18, 32 20 C 28 24, 24 24, 20 22 Z"/>
@@ -96,7 +111,7 @@
         <p>WHY, purpose, and the mindset work that holds everything up.</p>
       </a>
 
-      <a class="cat-card" href="collection.html#grief">
+      <a class="cat-card" href="collection.html#grief" style="--tile-bg:#B9C9B4;--tile-ink:#26401f;">
         <svg viewBox="0 0 64 64" fill="none" stroke="var(--cat-grief)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
           <path d="M32 50 C 14 38, 10 24, 18 16 C 24 10, 30 13, 32 19 C 34 13, 40 10, 46 16 C 54 24, 50 38, 32 50 Z"/>
           <path d="M28 22 L31 28 L27 32 L34 40" stroke-width="1.4"/>
@@ -105,7 +120,7 @@
         <p>For the losses that don't always get talked about — people, pets, and pieces of yourself.</p>
       </a>
 
-      <a class="cat-card" href="collection.html#daily">
+      <a class="cat-card" href="collection.html#daily" style="--tile-bg:#F0B7A0;--tile-ink:#5c2e1a;">
         <svg viewBox="0 0 64 64" fill="none" stroke="var(--cat-daily)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="32" cy="32" r="10"/>
           <path d="M32 12 L32 18 M32 46 L32 52 M12 32 L18 32 M46 32 L52 32 M18 18 L22 22 M46 46 L42 42 M46 18 L42 22 M18 46 L22 42"/>
@@ -114,7 +129,7 @@
         <p>60-day daily journals to check in with yourself, one page at a time.</p>
       </a>
 
-      <a class="cat-card" href="collection.html#badbitch">
+      <a class="cat-card" href="collection.html#badbitch" style="--tile-bg:#F0A6C4;--tile-ink:#6e2140;">
         <svg viewBox="0 0 64 64" fill="none" stroke="var(--cat-badbitch, #8a2f4b)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
           <path d="M32 10 L36 22 L48 22 L38 30 L42 42 L32 34 L22 42 L26 30 L16 22 L28 22 Z"/>
         </svg>
