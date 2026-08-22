@@ -48,13 +48,13 @@
 
   <style>
   /* Most Loved shop row — main page only */
-  .loved-section{ padding:8px 24px 18px; }
+  .loved-section{ padding:8px 24px 18px; text-align:center; }
   .loved-section .section-sub{ margin-bottom:4px; }
-  .loved-row{ display:flex; gap:14px; overflow-x:auto; padding:6px 2px 12px; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; }
-  .loved-row::-webkit-scrollbar{ height:0; }
-  .loved-card{ flex:0 0 auto; width:150px; scroll-snap-align:start; }
+  .loved-row{ display:grid; grid-template-columns:repeat(2,minmax(0,150px)); gap:16px; justify-content:center; padding:10px 0 4px; }
+  @media(min-width:640px){ .loved-row{ grid-template-columns:repeat(4,minmax(0,150px)); } }
+  .loved-card{ width:100%; text-align:left; }
   .loved-card > a{ display:block; }
-  .loved-card img{ width:150px; aspect-ratio:1179/1620; object-fit:cover; border-radius:10px; display:block; box-shadow:0 8px 20px rgba(0,0,0,0.35); }
+  .loved-card img{ width:100%; aspect-ratio:1179/1620; object-fit:cover; border-radius:10px; display:block; box-shadow:0 8px 20px rgba(0,0,0,0.35); }
   .loved-title{ font-family:'Cormorant Garamond',serif; font-weight:600; font-size:17px; color:var(--cream); margin:9px 0 5px; line-height:1.15; }
   .loved-foot{ display:flex; align-items:center; justify-content:space-between; }
   .loved-price{ font-family:'Cormorant Garamond',serif; font-size:16px; color:var(--cream); }
