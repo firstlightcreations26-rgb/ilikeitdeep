@@ -32,6 +32,7 @@
         <a href="girl-code.html">Girl Code</a>
         <a href="bookmarks.html">Bookmarks</a>
         <a href="coloring-pages.html">Coloring Pages</a>
+        <a href="worksheets.html">Free Worksheets</a>
         <a href="about.html">About</a>
         <a href="request.html">Request a Journal</a>
       </nav>
@@ -95,18 +96,51 @@
   </section>
 
   <style>
+  .worksheets-section{ padding:20px 24px 44px; text-align:center; }
+  .ws-sub{ color:var(--rose); font-size:11px; letter-spacing:0.14em; text-transform:uppercase; margin-bottom:8px; }
+  .ws-title{ font-family:'Cormorant Garamond',serif; font-weight:600; font-size:26px; margin-bottom:6px; }
+  .ws-intro{ color:var(--muted); font-size:14px; max-width:420px; margin:0 auto 22px; line-height:1.6; }
+  .ws-row{ display:grid; grid-template-columns:repeat(3,minmax(0,110px)); gap:12px; justify-content:center; margin-bottom:22px; }
+  .ws-card{ text-decoration:none; }
+  .ws-card img{ width:100%; border-radius:8px; display:block; box-shadow:0 8px 20px rgba(0,0,0,0.32); border:1px solid var(--line); }
+  .ws-name{ font-family:'Cormorant Garamond',serif; font-size:13px; color:var(--cream); margin-top:8px; line-height:1.15; }
+  .ws-btn{ display:inline-block; background:var(--rose-deep); color:var(--cream); font-family:'Karla',sans-serif; font-size:12px; letter-spacing:0.05em; text-transform:uppercase; font-weight:700; padding:11px 26px; border-radius:24px; text-decoration:none; }
+  .ws-btn:hover{ background:var(--rose); }
+  </style>
+
+  <section class="worksheets-section">
+    <div class="ws-sub">Free &middot; Printable</div>
+    <div class="ws-title">Free worksheets to start with</div>
+    <p class="ws-intro">A little taste before you buy — print them anytime, no cost.</p>
+    <div class="ws-row">
+      <a class="ws-card" href="worksheets.html"><img src="images/ws-keeping-the-spark.jpg" alt="Keeping the Spark worksheet" loading="lazy"><div class="ws-name">Keeping the Spark</div></a>
+      <a class="ws-card" href="worksheets.html"><img src="images/ws-mood-tracker.jpg" alt="Monthly Mood Tracker" loading="lazy"><div class="ws-name">Mood Tracker</div></a>
+      <a class="ws-card" href="worksheets.html"><img src="images/ws-self-care-tracker.jpg" alt="Weekly Self-Care Tracker" loading="lazy"><div class="ws-name">Self-Care Tracker</div></a>
+    </div>
+    <a class="ws-btn" href="worksheets.html">Browse all free worksheets</a>
+  </section>
+
+  <style>
   /* Colorful category tiles — main page only */
+  .categories .cat-grid{ grid-template-columns:1fr !important; gap:12px !important; }
   .categories .cat-card{
     background:var(--tile-bg) !important;
     border:none !important;
     border-radius:14px;
     transition:transform 0.15s ease;
+    display:grid !important;
+    grid-template-columns:auto 1fr;
+    column-gap:16px;
+    row-gap:3px;
+    align-items:center;
+    text-align:left !important;
+    padding:16px 18px !important;
   }
   .categories .cat-card:hover{ transform:translateY(-2px); }
-  .categories .cat-card svg{ stroke:var(--tile-ink) !important; }
+  .categories .cat-card svg{ stroke:var(--tile-ink) !important; grid-column:1; grid-row:1 / span 2; align-self:center; width:38px !important; height:38px !important; margin:0 !important; }
   .categories .cat-card svg [fill]:not([fill="none"]){ fill:var(--tile-ink) !important; }
-  .categories .cat-card h3{ color:var(--tile-ink) !important; }
-  .categories .cat-card p{ color:var(--tile-ink) !important; opacity:0.8; }
+  .categories .cat-card h3{ color:var(--tile-ink) !important; grid-column:2; grid-row:1; margin:0 !important; }
+  .categories .cat-card p{ color:var(--tile-ink) !important; opacity:0.8; grid-column:2; grid-row:2; margin:0 !important; }
   </style>
 
   <section class="categories">
