@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Nights I Couldn't Say What I Was Carrying (Full) — I Like It Deep</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&family=Karla:wght@400;500;600&family=Poppins:wght@400;500;600&family=Lora:ital@1&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .post-head{max-width:640px;margin:0 auto;padding:60px 0 10px;text-align:center;}
+  .post-date{font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--rose);margin-bottom:14px;}
+  .post-head h1{font-size:38px;}
+  .post-byline{color:var(--muted);font-size:13px;font-style:italic;font-family:'Cormorant Garamond',serif;}
+  .post-photo{max-width:640px;margin:34px auto;border-radius:16px;overflow:hidden;}
+  .post-photo img{width:100%;display:block;}
+  .post-body{max-width:620px;margin:0 auto;color:var(--cream);font-size:16px;line-height:1.85;}
+  .post-body p{margin:0 0 20px;}
+
+  .member-note{max-width:620px;margin:10px auto 50px;background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:16px 22px;text-align:center;color:var(--rose);font-size:13px;font-family:'Cormorant Garamond',serif;font-style:italic;}
+
+  .rec-section{padding:50px 0 20px;border-top:1px solid var(--line);max-width:680px;margin:0 auto;}
+  .rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px;}
+
+  @media (max-width:720px){ .rec-grid{grid-template-columns:1fr;} }
+
+  /* back navigation (added) */
+  .post-nav-bottom{max-width:700px;margin:0 auto;padding:0 22px 64px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .pnb-btn{font-family:'Karla',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:13px 26px;border-radius:999px;text-decoration:none;}
+  .pnb-primary{background:var(--rose,#8a2f4b);color:var(--cream,#FAF6EF);}
+  .pnb-primary:hover{background:var(--rose-soft,#c98aa0);color:var(--bg,#2E2D33);}
+  .pnb-ghost{border:1px solid var(--line,rgba(250,246,239,0.30));color:var(--muted,#b9b4bc);}
+  .pnb-ghost:hover{color:var(--rose,#8a2f4b);border-color:var(--rose,#8a2f4b);}
+  .top-back{display:inline-flex;align-items:center;gap:6px;font-family:'Karla',sans-serif;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:var(--rose-soft,#c98aa0);text-decoration:none;margin:0 0 18px;}
+  .top-back:hover{color:var(--blush,#f2b8c6);}
+</style>
+</head>
+<body>
+<div class="wrap" id="top">
+  <header>
+    <div class="logo"><img src="images/logo.png" alt="I Like It Deep logo" style="height:50px;"></div>
+    <nav>
+      <a href="collection.html">Journals</a>
+      <a href="blog.html">Blog</a>
+      <a href="bookmarks.html">Bookmarks</a>
+      <a href="coloring-pages.html">Coloring Pages</a>
+      <a href="#about">About</a>
+      <a href="#request">Request a Journal</a>
+    </nav>
+  </header>
+
+  <article>
+    <a href="blog.html" class="top-back">&larr; Back to Blog</a>
+    <div class="post-head">
+      <div class="post-date">July 31, 2026</div>
+      <h1>The Nights I Couldn't Say What I Was Carrying</h1>
+      <div class="post-byline">— S, founder of I Like It Deep</div>
+    </div>
+
+    <div class="post-photo">
+      <img src="images/logo.png" alt="Replace this with your blog photo">
+    </div>
+
+    <div class="post-body">
+      <p>There's a specific kind of tired that comes from carrying something you've never said out loud. Not the tired that sleep fixes — the kind that sits behind your eyes during a normal Tuesday, while you're making dinner or sitting in traffic, because some part of you is always holding something back.</p>
+      <p>For a long time I thought staying quiet about it was the strong thing to do. Like if I just didn't say it, it would stop being true, or at least stop being so heavy. It doesn't work that way. The stuff you don't say doesn't disappear — it just moves. It shows up as a short temper, or a wall you didn't mean to build, or a 2 a.m. wide-awake staring at the ceiling.</p>
+      <p>The first night I actually wrote it down — not to anyone, not for anyone to read, just onto a page — something in my chest loosened that I didn't even know was tight.</p>
+      <p>[Continue your full post here — replace this paragraph and the ones below with the rest of your writing.]</p>
+      <p>What I didn't expect was how much easier the second time was. And the third. It wasn't that the feeling got smaller — it's that I stopped being afraid of it once it had somewhere to go besides stuck inside me.</p>
+      <p>If you're in the middle of carrying something right now, you don't have to say it to a person yet. You can say it to a page first. That's allowed. That's actually where most of this starts.</p>
+    </div>
+
+    <div class="member-note">🤍 You're reading the full post as a member — thank you for supporting this.</div>
+
+    <section class="rec-section">
+      <div class="section-sub">If This Hit Home</div>
+      <div class="section-title">Journals that go deeper on this</div>
+      <div class="rec-grid">
+        <div class="journal-card">
+          <h3>Let It Out</h3>
+          <p>Journal the things you feel but never say out loud.</p>
+          <div class="card-foot"><span class="price">$17</span><a class="buy" href="https://buy.stripe.com/3cI00l0DV6IXfAme6tgUM0d">Buy</a></div>
+        </div>
+        <div class="journal-card">
+          <h3>Shame Work</h3>
+          <p>Confront shame head-on instead of letting it run the show.</p>
+          <div class="card-foot"><span class="price">$17</span><a class="buy" href="https://buy.stripe.com/fZu9AV1HZ0kzdse4vTgUM0c">Buy</a></div>
+        </div>
+        <div class="journal-card">
+          <h3>When I Couldn't Say It</h3>
+          <p>The apology, the truth, a parent never said out loud.</p>
+          <div class="card-foot"><span class="price">$17</span><a class="buy" href="https://buy.stripe.com/3cI7sN86ngjxgEqgeBgUM0h">Buy</a></div>
+        </div>
+      </div>
+    </section>
+  </article>
+  <div class="post-nav-bottom">
+    <a href="blog.html" class="pnb-btn pnb-primary">&larr; Back to Blog</a>
+    <a href="#top" class="pnb-btn pnb-ghost">&uarr; Back to Top</a>
+  </div>
+
+  <footer>
+    <div class="footer-signup">
+      <h4>Get notified about new posts &amp; journals</h4>
+      <p>New releases drop on the 8th, 17th, or 26th. Be the first to know.</p>
+      <div class="signup-row">
+        <input type="email" placeholder="Your email" />
+        <button class="signup-btn">Subscribe</button>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      These journals are meant to help you grow and work through life's challenges — they are not a substitute for professional advice. We all deserve to be truly happy and like being in the skin we chose.
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>
