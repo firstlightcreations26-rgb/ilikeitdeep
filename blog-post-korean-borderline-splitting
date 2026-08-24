@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Go Inside the Mind of a Korean Borderline When Splitting — I Like It Deep</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&family=Karla:wght@400;500;600&family=Poppins:wght@400;500;600&family=Lora:ital@1&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .nav-wrap{position:relative;}
+  .menu-toggle{background:transparent;border:1px solid var(--line,rgba(250,246,239,0.10));color:var(--muted,#b9b4bc);font-family:'Karla',sans-serif;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;padding:11px 20px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;}
+  .menu-toggle:hover{color:var(--rose,#8a2f4b);border-color:var(--rose,#8a2f4b);}
+  .menu-arrow{transition:transform 0.2s ease;font-size:11px;}
+  .menu-toggle[aria-expanded="true"] .menu-arrow{transform:rotate(180deg);}
+  .dropdown-menu{display:none;flex-direction:column;position:absolute;top:calc(100% + 10px);right:0;background:var(--bg-soft,#38373E);border:1px solid var(--line,rgba(250,246,239,0.10));border-radius:14px;padding:8px;min-width:210px;z-index:50;box-shadow:0 14px 34px rgba(0,0,0,0.4);}
+  .dropdown-menu.open{display:flex;}
+  .dropdown-menu a{padding:13px 16px;border-radius:10px;color:var(--muted,#b9b4bc);text-decoration:none;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;}
+  .dropdown-menu a:hover{background:var(--bg,#2E2D33);color:var(--rose,#8a2f4b);}
+
+  /* ---- blog post page ---- */
+  body{background:var(--bg,#2E2D33);}
+  .post-wrap{max-width:700px;margin:0 auto;padding:20px 22px 70px;}
+  .back-link{display:inline-flex;align-items:center;gap:6px;color:var(--rose-soft,#c98aa0);text-decoration:none;font-size:.8rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin:22px 0;}
+  .back-link:hover{text-decoration:underline;}
+  .post-eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--rose-soft,#c98aa0);margin-bottom:10px;}
+  .post-title{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:clamp(1.8rem,6vw,2.5rem);line-height:1.2;color:var(--cream,#FAF6EF);margin-bottom:10px;}
+  .post-subtitle{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--muted,#b9b4bc);font-size:1.05rem;margin-bottom:14px;}
+  .post-date{color:var(--muted,#b9b4bc);font-size:.85rem;margin-bottom:26px;}
+  .post-hero-img{width:100%;border-radius:12px;display:block;margin-bottom:32px;}
+  .content-note{background:var(--bg-soft,#38373E);border-left:3px solid var(--rose-soft,#c98aa0);padding:14px 18px;border-radius:8px;color:var(--muted,#b9b4bc);font-size:.82rem;line-height:1.6;margin-bottom:32px;}
+  .post-body p{color:var(--cream,#FAF6EF);font-size:1.03rem;line-height:1.85;margin-bottom:22px;font-family:'Karla',sans-serif;}
+  .post-body p.pull{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--rose-soft,#c98aa0);font-size:1.25rem;line-height:1.6;margin:30px 0;}
+
+  .fade-cut{display:none;}
+
+  .paywall{background:var(--bg-soft,#38373E);border:1px solid var(--line,rgba(250,246,239,0.10));border-radius:20px;padding:40px 30px;text-align:center;margin:0 auto 54px;}
+  .paywall .lock{font-size:2rem;margin-bottom:14px;}
+  .paywall h3{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;color:var(--cream,#FAF6EF);font-size:1.5rem;margin-bottom:14px;}
+  .paywall p{color:var(--muted,#b9b4bc);font-size:.9rem;line-height:1.65;max-width:380px;margin:0 auto 26px;}
+  .sub-btn{display:inline-block;background:var(--rose-soft,#c98aa0);color:#fff;font-weight:800;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:15px 30px;border-radius:999px;text-decoration:none;}
+
+  .related-section{margin-top:20px;padding-top:0;border-top:1px solid var(--line,rgba(250,246,239,0.10));padding-top:44px;}
+  .related-eyebrow{font-size:.75rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--rose-soft,#c98aa0);text-align:center;margin-bottom:10px;}
+  .related-title{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:clamp(1.5rem,5vw,2.1rem);color:var(--cream,#FAF6EF);text-align:center;margin-bottom:40px;}
+  .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  @media(max-width:700px){.related-grid{grid-template-columns:1fr;}}
+  .related-card{background:var(--bg-soft,#38373E);border-radius:16px;overflow:hidden;text-decoration:none;display:block;transition:transform .18s ease, box-shadow .18s ease;box-shadow:0 8px 24px rgba(0,0,0,.28);}
+  .related-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,.4);}
+  .related-card .bar{height:7px;width:100%;}
+  .bar-a{background:linear-gradient(90deg,#f2b8c6,#c98aa0);}
+  .bar-b{background:linear-gradient(90deg,#b8a3f2,#8ac9c4);}
+  .bar-c{background:linear-gradient(90deg,#f4d9a0,#e8b866);}
+  .related-card .inner{padding:22px 20px;}
+  .related-card h4{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;color:var(--rose-soft,#c98aa0);font-size:1.25rem;margin-bottom:12px;}
+  .related-card p{font-size:.88rem;color:var(--muted,#b9b4bc);line-height:1.55;margin-bottom:20px;}
+  .related-foot{display:flex;justify-content:space-between;align-items:center;}
+  .related-price{color:var(--cream,#FAF6EF);font-weight:700;font-size:1rem;}
+  .related-buy{background:var(--rose-soft,#c98aa0);color:#fff;font-weight:800;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;padding:9px 18px;border-radius:999px;text-decoration:none;}
+
+  .post-footer{border-top:1px solid var(--line,rgba(250,246,239,0.10));margin-top:54px;padding-top:38px;text-align:center;}
+  .post-footer p{color:var(--muted,#b9b4bc);font-size:.88rem;line-height:1.7;max-width:520px;margin:0 auto 16px;}
+  .post-footer a{color:var(--muted,#b9b4bc);text-decoration:underline;font-size:.85rem;}
+
+  /* back navigation (added) */
+  .post-nav-bottom{max-width:700px;margin:0 auto;padding:0 22px 64px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .pnb-btn{font-family:'Karla',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:13px 26px;border-radius:999px;text-decoration:none;}
+  .pnb-primary{background:var(--rose,#8a2f4b);color:var(--cream,#FAF6EF);}
+  .pnb-primary:hover{background:var(--rose-soft,#c98aa0);color:var(--bg,#2E2D33);}
+  .pnb-ghost{border:1px solid var(--line,rgba(250,246,239,0.30));color:var(--muted,#b9b4bc);}
+  .pnb-ghost:hover{color:var(--rose,#8a2f4b);border-color:var(--rose,#8a2f4b);}
+  .top-back{display:inline-flex;align-items:center;gap:6px;font-family:'Karla',sans-serif;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:var(--rose-soft,#c98aa0);text-decoration:none;margin:0 0 18px;}
+  .top-back:hover{color:var(--blush,#f2b8c6);}
+</style>
+</head>
+<body>
+<div class="wrap" id="top">
+  <header>
+   <div class="logo"><img src="images/logo.png" alt="I Like It Deep logo" style="height:50px;"></div>
+    <div class="nav-wrap">
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainMenu" onclick="toggleMainMenu()">Menu <span class="menu-arrow">▾</span></button>
+      <nav id="mainMenu" class="dropdown-menu">
+        <a href="collection.html">Journals</a>
+        <a href="blog.html">Blog</a>
+        <a href="bookmarks.html">Bookmarks</a>
+        <a href="coloring-pages.html">Coloring Pages</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#request">Request a Journal</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="post-wrap">
+    <a href="blog.html" class="back-link">&larr; Back to Blog</a>
+
+    <div class="post-eyebrow">BPD &middot; Real Time</div>
+    <h1 class="post-title">Go Inside the Mind of a Korean Borderline When Splitting</h1>
+    <div class="post-subtitle">17 texts, one missed call, and a mind that won't stop spiraling — this is what it feels like from the inside.</div>
+    <div class="post-date">August 18, 2026</div>
+
+    <img class="post-hero-img" src="images/splittingmoment.png" alt="How my mind operates during a split">
+
+    <div class="content-note">This post talks openly about a BPD split as it's happening, including abandonment fears and suicidal thoughts. If any of this hits close to home and you need to talk to someone right now, the 988 Suicide &amp; Crisis Lifeline (call or text 988) is there 24/7.</div>
+
+    <div class="post-body">
+      <p>My heart is racing, over probably nothing. I was in contact with my boyfriend all day, then I took a nap, woke up, texted and called him, and got no answer. I'm assuming he's doing the side job he was going to do, or napping too. That's my "wise mind" talking, ha. Then there's this other little voice in my head that's freaking out, on the verge of crying. I feel the pressure in my nose before you actually start seeing tears.</p>
+
+      <p>I'm also aware I need to take my PMDD into account. My period usually comes the second week of the month, but two weeks before it my hormones go insane, so I feel more emotional than usual. I get bloated too, and that's definitely going on — less energy, a little more clingy, more in my feelings, overthinking every outcome. At this moment I don't think he's up to anything terrible, but give it an hour and my mind will get there.</p>
+    </div>
+
+    <div class="paywall">
+      <div class="lock">🔒</div>
+      <h3>Keep reading</h3>
+      <p>The rest of this post — and every post like it — is for the $5/month circle. It also helps keep new journals coming.</p>
+      <a href="#" class="sub-btn">Subscribe — $5/month</a>
+    </div>
+
+    <div class="post-body">
+      <div class="fade-cut">
+      <p>I'm just sad, right now, that he's not contacting me. I need constant reassurance, often. If that ever lacks, I spiral — it won't matter if I see him every night, if I don't get my validation that he loves me, I lose it. Imagine being a man who receives over 200 text messages and 100 phone calls. Yikes, a little nuts maybe, but yup, that's my go-to until I just go look for him. Without a vehicle and my license it's a little hard, but if I want something, I'll get it. If only I used this motivation for something healthier. Ha.</p>
+
+      <p>I listen to sad songs to make the feeling more emotional too. I need nicotine more than ever. My head feels cloudy and I'm already crying for no reason. Thanks so much, PMDD. Awesome. It always ends up being something so stupid, where I feel so dumb after for freaking out over nothing. You'd think I'd learn, but I'm trying to protect my little Stephanie from being hurt.</p>
+
+      <p class="pull">I know what this abandonment is. I've felt it over and over, to where I don't feel worthy in life.</p>
+
+      <p>I think life is better if I'm not here, since everyone leaves. Is that true, should I question that? It may not be true, but my black-and-white thinking will just roll with it. My heart feels like it's pounding so loud right now. My chest feels tight. All I want is for him to tell me everything is okay. I want some answer. I want to go see him, for his arms to be around me. I don't want to sit in this room alone. This place I rent is definitely not healthy for my mental state — I'm here because it's all I can afford at the moment.</p>
+
+      <p>I've already sent my man 17 texts. I get obsessive about things. Can I distract myself? Sure, I can go take a shower and cry in the bathroom. That might work better than sitting here while my mind is racing and I'm bloated and feeling ick. On any other day I probably wouldn't even want to see him when I'm this bloated — it's so uncomfortable. I just want him to tell me he's okay and answer me.</p>
+
+      <p>I have no boundaries with him, and I feel bad after, always, but panic sets in. I've tried to explain this to him and he half listens. I think a cold shower is what I'll do, to try to distract myself. Usually if I don't hear from him I feel like anyone or anything else is better than being alone, and I'll go find someone else to take his space, because being alone during a freak-out moment will make me go insane. Or the opposite, and I'll go to bed.</p>
+
+      <p>Which is the better option? Less regret, less self-control — it's obviously a depressive state, crying myself to sleep, but it's obviously better than making other plans out of being impulsive. I'll keep you posted if I decide to let my impulsive side win or not.</p>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-eyebrow">If This Hit Home</div>
+      <div class="related-title">Journals that go deeper on this</div>
+      <div class="related-grid">
+
+        <a class="related-card" href="https://buy.stripe.com/eVq14p72jfftfAmaUhgUM0i">
+          <div class="bar bar-a"></div>
+          <div class="inner">
+            <h4>Before the Storm</h4>
+            <p>A PMDD tracker to understand your patterns before they hit.</p>
+            <div class="related-foot"><span class="related-price">$17</span><span class="related-buy">Buy</span></div>
+          </div>
+        </a>
+
+        <a class="related-card" href="https://buy.stripe.com/7sYcN7fyP5ETgEq5zXgUM0f">
+          <div class="bar bar-b"></div>
+          <div class="inner">
+            <h4>Right Now I'm Okay</h4>
+            <p>A guided journal for the high days and the low ones.</p>
+            <div class="related-foot"><span class="related-price">$17</span><span class="related-buy">Buy</span></div>
+          </div>
+        </a>
+
+        <a class="related-card" href="https://buy.stripe.com/6oUdRb72jebpfAm9QdgUM17">
+          <div class="bar bar-c"></div>
+          <div class="inner">
+            <h4>The Deep Dive</h4>
+            <p>A couples questionnaire for when things are "fine" but you've stopped really talking.</p>
+            <div class="related-foot"><span class="related-price">$17</span><span class="related-buy">Buy</span></div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  <div class="post-nav-bottom">
+    <a href="blog.html" class="pnb-btn pnb-primary">&larr; Back to Blog</a>
+    <a href="#top" class="pnb-btn pnb-ghost">&uarr; Back to Top</a>
+  </div>
+
+
+    <div class="post-footer">
+      <p>This blog is the founder's own online journal — a place to think out loud and look back on her own growth over time. These posts aren't polished advice and they're not asking for feedback — just one person being honest about her own life.</p>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</div>
+<script>
+function toggleMainMenu(){
+  var menu = document.getElementById('mainMenu');
+  var btn = document.getElementById('menuToggle');
+  var isOpen = menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+}
+document.addEventListener('click', function(e){
+  var wrap = document.querySelector('.nav-wrap');
+  if(wrap && !wrap.contains(e.target)){
+    document.getElementById('mainMenu').classList.remove('open');
+    document.getElementById('menuToggle').setAttribute('aria-expanded', 'false');
+  }
+});
+</script>
+</body>
+</html>
