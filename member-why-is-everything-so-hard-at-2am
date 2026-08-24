@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why Is Everything So Hard at 2AM? — I Like It Deep</title>
+<meta name="robots" content="noindex, nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&family=Karla:wght@400;500;600&family=Poppins:wght@400;500;600&family=Lora:ital@1&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=5">
+<style>
+  .post-head{max-width:640px;margin:0 auto;padding:60px 0 10px;text-align:center;}
+  .post-date{font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--rose);margin-bottom:14px;}
+  .post-head h1{font-size:38px;}
+  .post-byline{color:var(--muted);font-size:13px;font-style:italic;font-family:'Cormorant Garamond',serif;}
+  .post-photo{max-width:640px;margin:34px auto;border-radius:16px;overflow:hidden;}
+  .post-photo img{width:100%;display:block;}
+  .post-body{max-width:620px;margin:0 auto;color:var(--cream);font-size:16px;line-height:1.85;}
+  .post-body p{margin:0 0 20px;}
+  .rec-section{padding:50px 0 20px;border-top:1px solid var(--line);max-width:680px;margin:0 auto;}
+  .rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px;}
+  @media (max-width:720px){ .rec-grid{grid-template-columns:1fr;} }
+  .nav-wrap{position:relative;}
+  .menu-toggle{background:transparent;border:1px solid var(--line);color:var(--muted);font-family:'Karla',sans-serif;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;padding:11px 20px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;}
+  .menu-toggle:hover{color:var(--rose);border-color:var(--rose);}
+  .menu-arrow{transition:transform 0.2s ease;font-size:11px;}
+  .menu-toggle[aria-expanded="true"] .menu-arrow{transform:rotate(180deg);}
+  .dropdown-menu{display:none;flex-direction:column;position:absolute;top:calc(100% + 10px);right:0;background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:8px;min-width:210px;z-index:50;box-shadow:0 14px 34px rgba(0,0,0,0.4);}
+  .dropdown-menu.open{display:flex;}
+  .dropdown-menu a{padding:13px 16px;border-radius:10px;color:var(--muted);text-decoration:none;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;}
+  .dropdown-menu a:hover{background:var(--bg);color:var(--rose);}
+  .back-link{display:inline-block;margin:22px 0 0;color:var(--muted);font-size:13px;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;}
+  .back-link:hover{color:var(--rose);}
+  .post-nav-bottom{max-width:700px;margin:0 auto;padding:0 22px 64px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .pnb-btn{font-family:'Karla',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:13px 26px;border-radius:999px;text-decoration:none;}
+  .pnb-primary{background:var(--rose,#8a2f4b);color:var(--cream,#FAF6EF);}
+  .pnb-primary:hover{background:var(--rose-soft,#c98aa0);color:var(--bg,#2E2D33);}
+  .pnb-ghost{border:1px solid var(--line,rgba(250,246,239,0.30));color:var(--muted,#b9b4bc);}
+  .pnb-ghost:hover{color:var(--rose,#8a2f4b);border-color:var(--rose,#8a2f4b);}
+</style>
+</head>
+<body>
+<div class="wrap" id="top">
+  <header>
+    <div class="logo"><img src="images/logo.png" alt="I Like It Deep logo" style="height:50px;"></div>
+    <div class="nav-wrap">
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainMenu" onclick="toggleMainMenu()">Menu <span class="menu-arrow">▾</span></button>
+      <nav id="mainMenu" class="dropdown-menu">
+        <a href="members-blog.html">Members Blog</a>
+        <a href="index.html">Home</a>
+      </nav>
+    </div>
+  </header>
+  <a href="members-blog.html" class="back-link">← Back to Members Blog</a>
+
+  <article>
+    <div class="post-head">
+      <div class="post-date">August 21, 2026</div>
+      <h1>Why Is Everything So Hard at 2AM?</h1>
+      <div class="post-byline">— S, founder of I Like It Deep</div>
+    </div>
+
+    <div class="post-photo">
+      <img src="images/why-is-everything-so-hard-at-2am-cover.jpg" alt="Illustration of a tired woman working late on her laptop at 2:47am">
+    </div>
+
+    <div class="post-body">
+      <p>I need sleep. This site has taken a lot of my time and energy trying to perfect every detail so I can produce some kind of income. I've been staying up late trying to come up with new ideas. Post pins on Pinterest, Reddit — it's a mind fuck. I'm not working, so I have the time; I just pick the wrong time to do it. I should be investing into my sleep. Then my days are not as productive and I'm tired and irritated by everything. It's not fair to the people I'm around. I'm on edge now and trying my best to stay calm.</p>
+      <p>I should put my phone down and just take a nap. Not feed into this petty argument with someone. I don't have to prove I'm right or how I feel — because realistically, if my feeling meant shit, we wouldn't be in this argument. I just need to calm down and not go into crazy mode where I want to lash the fuck out. It would be so cool to do the opposite of what I usually do and test myself and not fall back into the same patterns. Maybe I can actually change things up myself without pulling my normal.</p>
+      <p>My eyes are so tired they just want to shut, but my brain's like keep going bitch. I have all day tomorrow to relax also. Take this time and do me — it shouldn't be that hard. Just close your eyes, plug your phone in, and go to rest. Your body's telling you to. Listen to it. Wake up refreshed and see how you feel. Don't worry about things you can't control, or how someone is immature and is acting like a bitch. Let it go. Focus on me. I'm just talking out loud to myself. Okay, I'll finish this journal when I wake up. It's nap time at 4:42 pm. Wish me luck.</p>
+      <p>It's the next day and I'm definitely refreshed by my nap/sleep. I needed it. I woke up still overthinking things, but I kept myself busy and waited for them to text me and didn't cave in. Usually I freak out over things, and I'm proud of myself for standing my ground — even though I don't think in their eyes it means anything. I understand they can't read my mind, but when I feel hurt, shouldn't someone try to understand why?</p>
+      <p>I guess I've been selfish in my past and truly not given a fuck before too. Maybe that's the case. I can't force anyone to understand what goes on in my head and feel sympathy at all. I'm here in this uncomfortable situation in life where I'm not where I'm supposed to be, and it's beyond frustrating. I'm hoping these small lessons in life lead me to something bigger and better. I've hit bottom and still linger there. It's not as easy to just rebuild yourself. I think a little depression and being scared in life doesn't help either.</p>
+      <p>I have one person supporting me in the ways he can, but that's about it. I do believe in time my website will take off — I have trust and faith in it. I am still working to improve it daily with nonstop ideas. I know things take time. I just want it to succeed, and for me to actually make money off it too. I'm already proud of myself for creating it. I love that I actually accomplished it. I am happy with that — but if it's just sitting there doing nothing, it kinda sucks.</p>
+      <p>I'm stuck between continuing to post about it and get it out there, or starting something up fresh and seeing where it goes. Hopefully good things can only come from it.</p>
+    </div>
+
+    <section class="rec-section">
+      <div class="section-sub">If This Hit Home</div>
+      <div class="section-title">Journals that go deeper on this</div>
+      <div class="rec-grid">
+        <div class="journal-card">
+          <h3>Behind the Fire</h3>
+          <p>An anger release journal: your feelings, your responsibility, your choice.</p>
+          <div class="card-foot"><span class="price">$17</span><a class="buy" href="https://buy.stripe.com/7sYcN786nfftbk64vTgUM0e">Buy</a></div>
+        </div>
+        <div class="journal-card">
+          <h3>The Deep Dive</h3>
+          <p>A couples questionnaire for the relationship that's "fine" but has gone quiet.</p>
+          <div class="card-foot"><span class="price">$17</span><a class="buy" href="https://buy.stripe.com/6oUdRb72jebpfAm9QdgUM17">Buy</a></div>
+        </div>
+        <div class="journal-card">
+          <h3>Before the Storm</h3>
+          <p>A PMDD tracker to understand your patterns before they hit.</p>
+          <div class="card-foot"><span class="price">$17</span><a class="buy" href="https://buy.stripe.com/eVq14p72jfftfAmaUhgUM0i">Buy</a></div>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <div class="post-nav-bottom">
+    <a href="blog.html" class="pnb-btn pnb-primary">&larr; Back to Blog</a>
+    <a href="#top" class="pnb-btn pnb-ghost">&uarr; Back to Top</a>
+  </div>
+
+  <footer>
+    <div class="footer-disclaimer">
+      These journals are meant to help you grow and work through life's challenges — they are not a substitute for professional advice. We all deserve to be truly happy and like being in the skin we chose.
+    </div>
+  </footer>
+</div>
+<script>
+function toggleMainMenu(){
+  var menu = document.getElementById('mainMenu');
+  var btn = document.getElementById('menuToggle');
+  var isOpen = menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+}
+document.addEventListener('click', function(e){
+  var wrap = document.querySelector('.nav-wrap');
+  if(wrap && !wrap.contains(e.target)){
+    document.getElementById('mainMenu').classList.remove('open');
+    document.getElementById('menuToggle').setAttribute('aria-expanded', 'false');
+  }
+});
+</script>
+</body>
+</html>
