@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Am I Even Magnetic? — I Like It Deep</title>
+<meta name="description" content="Late-night rambling on disappointment, an ADD brain that won't slow down, wearing masks, chasing dopamine, and wondering if any of us are really who we pretend to be.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&family=Karla:wght@400;500;600&family=Poppins:wght@400;500;600&family=Lora:ital@1&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=4">
+<style>
+  .post-head{max-width:640px;margin:0 auto;padding:60px 0 10px;text-align:center;}
+  .post-date{font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--rose);margin-bottom:14px;}
+  .post-head h1{font-size:38px;}
+  .post-byline{color:var(--muted);font-size:13px;font-style:italic;font-family:'Cormorant Garamond',serif;}
+  .post-photo{max-width:640px;margin:34px auto;border-radius:16px;overflow:hidden;}
+  .post-photo img{width:100%;display:block;}
+  .post-body{max-width:620px;margin:0 auto;color:var(--cream);font-size:16px;line-height:1.85;}
+  .post-body p{margin:0 0 20px;}
+
+  .paywall{max-width:620px;margin:10px auto 60px;position:relative;}
+  .fade-cut{height:90px;margin-top:-90px;background:linear-gradient(to bottom, rgba(46,45,51,0), var(--bg));position:relative;z-index:1;}
+  .lock-box{background:var(--bg-soft);border:1px solid var(--line);border-radius:18px;padding:34px 30px;text-align:center;position:relative;z-index:2;}
+  .lock-box .lock-icon{font-size:22px;margin-bottom:10px;}
+  .lock-box h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:22px;margin:0 0 10px;color:var(--cream);}
+  .lock-box p{color:var(--muted);font-size:13.5px;margin:0 0 20px;line-height:1.6;}
+
+  .rec-section{padding:50px 0 20px;border-top:1px solid var(--line);max-width:680px;margin:0 auto;}
+  .rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px;}
+
+  @media (max-width:720px){ .rec-grid{grid-template-columns:1fr;} }
+
+  .nav-wrap{position:relative;}
+  .menu-toggle{background:transparent;border:1px solid var(--line);color:var(--muted);font-family:'Karla',sans-serif;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;padding:11px 20px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;}
+  .menu-toggle:hover{color:var(--rose);border-color:var(--rose);}
+  .menu-arrow{transition:transform 0.2s ease;font-size:11px;}
+  .menu-toggle[aria-expanded="true"] .menu-arrow{transform:rotate(180deg);}
+  .dropdown-menu{display:none;flex-direction:column;position:absolute;top:calc(100% + 10px);right:0;background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:8px;min-width:210px;z-index:50;box-shadow:0 14px 34px rgba(0,0,0,0.4);}
+  .dropdown-menu.open{display:flex;}
+  .dropdown-menu a{padding:13px 16px;border-radius:10px;color:var(--muted);text-decoration:none;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;}
+  .dropdown-menu a:hover{background:var(--bg);color:var(--rose);}
+  .back-to-blog{display:inline-flex;align-items:center;gap:6px;max-width:640px;margin:22px auto 0;padding:0 0;font-family:'Karla',sans-serif;font-size:13px;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);text-decoration:none;}
+  .back-to-blog:hover{color:var(--rose);}
+  .back-wrap{max-width:640px;margin:0 auto;padding:18px 0 0;}
+
+  /* back navigation (added) */
+  .post-nav-bottom{max-width:700px;margin:0 auto;padding:0 22px 64px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .pnb-btn{font-family:'Karla',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:13px 26px;border-radius:999px;text-decoration:none;}
+  .pnb-primary{background:var(--rose,#8a2f4b);color:var(--cream,#FAF6EF);}
+  .pnb-primary:hover{background:var(--rose-soft,#c98aa0);color:var(--bg,#2E2D33);}
+  .pnb-ghost{border:1px solid var(--line,rgba(250,246,239,0.30));color:var(--muted,#b9b4bc);}
+  .pnb-ghost:hover{color:var(--rose,#8a2f4b);border-color:var(--rose,#8a2f4b);}
+  .top-back{display:inline-flex;align-items:center;gap:6px;font-family:'Karla',sans-serif;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:var(--rose-soft,#c98aa0);text-decoration:none;margin:0 0 18px;}
+  .top-back:hover{color:var(--blush,#f2b8c6);}
+</style>
+</head>
+<body>
+<div class="wrap" id="top">
+  <header>
+    <div class="logo"><img src="images/logo.png" alt="I Like It Deep logo" style="height:50px;"></div>
+    <div class="nav-wrap">
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainMenu" onclick="toggleMainMenu()">Menu <span class="menu-arrow">▾</span></button>
+      <nav id="mainMenu" class="dropdown-menu">
+        <a href="index.html">Home</a>
+        <a href="collection.html">Journals</a>
+        <a href="blog.html">Blog</a>
+        <a href="bookmarks.html">Bookmarks</a>
+        <a href="coloring-pages.html">Coloring Pages</a>
+        <a href="about.html">About</a>
+        <a href="request.html">Request a Journal</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="back-wrap">
+    <a href="blog.html" class="back-to-blog">&larr; Back to Blog</a>
+  </div>
+
+  <article>
+    <div class="post-head">
+      <div class="post-date">August 17, 2026</div>
+      <h1>Am I Even Magnetic?</h1>
+      <div class="post-byline">— S, founder of I Like It Deep</div>
+    </div>
+
+    <div class="post-photo">
+      <img src="images/am-i-even-magnetic-cover.jpg" alt="Moonlit rose garden path with the words 'You are magnetic'">
+    </div>
+
+    <div class="post-body">
+      <p>Blah. That's the feeling when you try your best to show someone you're excited to see them, and you're met with an outcome that's the total opposite of what you imagined. Why do our brains fool us into thinking "oh, this is exactly how it'll go," when in reality it's nothing close? Why do we do this to ourselves, just to end up disappointed? Such a silly thing to do.</p>
+      <p>I mean, some outcomes turn out better than expected too. Maybe if we walked into every situation without expecting anything, it'd just be a fun surprise every time — living in the moment. That sounds a little crazy though, when you think about how we all tend to look back and dread the future instead...</p>
+    </div>
+
+    <div class="paywall">
+      <div class="fade-cut"></div>
+      <div class="lock-box">
+        <div class="lock-icon">🔒</div>
+        <h3>Keep reading</h3>
+        <p>The rest of this post — and every post like it — is for the $5/month circle. It also helps keep new journals coming.</p>
+        <a href="https://buy.stripe.com/9B64gB72jc3hfAm3rPgUM16" class="cta" style="font-size:13px;padding:12px 30px;">Subscribe — $5/month</a>
+      </div>
+    </div>
+
+    <section class="rec-section">
+      <div class="section-sub">If This Hit Home</div>
+      <div class="section-title">Journals that go deeper on this</div>
+      <div class="rec-grid">
+        <div class="journal-card">
+          <h3>WHY</h3>
+          <p>Recognize the behavior behind the emotion, and release it.</p>
+          <div class="card-foot"><span class="price">$17</span><a class="buy" href="https://buy.stripe.com/dRm4gBcmD6IX87U1jHgUM0A">Buy</a></div>
+        </div>
+        <div class="journal-card">
+          <h3>Pull Your Head Out</h3>
+          <p>Unpack the habits and emotions keeping you stuck.</p>
+          <div class="card-foot"><span class="price">$17</span><a class="buy" href="https://buy.stripe.com/28E7sNeuLebp4VIaUhgUM0D">Buy</a></div>
+        </div>
+        <div class="journal-card">
+          <h3>Inner Work</h3>
+          <p>A Carl Jung–inspired journal for facing what you've buried.</p>
+          <div class="card-foot"><span class="price">$17</span><a class="buy" href="https://buy.stripe.com/28E00l4UbgjxgEq0fDgUM0a">Buy</a></div>
+        </div>
+      </div>
+    </section>
+  </article>
+  <div class="post-nav-bottom">
+    <a href="blog.html" class="pnb-btn pnb-primary">&larr; Back to Blog</a>
+    <a href="#top" class="pnb-btn pnb-ghost">&uarr; Back to Top</a>
+  </div>
+
+
+
+  <footer>
+    <div class="footer-disclaimer">
+      This blog is the founder's own online journal — a place to think out loud and look back on her own growth over time. These posts aren't polished advice and they're not asking for feedback — just one person being honest about her own life.
+      <br><br><a href="privacy.html" style="color:var(--muted);">Privacy Policy</a>
+    </div>
+  </footer>
+</div>
+
+<script>
+function toggleMainMenu(){
+  var menu = document.getElementById('mainMenu');
+  var btn = document.getElementById('menuToggle');
+  var isOpen = menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+}
+document.addEventListener('click', function(e){
+  var wrap = document.querySelector('.nav-wrap');
+  if(wrap && !wrap.contains(e.target)){
+    document.getElementById('mainMenu').classList.remove('open');
+    document.getElementById('menuToggle').setAttribute('aria-expanded', 'false');
+  }
+});
+</script>
+</body>
+</html>
