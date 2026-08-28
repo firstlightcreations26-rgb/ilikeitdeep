@@ -242,6 +242,7 @@ footer.gc-footer p{max-width:560px;margin:0 auto;font-size:.85rem;opacity:.85;}
   <div id="quizBox">
     <form id="gcQuiz"></form>
     <div style="text-align:center;">
+      <p id="quizWarning" style="display:none;color:var(--hotpink);font-weight:700;margin-bottom:12px;"></p>
       <button class="btn btn-black" id="seeResults" type="button" onclick="calcResults()">See My Results</button>
     </div>
 
@@ -366,6 +367,8 @@ footer.gc-footer p{max-width:560px;margin:0 auto;font-size:.85rem;opacity:.85;}
       <div class="jshow-card">Deserve Better<span class="jp">$17</span></div>
       <div class="jshow-card">Choose Joy<span class="jp">$26</span></div>
     </div>
+
+    <p style="margin-top:30px;">A few more ways to keep people coming back and spending: rotate a "friend gift guide" post on the blog every month tied to a season (breakup season after Valentine's, glow-up season in January), keep the daily poll fresh so there's a reason to check the site even when they're not buying, and cross-post story-wall highlights (with permission) to social to pull new visitors in. Small, steady touches like that tend to do more for repeat traffic than one big push.</p>
   </div>
 </section>
 
@@ -420,13 +423,18 @@ var questions = [
 })();
 
 function calcResults(){
+  try{
+  var warningEl = document.getElementById('quizWarning');
+  warningEl.style.display = 'none';
   var total = 0, answered = 0;
   for(var i=0;i<questions.length;i++){
     var picked = document.querySelector('input[name="q'+i+'"]:checked');
     if(picked){ total += parseInt(picked.value,10); answered++; }
   }
   if(answered < questions.length){
-    alert("Answer all 8 to see your result, girl!");
+    warningEl.textContent = "Answer all 8 to see your result, girl! (" + answered + " of 8 answered so far)";
+    warningEl.style.display = 'block';
+    warningEl.scrollIntoView({behavior:'smooth', block:'center'});
     return;
   }
   var title, text, code = false;
@@ -464,6 +472,13 @@ function calcResults(){
   emailBtn.href = "mailto:ilikeitdeep26@gmail.com?subject=My%20Girl%20Code%20Result&body=" + encodeURIComponent(body);
   document.getElementById('resultBox').style.display = 'block';
   document.getElementById('resultBox').scrollIntoView({behavior:'smooth', block:'center'});
+  } catch(err){
+    var warningEl2 = document.getElementById('quizWarning');
+    if(warningEl2){
+      warningEl2.textContent = "Something glitched showing your result — scroll up and make sure all 8 are answered, then tap See My Results again.";
+      warningEl2.style.display = 'block';
+    }
+  }
 }
 
 /* ============ STORY WALL ============ */
