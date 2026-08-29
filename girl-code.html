@@ -18,15 +18,14 @@
    those need fat rounded letterforms to actually color inside.
    ============================================================ */
 :root{
-  --hotpink:#ff2f8f;      /* accent only: buttons, highlights */
-  --pink:#ff8fc4;
-  --softpink:#ffd7e8;     /* main soft background tone */
-  --softpink2:#fff0f6;
+  --hotpink:#ff1177;      /* bolder hot pink: buttons, highlights */
+  --pink:#ff5fa8;
+  --softpink:#ffb3d9;     /* deeper pink background tone */
+  --softpink2:#ffe0ef;
   --cream:#fffaf7;
   --black:#141014;
   --white:#ffffff;
-  --line:#f3b8d3;
-  --gold:#c9a84c;
+  --line:#ffb3d9;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
@@ -41,12 +40,12 @@ header.gc-header{background:var(--black);padding:14px 22px;display:flex;align-it
 .gc-logo span{color:var(--hotpink);}
 .gc-nav{display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
 .gc-nav a{font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--white);text-decoration:none;border:1.5px solid var(--hotpink);border-radius:999px;padding:8px 14px;transition:background .2s,color .2s;}
-.gc-nav a:hover{background:var(--hotpink);color:var(--black);}
+.gc-nav a:hover{background:var(--hotpink);color:var(--white);}
 .back-btn{background:var(--hotpink);color:var(--white)!important;border-color:var(--hotpink)!important;font-weight:800;}
-.back-btn:hover{background:var(--white)!important;color:var(--hotpink)!important;}
+.back-btn:hover{background:var(--black)!important;color:var(--white)!important;border-color:var(--white)!important;}
 
 /* ---------- HERO ---------- */
-.hero{background:linear-gradient(180deg,#ffc3de,var(--softpink) 70%);padding:66px 22px 54px;text-align:center;color:var(--black);position:relative;overflow:hidden;}
+.hero{background:linear-gradient(180deg,var(--hotpink),var(--softpink) 75%);padding:66px 22px 54px;text-align:center;color:var(--black);position:relative;overflow:hidden;}
 .hero .eyebrow{font-weight:700;letter-spacing:.3em;text-transform:uppercase;font-size:.72rem;color:var(--white);background:var(--black);display:inline-block;padding:6px 16px;border-radius:999px;margin-bottom:20px;}
 .hero h1{font-family:'Pacifico',cursive;font-weight:400;font-size:clamp(2.8rem,10vw,4.6rem);color:var(--black);letter-spacing:.01em;line-height:1.1;}
 .hero .sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:1.25rem;max-width:520px;margin:22px auto 0;color:var(--black);background:var(--white);padding:14px 22px;border-radius:16px;box-shadow:5px 5px 0 var(--black);}
@@ -54,7 +53,7 @@ header.gc-header{background:var(--black);padding:14px 22px;display:flex;align-it
 .btn{display:inline-block;font-weight:700;letter-spacing:.05em;text-transform:uppercase;font-size:.8rem;padding:13px 24px;border-radius:999px;text-decoration:none;border:2.5px solid var(--black);cursor:pointer;}
 .btn-black{background:var(--black);color:var(--white);}
 .btn-white{background:var(--white);color:var(--black);}
-.btn-black:hover{background:var(--white);color:var(--black);}
+.btn-black:hover{background:var(--hotpink);color:var(--white);border-color:var(--hotpink);}
 .btn-white:hover{background:var(--black);color:var(--white);}
 
 /* ---------- SECTION SHELLS ---------- */
@@ -87,7 +86,7 @@ h2.section-title{font-family:'Cormorant Garamond',serif;font-weight:700;font-sty
 #resultBox{display:none;max-width:640px;margin:30px auto 0;background:var(--black);color:var(--white);border-radius:18px;padding:30px 26px;text-align:center;}
 #resultBox h3{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--hotpink);font-size:1.7rem;margin-bottom:14px;}
 #resultBox p{font-size:.95rem;margin-bottom:14px;text-align:left;}
-#resultBox .code{display:inline-block;background:var(--hotpink);color:var(--black);font-weight:800;padding:6px 14px;border-radius:8px;letter-spacing:.05em;}
+#resultBox .code{display:inline-block;background:var(--hotpink);color:var(--white);font-weight:800;padding:6px 14px;border-radius:8px;letter-spacing:.05em;}
 #emailResults{margin-top:10px;}
 
 /* ---------- STORY WALL ---------- */
@@ -144,8 +143,12 @@ h2.section-title{font-family:'Cormorant Garamond',serif;font-weight:700;font-sty
 #sendGiftBtn{display:block;margin:18px auto 0;}
 .journal-showcase{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:600px;margin:30px auto 0;}
 @media(min-width:600px){.journal-showcase{grid-template-columns:repeat(4,1fr);}}
-.jshow-card{background:var(--white);border:1.5px solid var(--black);border-radius:12px;padding:12px 10px;text-align:center;font-size:.8rem;font-weight:600;}
+.jshow-card{background:var(--white);border:1.5px solid var(--black);border-radius:12px;padding:12px 10px;text-align:center;font-size:.8rem;font-weight:600;color:var(--black);text-decoration:none;display:block;}
+.jshow-card:hover{background:var(--hotpink);color:var(--white);border-color:var(--hotpink);}
 .jshow-card .jp{color:var(--hotpink);font-weight:800;display:block;margin-top:4px;}
+.jshow-card:hover .jp{color:var(--white);}
+#levelUpBlock{margin-top:26px;padding-top:22px;border-top:1.5px dashed var(--pink);text-align:center;}
+#levelUpLine{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:var(--white);margin-bottom:18px;}
 .gift-note{max-width:600px;margin:24px auto 0;text-align:center;font-size:.8rem;font-style:italic;opacity:.7;}
 
 /* ---------- FOOTER ---------- */
@@ -250,6 +253,28 @@ footer.gc-footer p{max-width:560px;margin:0 auto;font-size:.85rem;opacity:.85;}
       <h3 id="resultTitle"></h3>
       <p id="resultText"></p>
       <a id="emailResults" class="btn btn-white" href="#">Email Me My Results</a>
+
+      <div id="levelUpBlock">
+        <p id="levelUpLine"></p>
+        <div class="gift-step-label">Shop The Glow Up Collection</div>
+        <div class="journal-showcase">
+          <a class="jshow-card" href="https://buy.stripe.com/00wfZjdqH9V95ZMd2pgUM10">Glow Up<span class="jp">$17</span></a>
+          <a class="jshow-card" href="https://buy.stripe.com/aFa7sN3Q70kz9bY3rPgUM13">Bitch Please<span class="jp">$17</span></a>
+          <a class="jshow-card" href="https://buy.stripe.com/cNibJ3fyPc3h3RE7I5gUM12">My Best Life<span class="jp">$17</span></a>
+          <a class="jshow-card" href="https://buy.stripe.com/28E5kFfyP4APag21jHgUM11">Make It Rain<span class="jp">$17</span></a>
+        </div>
+        <div class="gift-step-label">Pick Your Glow-Up</div>
+        <div class="journal-showcase" style="grid-template-columns:repeat(2,1fr);">
+          <!-- All 7 Mavely category links below are live and category-specific. -->
+          <a class="jshow-card" href="https://mave.ly/i-like-it-deep/post/soft-feminine-glow-up" target="_blank" rel="noopener">Soft &amp; Feminine Glow-Up<span class="jp">Shop →</span></a>
+          <a class="jshow-card" href="https://mave.ly/i-like-it-deep/post/bombshell-glow-up" target="_blank" rel="noopener">Bombshell Glow-Up<span class="jp">Shop →</span></a>
+          <a class="jshow-card" href="https://mave.ly/i-like-it-deep/post/edgy-girl-glow-up" target="_blank" rel="noopener">Edgy Girl Glow-Up<span class="jp">Shop →</span></a>
+          <a class="jshow-card" href="https://mave.ly/i-like-it-deep/post/clean-girl-glow-up" target="_blank" rel="noopener">Clean Girl Glow-Up<span class="jp">Shop →</span></a>
+          <a class="jshow-card" href="https://mave.ly/i-like-it-deep/post/looks-expensive-on-a-budget" target="_blank" rel="noopener">Looks Expensive on a Budget<span class="jp">Shop →</span></a>
+          <a class="jshow-card" href="https://mave.ly/i-like-it-deep/post/dats-night-glow-up" target="_blank" rel="noopener">Date Night Glow-Up<span class="jp">Shop →</span></a>
+          <a class="jshow-card" href="https://mave.ly/i-like-it-deep/post/under-50" target="_blank" rel="noopener">Under $50 Glow-Up<span class="jp">Shop →</span></a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -437,27 +462,33 @@ function calcResults(){
     warningEl.scrollIntoView({behavior:'smooth', block:'center'});
     return;
   }
-  var title, text, code = false;
+  var title, text, levelUp, code = false;
   if(total <= 14){
     title = "You Are Not A Friend";
     text = "Based on your answers, it looks like either nobody ever taught you the code, or you knew and did it anyway. If you care about your reputation and want to feel the warmth of real friendship, this is your sign. There's no better feeling than when your heart is breaking and you have girls to actually call. Your mom isn't the same. Your guy friends aren't the same. Having even a small army behind you is everything. Take this advice, or find out the hard way. Since it looks like you could use the code book — here's 25% off:";
     code = true;
+    levelUp = "And it's not just the friend thing — if you're ready to become the version of you that people actually want to be loyal to, here's where you start.";
   } else if(total <= 21){
     title = "You Are Not A Very Nice Friend";
     text = "A little risky. Some of your instincts lean toward protecting yourself first and her second. Not a lost cause — just a few habits worth rethinking before they cost you a real friendship.";
+    levelUp = "\"A little risky\" is a fixable place to be. If you're ready to level up — not just with her, but for you — here's where to start.";
   } else if(total <= 28){
     title = "You Are Just A Decent Friend";
     text = "You're doing the bare minimum. You show up when it's easy, and that's something — but the girls who really have your back go further than easy.";
+    levelUp = "Bare minimum keeps the lights on, but it's not who you actually want to be. Would you want to improve — really improve — into a better version of you?";
   } else if(total <= 34){
     title = "You Are A Nice Friend";
     text = "You're keeping the peace. You mean well and you usually come through, but you play it safe more often than you fight for her. Push a little harder on the hard days.";
+    levelUp = "You mean well. Now imagine what happens when you stop playing it safe with yourself too.";
   } else {
     title = "You Are The Best Friend";
     text = "She's got you 100%, and you've got her. This is the energy. This is the code. Keep being that girl.";
+    levelUp = "You've already got the loyalty part down cold. Now let's make sure the rest of your life is glowing just as hard.";
   }
   document.getElementById('resultTitle').textContent = title + " (" + total + "/40)";
   var textEl = document.getElementById('resultText');
   textEl.textContent = text;
+  document.getElementById('levelUpLine').textContent = levelUp;
   var emailBtn = document.getElementById('emailResults');
   var body = "My Girl Code result: " + title + " (" + total + "/40).";
   if(code){
