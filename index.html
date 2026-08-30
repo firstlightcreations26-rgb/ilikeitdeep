@@ -17,6 +17,10 @@
   .dropdown-menu.open{display:flex;}
   .dropdown-menu a{padding:13px 16px;border-radius:10px;color:var(--muted);text-decoration:none;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;}
   .dropdown-menu a:hover{background:var(--bg);color:var(--rose);}
+  .dropdown-menu a.girl-code-link{color:#ff2f8f;font-weight:700;}
+  .dropdown-menu a.girl-code-link:hover{color:#ff2f8f;background:var(--bg);}
+  .dropdown-menu a.glow-up-link{color:#9b7fe0;font-weight:700;}
+  .dropdown-menu a.glow-up-link:hover{color:#9b7fe0;background:var(--bg);}
 </style>
 
 </head>
@@ -25,16 +29,16 @@
   <header>
    <div class="logo"><img src="images/logo.png" alt="I Like It Deep logo" style="height:50px;"></div>
     <div class="nav-wrap">
-      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainMenu" onclick="toggleMainMenu()">Menu <span class="menu-arrow">&#9662;</span></button>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainMenu" onclick="toggleMainMenu()">Menu <span class="menu-arrow">▾</span></button>
       <nav id="mainMenu" class="dropdown-menu">
         <a href="collection.html">Journals</a>
         <a href="blog.html">Blog</a>
-        <a href="girl-code.html">Girl Code</a>
+        <a href="girl-code.html" class="girl-code-link">Girl Code</a>
+        <a href="glow-up.html" class="glow-up-link">Glow Up</a>
         <a href="bookmarks.html">Bookmarks</a>
         <a href="coloring-pages.html">Coloring Pages</a>
-        <a href="worksheets.html">Free Worksheets</a>
         <a href="about.html">About</a>
-        <a href="request.html">Request a Journal</a>
+        <a href="#request">Request a Journal</a>
       </nav>
     </div>
   </header>
@@ -47,109 +51,12 @@
    <div class="tagline">"Write it. Feel it. Heal it.<br>Your journal knows the real you."</div>
   </section>
 
-  <style>
-  /* Most Loved shop row — main page only */
-  .loved-section{ padding:8px 24px 18px; text-align:center; }
-  .loved-section .section-sub{ margin-bottom:4px; }
-  .loved-row{ display:grid; grid-template-columns:repeat(2,minmax(0,150px)); gap:16px; justify-content:center; padding:10px 0 4px; }
-  @media(min-width:640px){ .loved-row{ grid-template-columns:repeat(4,minmax(0,150px)); } }
-  .loved-card{ width:100%; text-align:left; }
-  .loved-card > a{ display:block; }
-  .loved-card img{ width:100%; aspect-ratio:1179/1620; object-fit:cover; border-radius:10px; display:block; box-shadow:0 8px 20px rgba(0,0,0,0.35); }
-  .loved-title{ font-family:'Cormorant Garamond',serif; font-weight:600; font-size:17px; color:var(--cream); margin:9px 0 5px; line-height:1.15; }
-  .loved-foot{ display:flex; align-items:center; justify-content:space-between; }
-  .loved-price{ font-family:'Cormorant Garamond',serif; font-size:16px; color:var(--cream); }
-  .loved-buy{ background:var(--rose-deep); color:var(--cream); font-family:'Karla',sans-serif; font-size:11px; letter-spacing:0.05em; text-transform:uppercase; font-weight:700; padding:7px 16px; border-radius:20px; text-decoration:none; }
-  .loved-buy:hover{ background:var(--rose); }
-  </style>
-
-  <section class="loved-section">
-    <div class="section-sub">Most Loved Right Now</div>
-    <div class="section-title">Start here</div>
-    <div class="loved-row">
-
-      <div class="loved-card">
-        <a href="https://buy.stripe.com/6oUdRb72jebpfAm9QdgUM17"><img src="images/deepdive-cover.jpg" alt="The Deep Dive journal cover" loading="lazy"></a>
-        <div class="loved-title">The Deep Dive</div>
-        <div class="loved-foot"><span class="loved-price">$17</span><a class="loved-buy" href="https://buy.stripe.com/6oUdRb72jebpfAm9QdgUM17">Buy</a></div>
-      </div>
-
-      <div class="loved-card">
-        <a href="https://buy.stripe.com/8x2fZjcmDebp1Jw1jHgUM0Q"><img src="images/cover-choose-joy.jpg" alt="Choose Joy journal cover" loading="lazy"></a>
-        <div class="loved-title">Choose Joy</div>
-        <div class="loved-foot"><span class="loved-price">$26</span><a class="loved-buy" href="https://buy.stripe.com/8x2fZjcmDebp1Jw1jHgUM0Q">Buy</a></div>
-      </div>
-
-      <div class="loved-card">
-        <a href="https://buy.stripe.com/3cI5kF0DV8R5ewi3rPgUM09"><img src="images/Quiet-Moments-Cover.jpg" alt="Quiet Moments journal cover" loading="lazy"></a>
-        <div class="loved-title">Quiet Moments</div>
-        <div class="loved-foot"><span class="loved-price">$17</span><a class="loved-buy" href="https://buy.stripe.com/3cI5kF0DV8R5ewi3rPgUM09">Buy</a></div>
-      </div>
-
-      <div class="loved-card">
-        <a href="https://buy.stripe.com/28E00l4UbgjxgEq0fDgUM0a"><img src="images/inner-work-cover.jpg" alt="Inner Work journal cover" loading="lazy"></a>
-        <div class="loved-title">Inner Work</div>
-        <div class="loved-foot"><span class="loved-price">$17</span><a class="loved-buy" href="https://buy.stripe.com/28E00l4UbgjxgEq0fDgUM0a">Buy</a></div>
-      </div>
-
-    </div>
-  </section>
-
-  <style>
-  .worksheets-section{ padding:20px 16px 44px; text-align:center; }
-  .ws-sub{ color:var(--rose); font-size:11px; letter-spacing:0.14em; text-transform:uppercase; margin-bottom:8px; }
-  .ws-title{ font-family:'Cormorant Garamond',serif; font-weight:600; font-size:26px; margin-bottom:6px; }
-  .ws-intro{ color:var(--muted); font-size:14px; max-width:420px; margin:0 auto 22px; line-height:1.6; }
-  .ws-row{ display:flex; flex-wrap:wrap; gap:16px; justify-content:center; margin-bottom:24px; }
-  .ws-card{ width:150px; text-decoration:none; }
-  .ws-card img{ width:100%; border-radius:8px; display:block; box-shadow:0 8px 20px rgba(0,0,0,0.32); border:1px solid var(--line); }
-  .ws-name{ font-family:'Cormorant Garamond',serif; font-size:14px; color:var(--cream); margin-top:8px; line-height:1.15; }
-  .ws-btn{ display:inline-block; background:var(--rose-deep); color:var(--cream); font-family:'Karla',sans-serif; font-size:12px; letter-spacing:0.05em; text-transform:uppercase; font-weight:700; padding:11px 26px; border-radius:24px; text-decoration:none; }
-  .ws-btn:hover{ background:var(--rose); }
-  </style>
-
-  <section class="worksheets-section">
-    <div class="ws-sub">Free &middot; Printable</div>
-    <div class="ws-title">Free worksheets to start with</div>
-    <p class="ws-intro">A little taste before you buy — print them anytime, no cost.</p>
-    <div class="ws-row">
-      <a class="ws-card" href="worksheets.html"><img src="images/ws-keeping-the-spark.jpg" alt="Keeping the Spark worksheet" loading="lazy"><div class="ws-name">Keeping the Spark</div></a>
-      <a class="ws-card" href="worksheets.html"><img src="images/ws-mood-tracker.jpg" alt="Monthly Mood Tracker" loading="lazy"><div class="ws-name">Mood Tracker</div></a>
-      <a class="ws-card" href="worksheets.html"><img src="images/ws-self-care-tracker.jpg" alt="Weekly Self-Care Tracker" loading="lazy"><div class="ws-name">Self-Care Tracker</div></a>
-    </div>
-    <a class="ws-btn" href="worksheets.html">Browse all free worksheets</a>
-  </section>
-
-  <style>
-  /* Colorful category tiles — main page only */
-  .categories .cat-grid{ grid-template-columns:1fr !important; gap:14px !important; margin-left:-16px !important; margin-right:-16px !important; }
-  .categories .cat-card{
-    background:var(--bg-soft) !important;
-    border:2.5px solid var(--tile-bg) !important;
-    border-radius:14px;
-    transition:transform 0.15s ease, box-shadow 0.15s ease;
-    box-shadow:0 0 15px var(--tile-glow), 0 0 4px var(--tile-glow) !important;
-    display:grid !important;
-    grid-template-columns:auto 1fr;
-    column-gap:18px;
-    row-gap:4px;
-    align-items:center;
-    text-align:left !important;
-    padding:22px 20px !important;
-  }
-  .categories .cat-card:hover{ transform:translateY(-2px); box-shadow:0 0 22px var(--tile-glow), 0 0 7px var(--tile-glow) !important; }
-  .categories .cat-card svg{ stroke:var(--tile-bg) !important; grid-column:1; grid-row:1 / span 2; align-self:center; width:46px !important; height:46px !important; margin:0 !important; }
-  .categories .cat-card svg [fill]:not([fill="none"]){ fill:var(--tile-bg) !important; }
-  .categories .cat-card h3{ color:var(--cream) !important; grid-column:2; grid-row:1; margin:0 !important; font-size:19px !important; }
-  .categories .cat-card p{ color:var(--muted) !important; grid-column:2; grid-row:2; margin:0 !important; }
-  </style>
-
   <section class="categories">
     <div class="section-sub">Depth 1 · Wading In</div>
     <div class="section-title">Choose where you start</div>
     <div class="cat-grid">
 
-      <a class="cat-card" href="collection.html#healing" style="--tile-bg:#E8B4C4;--tile-ink:#3d2432;--tile-glow:rgba(232,180,196,0.55);">
+      <a class="cat-card" href="collection.html#healing">
         <svg viewBox="0 0 64 64" fill="none" stroke="var(--cat-healing)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
           <path d="M32 12 C 26 18, 26 26, 32 32 C 38 26, 38 18, 32 12 Z"/>
           <path d="M32 32 C 26 38, 18 38, 12 32 C 18 26, 26 26, 32 32 Z"/>
@@ -161,7 +68,7 @@
         <p>Shadow work, shame, the parts of you that need a witness.</p>
       </a>
 
-      <a class="cat-card" href="collection.html#recovery" style="--tile-bg:#A9C6D8;--tile-ink:#1f3b48;--tile-glow:rgba(169,198,216,0.55);">
+      <a class="cat-card" href="collection.html#recovery">
         <svg viewBox="0 0 64 64" fill="none" stroke="var(--cat-recovery)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
           <path d="M32 10 C 28 14, 28 20, 32 24 C 36 20, 36 14, 32 10 Z"/>
           <path d="M32 24 C 24 24, 20 28, 18 32 C 24 34, 30 30, 32 24 Z"/>
@@ -172,7 +79,7 @@
         <p>Step-down journals for cutting back, one day at a time.</p>
       </a>
 
-      <a class="cat-card" href="collection.html#family" style="--tile-bg:#C9B6DE;--tile-ink:#372549;--tile-glow:rgba(201,182,222,0.55);">
+      <a class="cat-card" href="collection.html#family">
         <svg viewBox="0 0 64 64" fill="none" stroke="var(--cat-family)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="32" cy="20" r="8"/>
           <path d="M20 30 C 16 26, 16 20, 20 16"/>
@@ -183,7 +90,7 @@
         <p>The people who shaped you — and the pages that untangle it.</p>
       </a>
 
-      <a class="cat-card" href="collection.html#faith" style="--tile-bg:#E8D9A8;--tile-ink:#4a3c16;--tile-glow:rgba(232,217,168,0.55);">
+      <a class="cat-card" href="collection.html#faith">
         <svg viewBox="0 0 64 64" fill="none" stroke="var(--cat-faith)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
           <path d="M32 8 C 28 12, 28 16, 32 20 C 36 16, 36 12, 32 8 Z"/>
           <path d="M20 22 C 24 18, 28 18, 32 20 C 28 24, 24 24, 20 22 Z"/>
@@ -194,7 +101,7 @@
         <p>WHY, purpose, and the mindset work that holds everything up.</p>
       </a>
 
-      <a class="cat-card" href="collection.html#grief" style="--tile-bg:#B9C9B4;--tile-ink:#26401f;--tile-glow:rgba(185,201,180,0.55);">
+      <a class="cat-card" href="collection.html#grief">
         <svg viewBox="0 0 64 64" fill="none" stroke="var(--cat-grief)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
           <path d="M32 50 C 14 38, 10 24, 18 16 C 24 10, 30 13, 32 19 C 34 13, 40 10, 46 16 C 54 24, 50 38, 32 50 Z"/>
           <path d="M28 22 L31 28 L27 32 L34 40" stroke-width="1.4"/>
@@ -203,7 +110,7 @@
         <p>For the losses that don't always get talked about — people, pets, and pieces of yourself.</p>
       </a>
 
-      <a class="cat-card" href="collection.html#daily" style="--tile-bg:#F0B7A0;--tile-ink:#5c2e1a;--tile-glow:rgba(240,183,160,0.55);">
+      <a class="cat-card" href="collection.html#daily">
         <svg viewBox="0 0 64 64" fill="none" stroke="var(--cat-daily)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="32" cy="32" r="10"/>
           <path d="M32 12 L32 18 M32 46 L32 52 M12 32 L18 32 M46 32 L52 32 M18 18 L22 22 M46 46 L42 42 M46 18 L42 22 M18 46 L22 42"/>
@@ -212,7 +119,7 @@
         <p>60-day daily journals to check in with yourself, one page at a time.</p>
       </a>
 
-      <a class="cat-card" href="collection.html#badbitch" style="--tile-bg:#F0A6C4;--tile-ink:#6e2140;--tile-glow:rgba(240,166,196,0.55);">
+      <a class="cat-card" href="collection.html#badbitch">
         <svg viewBox="0 0 64 64" fill="none" stroke="var(--cat-badbitch, #8a2f4b)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
           <path d="M32 10 L36 22 L48 22 L38 30 L42 42 L32 34 L22 42 L26 30 L16 22 L28 22 Z"/>
         </svg>
@@ -331,6 +238,34 @@
   })();
   </script>
 
+  <section class="reviews">
+    <div class="section-sub">In Their Words</div>
+    <div class="section-title">What people are saying</div>
+    <div class="reviews-empty">
+      Real reviews from real people will show up here as they come in. <br>No fake ones, ever — just honest words from the people who've used these pages.
+    </div>
+    <div class="review-form">
+      <h3>Bought a journal? Tell us about it.</h3>
+      <div class="star-select"><span>♥</span><span>♥</span><span>♥</span><span>♥</span><span>♥</span></div>
+      <input type="text" placeholder="Your name (or just initials)" />
+      <textarea rows="4" placeholder="What was your experience like?"></textarea>
+      <a href="mailto:ilikeitdeep26@gmail.com?subject=Journal%20Review" class="submit-review">Submit Review</a>
+      <p class="form-note">Every review goes straight to Steph's inbox and gets read by an actual person before it's posted.</p>
+    </div>
+  </section>
+
+  <section class="request-section" id="request">
+    <div class="section-sub">Don't See It Yet?</div>
+    <div class="section-title">Request a Journal</div>
+    <div class="request-box">
+      <p>Going through something that isn't covered yet? Tell us about it — if it fits, we'll build it.</p>
+      <input type="text" placeholder="Your name" />
+      <input type="email" placeholder="Your email" />
+      <textarea rows="4" placeholder="What kind of journal would help you?"></textarea>
+      <a href="mailto:ilikeitdeep26@gmail.com?subject=Journal%20Request" class="request-submit">Send Request</a>
+    </div>
+  </section>
+
   <style>
   .handwritten-quote{
     font-family:'Caveat', cursive;
@@ -352,6 +287,15 @@
   </style>
 
   <footer>
+    <div class="handwritten-quote">I'm addicted t<span class="mini-heart">♥</span> th<span class="mini-heart">♥</span>se s<span class="mini-heart">♥</span>uls wh<span class="mini-heart">♥</span> think a little deeper and l<span class="mini-heart">♥</span>ve a little harder.</div>
+    <div class="footer-signup">
+      <h4>Get notified about new journals</h4>
+      <p>New releases drop on the 8th, 17th, or 26th. Be the first to know.</p>
+      <div class="signup-row">
+        <input type="email" placeholder="Your email" />
+        <button class="signup-btn">Subscribe</button>
+      </div>
+    </div>
     <div class="footer-disclaimer">
       These journals are meant to help you grow and work through life's challenges — they are not a substitute for professional advice. We all deserve to be truly happy and like being in the skin we chose.
       <br><br><a href="privacy.html" style="color:var(--muted);">Privacy Policy</a>
