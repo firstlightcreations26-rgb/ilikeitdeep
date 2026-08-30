@@ -75,8 +75,25 @@ h2.section-title{font-family:'Cormorant Garamond',serif;font-weight:700;font-sty
 .rule-group h3{font-family:'Cormorant Garamond',serif;font-weight:700;font-style:italic;font-size:1.3rem;color:var(--hotpink);margin:34px 0 14px;text-align:center;}
 .rule-grid{display:grid;grid-template-columns:1fr;gap:14px;max-width:760px;margin:0 auto;}
 @media(min-width:700px){.rule-grid{grid-template-columns:1fr 1fr;}}
-.rule-card{background:var(--white);border:var(--hairline);border-radius:14px;padding:16px 18px;font-size:.92rem;box-shadow:var(--shadowsm);}
+.rule-card{background:var(--white);border:var(--hairline);border-left:4px solid var(--hotpink);border-radius:10px 14px 14px 10px;padding:16px 18px;font-size:.92rem;box-shadow:var(--shadowsm);}
 .rule-card b{color:var(--hotpink);font-family:'Cormorant Garamond',serif;font-size:1rem;}
+
+/* each category gets its own accent so the boxes don't all read as plain white */
+.cat-honesty h3{color:#d81b73;}
+.cat-honesty .rule-card{background:rgba(216,27,115,0.06);border-left-color:#d81b73;}
+.cat-honesty .rule-card b{color:#d81b73;}
+
+.cat-man h3{color:#c9184f;}
+.cat-man .rule-card{background:rgba(201,24,79,0.06);border-left-color:#c9184f;}
+.cat-man .rule-card b{color:#c9184f;}
+
+.cat-loyalty h3{color:#8e2a63;}
+.cat-loyalty .rule-card{background:rgba(142,42,99,0.06);border-left-color:#8e2a63;}
+.cat-loyalty .rule-card b{color:#8e2a63;}
+
+.cat-love h3{color:#e2417a;}
+.cat-love .rule-card{background:rgba(226,65,122,0.06);border-left-color:#e2417a;}
+.cat-love .rule-card b{color:#e2417a;}
 
 /* ---------- QUIZ ---------- */
 .quiz-start{text-align:center;}
@@ -152,7 +169,11 @@ h2.section-title{font-family:'Cormorant Garamond',serif;font-weight:700;font-sty
 .jshow-card .jp{color:var(--hotpink);font-weight:800;display:block;margin-top:4px;}
 .jshow-card:hover .jp{color:var(--white);}
 #levelUpBlock{margin-top:26px;padding-top:22px;border-top:1.5px dashed var(--pink);text-align:center;}
-#levelUpLine{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:var(--white);margin-bottom:18px;}
+#levelUpLine{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:var(--white);margin-bottom:12px;}
+.levelup-invite{font-size:.9rem;color:var(--white);opacity:.9;max-width:440px;margin:0 auto 18px;line-height:1.6;}
+.levelup-invite .code{display:inline-block;background:var(--hotpink);color:var(--white);font-weight:800;padding:3px 10px;border-radius:6px;letter-spacing:.03em;}
+.glow-quiz-nudge{margin-top:22px;font-size:.85rem;color:var(--white);opacity:.85;}
+.glow-quiz-nudge a{color:var(--pink);font-weight:700;text-decoration:underline;}
 .gift-note{max-width:600px;margin:24px auto 0;text-align:center;font-size:.8rem;font-style:italic;opacity:.7;}
 
 /* ---------- FOOTER ---------- */
@@ -193,7 +214,7 @@ footer.gc-footer p{max-width:560px;margin:0 auto;font-size:.85rem;opacity:.85;}
     <p>These rules were put in place by women who got burned by so-called "friends." Don't be the fake friend, the stupid bitch, or the home-wrecker. Be the girl who actually has the room when she walks in.</p>
   </div>
 
-  <div class="rule-group">
+  <div class="rule-group cat-honesty">
     <h3>On Honesty</h3>
     <div class="rule-grid">
       <div class="rule-card"><b>Keep it real.</b> Be honest when she asks your opinion. Don't worry about hurting her feelings — worry about how you'd feel if you needed the truth and didn't get it.</div>
@@ -203,7 +224,7 @@ footer.gc-footer p{max-width:560px;margin:0 auto;font-size:.85rem;opacity:.85;}
     </div>
   </div>
 
-  <div class="rule-group">
+  <div class="rule-group cat-man">
     <h3>On Her Man (Not Yours)</h3>
     <div class="rule-grid">
       <div class="rule-card"><b>Let her live.</b> If she likes someone, support her, warn her if you must — but that's it.</div>
@@ -213,7 +234,7 @@ footer.gc-footer p{max-width:560px;margin:0 auto;font-size:.85rem;opacity:.85;}
     </div>
   </div>
 
-  <div class="rule-group">
+  <div class="rule-group cat-loyalty">
     <h3>On Loyalty</h3>
     <div class="rule-grid">
       <div class="rule-card"><b>Her beef is your beef.</b> Nobody should be disrespectful to your girl. Have her back, always.</div>
@@ -223,7 +244,7 @@ footer.gc-footer p{max-width:560px;margin:0 auto;font-size:.85rem;opacity:.85;}
     </div>
   </div>
 
-  <div class="rule-group">
+  <div class="rule-group cat-love">
     <h3>On Everyday Love</h3>
     <div class="rule-grid">
       <div class="rule-card"><b>Be her cheerleader.</b> Support her in life, always. Make sure she feels valued.</div>
@@ -260,6 +281,8 @@ footer.gc-footer p{max-width:560px;margin:0 auto;font-size:.85rem;opacity:.85;}
 
       <div id="levelUpBlock">
         <p id="levelUpLine"></p>
+        <p class="levelup-invite">If you'd want to be a better friend, we recommend these journals — <span class="code">DUMBBITCH</span> gets you 25% off:</p>
+
         <div class="gift-step-label">Shop The Glow Up Collection</div>
         <div class="journal-showcase">
           <a class="jshow-card" href="https://buy.stripe.com/00wfZjdqH9V95ZMd2pgUM10">Glow Up<span class="jp">$17</span></a>
@@ -267,17 +290,8 @@ footer.gc-footer p{max-width:560px;margin:0 auto;font-size:.85rem;opacity:.85;}
           <a class="jshow-card" href="https://buy.stripe.com/cNibJ3fyPc3h3RE7I5gUM12">My Best Life<span class="jp">$17</span></a>
           <a class="jshow-card" href="https://buy.stripe.com/28E5kFfyP4APag21jHgUM11">Make It Rain<span class="jp">$17</span></a>
         </div>
-        <div class="gift-step-label">Pick Your Glow-Up</div>
-        <div class="journal-showcase" style="grid-template-columns:repeat(2,1fr);">
-          <!-- All 7 Mavely category links below are live and category-specific. -->
-          <a class="jshow-card" href="https://mave.ly/i-like-it-deep/post/soft-feminine-glow-up" target="_blank" rel="noopener">Soft &amp; Feminine Glow-Up<span class="jp">Shop →</span></a>
-          <a class="jshow-card" href="https://mave.ly/i-like-it-deep/post/bombshell-glow-up" target="_blank" rel="noopener">Bombshell Glow-Up<span class="jp">Shop →</span></a>
-          <a class="jshow-card" href="https://mave.ly/i-like-it-deep/post/edgy-girl-glow-up" target="_blank" rel="noopener">Edgy Girl Glow-Up<span class="jp">Shop →</span></a>
-          <a class="jshow-card" href="https://mave.ly/i-like-it-deep/post/clean-girl-glow-up" target="_blank" rel="noopener">Clean Girl Glow-Up<span class="jp">Shop →</span></a>
-          <a class="jshow-card" href="https://mave.ly/i-like-it-deep/post/looks-expensive-on-a-budget" target="_blank" rel="noopener">Looks Expensive on a Budget<span class="jp">Shop →</span></a>
-          <a class="jshow-card" href="https://mave.ly/i-like-it-deep/post/dats-night-glow-up" target="_blank" rel="noopener">Date Night Glow-Up<span class="jp">Shop →</span></a>
-          <a class="jshow-card" href="https://mave.ly/i-like-it-deep/post/under-50" target="_blank" rel="noopener">Under $50 Glow-Up<span class="jp">Shop →</span></a>
-        </div>
+
+        <p class="glow-quiz-nudge">Not sure where to start? <a href="glow-up.html">Take Our Glow-Up Quiz →</a></p>
       </div>
     </div>
   </div>
@@ -467,11 +481,10 @@ function calcResults(){
     warningEl.scrollIntoView({behavior:'smooth', block:'center'});
     return;
   }
-  var title, text, levelUp, code = false;
+  var title, text, levelUp;
   if(total <= 14){
     title = "You Are Not A Friend";
-    text = "Based on your answers, it looks like either nobody ever taught you the code, or you knew and did it anyway. If you care about your reputation and want to feel the warmth of real friendship, this is your sign. There's no better feeling than when your heart is breaking and you have girls to actually call. Your mom isn't the same. Your guy friends aren't the same. Having even a small army behind you is everything. Take this advice, or find out the hard way. Since it looks like you could use the code book — here's 25% off:";
-    code = true;
+    text = "Based on your answers, it looks like either nobody ever taught you the code, or you knew and did it anyway. If you care about your reputation and want to feel the warmth of real friendship, this is your sign. There's no better feeling than when your heart is breaking and you have girls to actually call. Your mom isn't the same. Your guy friends aren't the same. Having even a small army behind you is everything. Take this advice, or find out the hard way.";
     levelUp = "And it's not just the friend thing — if you're ready to become the version of you that people actually want to be loyal to, here's where you start.";
   } else if(total <= 21){
     title = "You Are Not A Very Nice Friend";
@@ -495,16 +508,7 @@ function calcResults(){
   textEl.textContent = text;
   document.getElementById('levelUpLine').textContent = levelUp;
   var emailBtn = document.getElementById('emailResults');
-  var body = "My Girl Code result: " + title + " (" + total + "/40).";
-  if(code){
-    var codeSpan = document.createElement('span');
-    codeSpan.className = 'code';
-    codeSpan.textContent = 'DUMBBITCH — 25% off';
-    textEl.appendChild(document.createElement('br'));
-    textEl.appendChild(document.createElement('br'));
-    textEl.appendChild(codeSpan);
-    body += " Promo code: DUMBBITCH for 25% off.";
-  }
+  var body = "My Girl Code result: " + title + " (" + total + "/40). Promo code: DUMBBITCH for 25% off the journals.";
   emailBtn.href = "mailto:ilikeitdeep26@gmail.com?subject=My%20Girl%20Code%20Result&body=" + encodeURIComponent(body);
   document.getElementById('resultBox').style.display = 'block';
   document.getElementById('resultBox').scrollIntoView({behavior:'smooth', block:'center'});
