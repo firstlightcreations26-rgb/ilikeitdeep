@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glow-Up Quiz — I Like It Deep</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500;1,600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --hotpink:#7c5cbf;
+  --pink:#ffcc33;
+  --softpink:#bfe3f5;
+  --softpink2:#eef8fd;
+  --cream:#fffaf7;
+  --black:#221a35;
+  --white:#ffffff;
+  --line:#cdeaf7;
+  --shadow:0 6px 20px rgba(34,26,53,0.10);
+  --shadowsm:0 3px 10px rgba(34,26,53,0.08);
+  --hairline:1px solid rgba(34,26,53,0.12);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--softpink2);color:var(--black);font-family:'Poppins',sans-serif;line-height:1.6;}
+a{color:inherit;}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px;}
+
+header.gc-header{background:var(--black);padding:14px 22px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:60;flex-wrap:wrap;gap:10px;}
+.gc-logo{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:1.25rem;color:var(--white);text-decoration:none;}
+.gc-logo span{color:var(--hotpink);}
+.back-btn{font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--white)!important;text-decoration:none;background:var(--hotpink);border:1.5px solid var(--hotpink);border-radius:999px;padding:8px 14px;}
+.back-btn:hover{background:var(--black);border-color:var(--white);}
+
+.hero{background:linear-gradient(180deg,var(--hotpink),var(--softpink) 75%);padding:60px 22px 48px;text-align:center;color:var(--black);}
+.hero .eyebrow{font-weight:700;letter-spacing:.3em;text-transform:uppercase;font-size:.7rem;color:var(--white);background:var(--black);display:inline-block;padding:6px 16px;border-radius:999px;margin-bottom:18px;}
+.hero h1{font-family:'Pacifico',cursive;font-weight:400;font-size:clamp(2.4rem,8vw,3.8rem);color:var(--black);line-height:1.1;}
+.hero .sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:1.15rem;max-width:480px;margin:20px auto 0;color:var(--black);background:var(--white);padding:14px 22px;border-radius:16px;box-shadow:var(--shadow);}
+.hero-btns{margin-top:24px;}
+.btn{display:inline-block;font-weight:700;letter-spacing:.05em;text-transform:uppercase;font-size:.8rem;padding:13px 24px;border-radius:999px;text-decoration:none;border:1.5px solid var(--black);cursor:pointer;transition:transform .15s,box-shadow .15s;}
+.btn:hover{box-shadow:var(--shadowsm);transform:translateY(-1px);}
+.btn-black{background:var(--black);color:var(--white);}
+.btn-black:hover{background:var(--hotpink);color:var(--white);border-color:var(--hotpink);}
+.btn-white{background:var(--white);color:var(--black);}
+
+section{padding:50px 22px;}
+.section-white{background:var(--white);}
+.section-blush{background:var(--softpink2);}
+.eyebrow-sm{font-weight:700;letter-spacing:.25em;text-transform:uppercase;font-size:.7rem;color:var(--hotpink);text-align:center;margin-bottom:8px;}
+h2.section-title{font-family:'Cormorant Garamond',serif;font-weight:700;font-style:italic;font-size:clamp(1.7rem,5vw,2.3rem);text-align:center;margin-bottom:10px;}
+.section-sub{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.02rem;max-width:520px;margin:0 auto 30px;opacity:.85;}
+
+.quiz-start{text-align:center;}
+#quizBox{display:none;max-width:700px;margin:30px auto 0;}
+.q-block{background:var(--white);border:var(--hairline);border-radius:16px;padding:20px 22px;margin-bottom:16px;box-shadow:var(--shadowsm);}
+.q-block p.q-text{font-weight:600;margin-bottom:12px;}
+.q-block label{display:block;background:var(--softpink2);border:1.5px solid var(--line);border-radius:10px;padding:10px 14px;margin-bottom:8px;font-size:.9rem;cursor:pointer;}
+.q-block label:hover{border-color:var(--hotpink);}
+.q-block input{margin-right:8px;}
+#seeResults{display:block;margin:20px auto 0;}
+#quizWarning{color:var(--hotpink);font-weight:700;text-align:center;margin-bottom:12px;display:none;}
+
+#resultBox{display:none;max-width:640px;margin:30px auto 0;background:var(--black);color:var(--white);border-radius:18px;padding:34px 28px;text-align:center;}
+#resultBox .eyebrow-sm{color:var(--pink);}
+#resultTitle{font-family:'Pacifico',cursive;font-weight:400;color:var(--white);font-size:2.1rem;margin-bottom:14px;}
+#resultDesc{font-size:.98rem;margin-bottom:22px;color:var(--white);opacity:.92;}
+#resultShopBtn{display:inline-block;background:var(--hotpink);color:var(--white);font-weight:800;letter-spacing:.05em;text-transform:uppercase;font-size:.82rem;padding:14px 26px;border-radius:999px;text-decoration:none;}
+#resultShopBtn:hover{background:var(--white);color:var(--black);}
+
+.also-check{margin-top:30px;padding-top:24px;border-top:1.5px dashed var(--pink);}
+.also-check-label{font-weight:700;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--pink);margin-bottom:14px;}
+.journal-showcase{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:460px;margin:0 auto;}
+.jshow-card{background:var(--white);border:var(--hairline);box-shadow:var(--shadowsm);border-radius:12px;padding:14px 12px;text-align:center;font-size:.85rem;font-weight:600;color:var(--black);text-decoration:none;display:block;transition:transform .15s;}
+.jshow-card:hover{background:var(--hotpink);color:var(--white);border-color:var(--hotpink);transform:translateY(-2px);}
+.jshow-card .jp{color:var(--hotpink);font-weight:800;display:block;margin-top:4px;font-size:.75rem;}
+.jshow-card:hover .jp{color:var(--white);}
+
+.glow-toggle{display:block;margin:26px auto 0;}
+#allCats{display:none;margin-top:20px;}
+#allCats .journal-showcase{max-width:600px;grid-template-columns:repeat(2,1fr);}
+@media(min-width:600px){#allCats .journal-showcase{grid-template-columns:repeat(4,1fr);}}
+
+footer.gc-footer{background:var(--black);color:var(--white);text-align:center;padding:40px 22px;}
+footer.gc-footer p{max-width:520px;margin:0 auto;font-size:.85rem;opacity:.85;}
+</style>
+</head>
+<body>
+
+<header class="gc-header">
+  <a href="index.html" class="gc-logo">I like it <span>deep</span></a>
+  <a href="index.html" class="back-btn">← Back to Main Page</a>
+</header>
+
+<section class="hero" id="top">
+  <div class="eyebrow">Find Your Look</div>
+  <h1>Glow-Up Quiz</h1>
+  <p class="sub">A few quick questions to find the glow-up style that actually fits you — then shop it.</p>
+  <div class="hero-btns">
+    <a href="#quiz" class="btn btn-black">Take The Quiz</a>
+  </div>
+</section>
+
+<section class="section-blush" id="quiz">
+  <div class="eyebrow-sm">6 Quick Questions</div>
+  <h2 class="section-title">What's Your Glow-Up Style?</h2>
+  <p class="section-sub">Pick whatever actually sounds like you — not what sounds cutest.</p>
+
+  <div class="quiz-start">
+    <button class="btn btn-black" onclick="document.getElementById('quizBox').style.display='block';this.style.display='none';">Click Here To Start</button>
+  </div>
+
+  <div id="quizBox">
+    <form id="glowQuiz"></form>
+    <div style="text-align:center;">
+      <p id="quizWarning"></p>
+      <button class="btn btn-black" id="seeResults" type="button" onclick="calcGlowResult()">See My Glow-Up Style</button>
+    </div>
+
+    <div id="resultBox">
+      <div class="eyebrow-sm">Your Glow-Up Style Is</div>
+      <div id="resultTitle"></div>
+      <p id="resultDesc"></p>
+      <a id="resultShopBtn" href="#" target="_blank" rel="noopener">Shop This Look →</a>
+
+      <div class="also-check">
+        <div class="also-check-label">A Couple More Worth A Peek</div>
+        <div class="journal-showcase">
+          <a class="jshow-card" href="https://mave.ly/i-like-it-deep/post/under-50" target="_blank" rel="noopener">Under $50 Glow-Up<span class="jp">Shop →</span></a>
+          <a class="jshow-card" href="https://mave.ly/i-like-it-deep/post/dats-night-glow-up" target="_blank" rel="noopener">Date Night Glow-Up<span class="jp">Shop →</span></a>
+        </div>
+
+        <button class="btn btn-white glow-toggle" type="button" id="allCatsBtn" onclick="toggleAllCats()">See Every Glow-Up Category</button>
+
+        <div id="allCats">
+          <div class="journal-showcase">
+            <a class="jshow-card" href="https://mave.ly/i-like-it-deep/post/soft-feminine-glow-up" target="_blank" rel="noopener">Soft &amp; Feminine<span class="jp">Shop →</span></a>
+            <a class="jshow-card" href="https://mave.ly/i-like-it-deep/post/bombshell-glow-up" target="_blank" rel="noopener">Bombshell<span class="jp">Shop →</span></a>
+            <a class="jshow-card" href="https://mave.ly/i-like-it-deep/post/edgy-girl-glow-up" target="_blank" rel="noopener">Edgy Girl<span class="jp">Shop →</span></a>
+            <a class="jshow-card" href="https://mave.ly/i-like-it-deep/post/clean-girl-glow-up" target="_blank" rel="noopener">Clean Girl<span class="jp">Shop →</span></a>
+            <a class="jshow-card" href="https://mave.ly/i-like-it-deep/post/looks-expensive-on-a-budget" target="_blank" rel="noopener">Looks Expensive on a Budget<span class="jp">Shop →</span></a>
+            <a class="jshow-card" href="https://mave.ly/i-like-it-deep/post/dats-night-glow-up" target="_blank" rel="noopener">Date Night<span class="jp">Shop →</span></a>
+            <a class="jshow-card" href="https://mave.ly/i-like-it-deep/post/under-50" target="_blank" rel="noopener">Under $50<span class="jp">Shop →</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="gc-footer">
+  <p>Heads up: these are affiliate links.</p>
+</footer>
+
+<script>
+/* ============ GLOW-UP CATEGORIES ============ */
+var categories = [
+  {
+    key:"soft",
+    name:"Soft &amp; Feminine",
+    desc:"Dewy skin, soft fabrics, pastel everything — your glow-up is gentle, romantic, and never trying too hard.",
+    link:"https://mave.ly/i-like-it-deep/post/soft-feminine-glow-up"
+  },
+  {
+    key:"bombshell",
+    name:"Bombshell",
+    desc:"Full glam, bold color, main-character energy — your glow-up walks into the room before you do.",
+    link:"https://mave.ly/i-like-it-deep/post/bombshell-glow-up"
+  },
+  {
+    key:"edgy",
+    name:"Edgy Girl",
+    desc:"Dark liner, leather, zero apologies — your glow-up is about owning exactly who you are.",
+    link:"https://mave.ly/i-like-it-deep/post/edgy-girl-glow-up"
+  },
+  {
+    key:"clean",
+    name:"Clean Girl",
+    desc:"Slicked-back bun, minimal makeup, effortless basics — your glow-up is polish without the fuss.",
+    link:"https://mave.ly/i-like-it-deep/post/clean-girl-glow-up"
+  },
+  {
+    key:"budget",
+    name:"Looks Expensive On A Budget",
+    desc:"You want the luxury look without the luxury price tag — your glow-up is all about the smart find.",
+    link:"https://mave.ly/i-like-it-deep/post/looks-expensive-on-a-budget"
+  },
+  {
+    key:"datenight",
+    name:"Date Night",
+    desc:"Getting ready for someone who makes you want to try a little harder — your glow-up is romantic and intentional.",
+    link:"https://mave.ly/i-like-it-deep/post/dats-night-glow-up"
+  },
+  {
+    key:"under50",
+    name:"Under $50",
+    desc:"Real results without blowing the budget — your glow-up is smart, simple, and still gets it done.",
+    link:"https://mave.ly/i-like-it-deep/post/under-50"
+  }
+];
+
+/* Each question offers one option per category, in the same order as `categories` above,
+   so option index === category index. Whichever category gets picked the most wins. */
+var questions = [
+  {
+    q:"Pick your Friday night in one sentence:",
+    opts:[
+      "Skincare, soft music, and my comfiest set.",
+      "Full glam, going out, turning heads.",
+      "Leather jacket, dark lips, no rules.",
+      "Slicked bun, gold hoops, effortless.",
+      "A thrifted find that looks way more expensive than it was.",
+      "Getting ready for someone who makes me want to try.",
+      "Whatever makes me feel good without blowing the budget."
+    ]
+  },
+  {
+    q:"Your dream closet is mostly full of:",
+    opts:[
+      "Florals, pastels, and lace.",
+      "Bodycon, heels, and bold color.",
+      "Black on black with a statement boot.",
+      "Neutrals that all match, no thinking required.",
+      "Pieces that look pricier than they actually were.",
+      "That one perfect outfit for someone special.",
+      "Affordable finds that still slap."
+    ]
+  },
+  {
+    q:"Your beauty routine right now is mostly about:",
+    opts:[
+      "Dewy, natural, romantic.",
+      "Bold lash, contour, main character energy.",
+      "Dark liner, matte lips, attitude.",
+      "Minimal, glowy, five-minute face.",
+      "Drugstore dupes for the luxury look.",
+      "Whatever makes me feel confident for them.",
+      "Good products that don't cost a fortune."
+    ]
+  },
+  {
+    q:"Pick a vibe word for where you're headed:",
+    opts:["Dreamy","Iconic","Fearless","Polished","Elevated","Romantic","Smart"]
+  },
+  {
+    q:"Your glow-up goal right now is mostly:",
+    opts:[
+      "Softness and self-love.",
+      "Confidence that walks into any room.",
+      "Owning exactly who I am, no apologies.",
+      "Getting my life — and my look — together.",
+      "Leveling up without spending a fortune.",
+      "Feeling irresistible for someone specific.",
+      "Real results on a real budget."
+    ]
+  },
+  {
+    q:"If your glow-up had a soundtrack, it'd be:",
+    opts:[
+      "Something soft and dreamy.",
+      "A strut-into-the-room anthem.",
+      "Something with an edge.",
+      "Chill, put-together, no chaos.",
+      "Something that sounds more expensive than it is.",
+      "A slow-burn love song.",
+      "Whatever's actually in my budget playlist."
+    ]
+  }
+];
+
+(function buildQuiz(){
+  var form = document.getElementById('glowQuiz');
+  questions.forEach(function(item, i){
+    var block = document.createElement('div');
+    block.className = 'q-block';
+    var qt = document.createElement('p');
+    qt.className = 'q-text';
+    qt.textContent = (i+1) + ". " + item.q;
+    block.appendChild(qt);
+    item.opts.forEach(function(opt, j){
+      var label = document.createElement('label');
+      var input = document.createElement('input');
+      input.type = 'radio';
+      input.name = 'q'+i;
+      input.value = j;
+      label.appendChild(input);
+      label.appendChild(document.createTextNode(opt));
+      block.appendChild(label);
+    });
+    form.appendChild(block);
+  });
+})();
+
+function calcGlowResult(){
+  try{
+  var warningEl = document.getElementById('quizWarning');
+  warningEl.style.display = 'none';
+  var tally = [0,0,0,0,0,0,0];
+  var answered = 0;
+  for(var i=0;i<questions.length;i++){
+    var picked = document.querySelector('input[name="q'+i+'"]:checked');
+    if(picked){ tally[parseInt(picked.value,10)]++; answered++; }
+  }
+  if(answered < questions.length){
+    warningEl.textContent = "Answer all " + questions.length + " to see your glow-up style! (" + answered + " of " + questions.length + " answered so far)";
+    warningEl.style.display = 'block';
+    warningEl.scrollIntoView({behavior:'smooth', block:'center'});
+    return;
+  }
+  var winnerIndex = 0;
+  for(var k=1;k<tally.length;k++){
+    if(tally[k] > tally[winnerIndex]) winnerIndex = k;
+  }
+  var result = categories[winnerIndex];
+  document.getElementById('resultTitle').innerHTML = result.name;
+  document.getElementById('resultDesc').textContent = result.desc;
+  document.getElementById('resultShopBtn').href = result.link;
+
+  var allBox = document.getElementById('allCats');
+  var allBtn = document.getElementById('allCatsBtn');
+  allBox.style.display = 'none';
+  allBtn.textContent = 'See Every Glow-Up Category';
+
+  document.getElementById('resultBox').style.display = 'block';
+  document.getElementById('resultBox').scrollIntoView({behavior:'smooth', block:'center'});
+  } catch(err){
+    var warningEl2 = document.getElementById('quizWarning');
+    if(warningEl2){
+      warningEl2.textContent = "Something glitched showing your result — scroll up and make sure all questions are answered, then try again.";
+      warningEl2.style.display = 'block';
+    }
+  }
+}
+
+function toggleAllCats(){
+  var box = document.getElementById('allCats');
+  var btn = document.getElementById('allCatsBtn');
+  var showing = box.style.display === 'block';
+  box.style.display = showing ? 'none' : 'block';
+  btn.textContent = showing ? 'See Every Glow-Up Category' : 'Show Less';
+}
+</script>
+</body>
+</html>
