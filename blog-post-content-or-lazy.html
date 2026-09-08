@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Is It Being Content or Lazy? — I Like It Deep</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  :root{
+    --bg:#2E2D33;
+    --bg-soft:#38373E;
+    --rose:#8a2f4b;
+    --rose-soft:#c98aa0;
+    --blush:#f2b8c6;
+    --cream:#FAF6EF;
+    --muted:#b9b4bc;
+    --line:rgba(250,246,239,0.10);
+  }
+  .nav-wrap{position:relative;}
+  .menu-toggle{background:transparent;border:1px solid var(--line);color:var(--muted);font-family:'Karla',sans-serif;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;padding:11px 20px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;}
+  .menu-toggle:hover{color:var(--rose);border-color:var(--rose);}
+  .menu-arrow{transition:transform 0.2s ease;font-size:11px;}
+  .menu-toggle[aria-expanded="true"] .menu-arrow{transform:rotate(180deg);}
+  .dropdown-menu{display:none;flex-direction:column;position:absolute;top:calc(100% + 10px);right:0;background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:8px;min-width:210px;z-index:50;box-shadow:0 14px 34px rgba(0,0,0,0.4);}
+  .dropdown-menu.open{display:flex;}
+  .dropdown-menu a{padding:13px 16px;border-radius:10px;color:var(--muted);text-decoration:none;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;}
+  .dropdown-menu a:hover{background:var(--bg);color:var(--rose);}
+  .dropdown-menu a.girl-code-link{color:#ff2f8f;font-weight:700;}
+  .dropdown-menu a.girl-code-link:hover{color:#ff2f8f;background:var(--bg);}
+  .dropdown-menu a.glow-up-link{color:#9b7fe0;font-weight:700;}
+  .dropdown-menu a.glow-up-link:hover{color:#9b7fe0;background:var(--bg);}
+
+  .post-wrap{max-width:700px;margin:0 auto;padding:40px 22px 10px;}
+  .back-link{display:inline-flex;align-items:center;gap:6px;font-family:'Karla',sans-serif;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:var(--rose-soft);text-decoration:none;margin-bottom:28px;}
+  .back-link:hover{color:var(--blush);}
+  .post-date{font-family:'Karla',sans-serif;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--rose-soft);margin-bottom:12px;}
+  .post-title{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(28px,6vw,42px);line-height:1.15;color:var(--cream);margin-bottom:14px;}
+  .post-byline{font-family:'Karla',sans-serif;font-style:italic;font-size:14px;color:var(--muted);margin-bottom:28px;}
+  .post-image{width:100%;border-radius:16px;overflow:hidden;margin-bottom:34px;box-shadow:0 14px 34px rgba(0,0,0,0.35);}
+  .post-image img{width:100%;display:block;object-fit:cover;}
+  .post-body{font-family:'Karla',sans-serif;font-size:16.5px;line-height:1.85;color:var(--cream);}
+  .post-body p{margin-bottom:22px;}
+  .back-to-top{display:inline-flex;align-items:center;gap:6px;font-family:'Karla',sans-serif;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--rose-soft);text-decoration:none;border:1px solid var(--line);border-radius:24px;padding:9px 18px;margin:6px 0 30px;}
+  .back-to-top:hover{color:var(--blush);border-color:var(--rose-soft);}
+
+  .related-wrap{max-width:1000px;margin:60px auto 0;padding:0 22px 70px;}
+  .related-eyebrow{text-align:center;font-family:'Karla',sans-serif;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:var(--rose-soft);margin-bottom:8px;}
+  .related-title{text-align:center;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(22px,4vw,30px);color:var(--cream);margin-bottom:34px;}
+  .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  @media(max-width:800px){.related-grid{grid-template-columns:1fr;max-width:360px;margin:0 auto;}}
+  .journal-card{background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;}
+  .journal-card .card-cover{width:100%;height:190px;object-fit:cover;border-radius:10px;display:block;margin-bottom:14px;box-shadow:0 4px 14px rgba(0,0,0,0.25);}
+  .journal-card h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:19px;color:var(--cream);margin-bottom:6px;}
+  .journal-card .card-desc{font-family:'Karla',sans-serif;font-size:13.5px;color:var(--muted);margin-bottom:16px;flex:1;}
+  .journal-card .card-foot{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}
+  .journal-card .price{font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--rose-soft);}
+  .journal-card .buy{background:var(--rose);color:var(--cream);font-weight:700;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;padding:9px 18px;border-radius:999px;text-decoration:none;}
+  .journal-card .reassure{font-family:'Karla',sans-serif;font-size:11.5px;color:var(--muted);opacity:0.75;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+   <div class="logo"><img src="images/logo.png" alt="I Like It Deep logo" style="height:50px;"></div>
+    <div class="nav-wrap">
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainMenu" onclick="toggleMainMenu()">Menu <span class="menu-arrow">▾</span></button>
+      <nav id="mainMenu" class="dropdown-menu">
+        <a href="index.html">Home</a>
+        <a href="collection.html">Journals</a>
+        <a href="blog.html">Blog</a>
+        <a href="girl-code.html" class="girl-code-link">Girl Code</a>
+        <a href="glow-up.html" class="glow-up-link">Glow Up</a>
+        <a href="bookmarks.html">Bookmarks</a>
+        <a href="coloring-pages.html">Coloring Pages</a>
+        <a href="about.html">About</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="index.html#request">Request a Journal</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="post-wrap" id="top">
+    <a href="blog.html" class="back-link">&larr; Back to Blog</a>
+    <div class="post-date">August 28, 2026</div>
+    <h1 class="post-title">Is It Being Content or Lazy?</h1>
+    <p class="post-byline">— S, founder of I Like It Deep</p>
+
+    <div class="post-image">
+      <img src="images/content-or-lazy.png" alt="Fictional AI-generated representation of grounding outside with a German Shepherd">
+    </div>
+
+    <div class="post-body">
+      <p>I'm a little confused about where I'm at right now. Writing this at 7:34pm, I'm happy. I feel great. I didn't accomplish anything today that was impressive, but I feel good. There were even a few things that happened that made me irritated and frustrated, and they're not even phasing me right now, because I'm just living in the moment. I truly have so much to be grateful for — even when it's not even that much, it's still something. I haven't reached for any of the goals I've set, haven't done much of anything really, but I feel light. My depression is being suppressed by this warm, nice feeling.</p>
+
+      <p>It might have come from sitting outside and grounding myself. I was brushing my boyfriend's German Shepherd, and while he was laying next to me, I closed my eyes and visualized our paws and feet connected, going deep into the earth, with a golden light coming down from the universe and filling both our bodies. I did that three times, and all three times, this silly guy rolled onto his back with all four legs facing the sky. It was pretty cool watching his reaction. There's gotta be some feeling he picked up on.</p>
+
+      <p>I love dogs. I could snuggle one all day and all night. I've always felt a bond with them, just love them completely. Growing up, this guy would find me hanging out in his garage because I'd sneak in through the gate connected to his house just to play with his dog, Tucker. He was a black lab mix and just perfect. I adored him. He was my first love that wasn't officially mine — until I moved out and was finally able to buy my own first true love, Owen. He was a Pomeranian/Yorkie, and this handsome boy was the love of my life. He came with me everywhere. I mean everywhere — to work, on dates when I was meeting a guy, to the store. That dog was by my side for all of it.</p>
+
+      <p>I never put any real training into him, since he was my first dog. And even working with dogs daily, having your own was just different. He was spoiled rotten and came before anyone else in my life. I remember boyfriends getting jealous over how I would talk to Owen — full baby talk, all sweet, and not a bit of that for them. Little pussies. That dog was my whole world. He lived to about 10 or 11.</p>
+
+      <p>I took him to the vet one day when he was acting goofy, and while we were waiting, he threw up black tar all over me. It broke my heart having to put him down. I saved a part of his beautiful tail and had his paw prints made in clay. I still miss that little guy to this day. I hope he comes back to me someday, in another dog. He's in heaven now with his brother Oscar (a mutt), his step-sister Kitty (a pitbull), and their distant cousin Sampson (a Scottish Fold). All of my babies were amazing pets. I wish they'd lived longer — saying goodbye to every one of them was the hardest thing I've ever had to do. They touched my heart in ways no human ever has.</p>
+
+      <p>The day I can finally afford another dog, my next breed is going to be a bull terrier. I don't know what it is about that breed, but I just love them.</p>
+    </div>
+
+    <a href="#top" class="back-to-top">&uarr; Back to top</a>
+  </div>
+
+  <div class="related-wrap">
+    <div class="related-eyebrow">You Might Also Need</div>
+    <div class="related-title">Journals That Relate</div>
+    <div class="related-grid">
+
+      <div class="journal-card">
+        <img class="card-cover" src="images/cover-choose-joy.jpg" alt="Choose Joy journal cover" loading="lazy">
+        <h3>Choose Joy</h3>
+        <p class="card-desc">A 60-day daily journal for finding the good — real gratitude, real kindness, one page at a time, without the toxic positivity.</p>
+        <div class="card-foot">
+          <span class="price">$26</span>
+          <a class="buy" href="https://buy.stripe.com/8x2fZjcmDebp1Jw1jHgUM0Q">Buy</a>
+        </div>
+        <p class="reassure">Instant download — start writing in 2 minutes</p>
+      </div>
+
+      <div class="journal-card">
+        <img class="card-cover" src="images/cover-Right-Now-Im-Okay-v2.jpg" alt="Right Now I'm Okay journal cover" loading="lazy">
+        <h3>Right Now I'm Okay</h3>
+        <p class="card-desc">A guided journal for the high days and the low ones.</p>
+        <div class="card-foot">
+          <span class="price">$17</span>
+          <a class="buy" href="https://buy.stripe.com/7sYcN7fyP5ETgEq5zXgUM0f">Buy</a>
+        </div>
+        <p class="reassure">Instant download — start writing in 2 minutes</p>
+      </div>
+
+      <div class="journal-card">
+        <img class="card-cover" src="images/cover-losing-a-pet.jpg" alt="Losing a Pet journal cover" loading="lazy">
+        <h3>Losing a Pet</h3>
+        <p class="card-desc">A grief journal for the silence they left behind — the empty food bowl, the leash by the door. Space to actually feel it, not rush past it.</p>
+        <div class="card-foot">
+          <span class="price">$17</span>
+          <a class="buy" href="https://buy.stripe.com/bJe8wR3Q73wL5ZM1jHgUM0K">Buy</a>
+        </div>
+        <p class="reassure">Instant download — start writing in 2 minutes</p>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-disclaimer">
+      These journals are meant to help you grow and work through life's challenges — they're meant to complement professional care, not replace it. We all deserve to be truly happy and like being in the skin we chose.
+      <br><br><a href="disclaimer.html" style="color:var(--muted);">Disclaimer &amp; Terms</a> &nbsp;·&nbsp; <a href="privacy.html" style="color:var(--muted);">Privacy Policy</a>
+    </div>
+  </footer>
+</div>
+<script>
+function toggleMainMenu(){
+  var menu = document.getElementById('mainMenu');
+  var btn = document.getElementById('menuToggle');
+  var isOpen = menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+}
+document.addEventListener('click', function(e){
+  var wrap = document.querySelector('.nav-wrap');
+  if(wrap && !wrap.contains(e.target)){
+    document.getElementById('mainMenu').classList.remove('open');
+    document.getElementById('menuToggle').setAttribute('aria-expanded', 'false');
+  }
+});
+</script>
+</body>
+</html>
