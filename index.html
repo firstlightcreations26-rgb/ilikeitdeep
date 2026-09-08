@@ -21,6 +21,23 @@
   .dropdown-menu a.girl-code-link:hover{color:#ff2f8f;background:var(--bg);}
   .dropdown-menu a.glow-up-link{color:#9b7fe0;font-weight:700;}
   .dropdown-menu a.glow-up-link:hover{color:#9b7fe0;background:var(--bg);}
+
+  .cat-card{border:2px solid transparent !important;border-radius:16px;transition:transform 0.2s ease, box-shadow 0.2s ease;}
+  .cat-card:hover{transform:translateY(-4px);}
+  .cat-card.glow-healing{border-color:#4ECDC4 !important;box-shadow:0 0 16px rgba(78,205,196,0.4);}
+  .cat-card.glow-healing:hover{box-shadow:0 0 28px rgba(78,205,196,0.65);}
+  .cat-card.glow-recovery{border-color:#5B9DF0 !important;box-shadow:0 0 16px rgba(91,157,240,0.4);}
+  .cat-card.glow-recovery:hover{box-shadow:0 0 28px rgba(91,157,240,0.65);}
+  .cat-card.glow-family{border-color:#F2A65A !important;box-shadow:0 0 16px rgba(242,166,90,0.4);}
+  .cat-card.glow-family:hover{box-shadow:0 0 28px rgba(242,166,90,0.65);}
+  .cat-card.glow-faith{border-color:#B48EF0 !important;box-shadow:0 0 16px rgba(180,142,240,0.4);}
+  .cat-card.glow-faith:hover{box-shadow:0 0 28px rgba(180,142,240,0.65);}
+  .cat-card.glow-grief{border-color:#C98FA3 !important;box-shadow:0 0 16px rgba(201,143,163,0.4);}
+  .cat-card.glow-grief:hover{box-shadow:0 0 28px rgba(201,143,163,0.65);}
+  .cat-card.glow-daily{border-color:#F0C75E !important;box-shadow:0 0 16px rgba(240,199,94,0.4);}
+  .cat-card.glow-daily:hover{box-shadow:0 0 28px rgba(240,199,94,0.65);}
+  .cat-card.glow-badbitch{border-color:#FF2F8F !important;box-shadow:0 0 16px rgba(255,47,143,0.4);}
+  .cat-card.glow-badbitch:hover{box-shadow:0 0 28px rgba(255,47,143,0.65);}
 </style>
 
 </head>
@@ -57,7 +74,7 @@
     <div class="section-title">Choose where you start</div>
     <div class="cat-grid">
 
-      <a class="cat-card" href="collection.html#healing">
+      <a class="cat-card glow-healing" href="collection.html#healing">
         <svg viewBox="0 0 64 64" fill="none" stroke="var(--cat-healing)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
           <path d="M32 12 C 26 18, 26 26, 32 32 C 38 26, 38 18, 32 12 Z"/>
           <path d="M32 32 C 26 38, 18 38, 12 32 C 18 26, 26 26, 32 32 Z"/>
@@ -69,7 +86,7 @@
         <p>Shadow work, shame, the parts of you that need a witness.</p>
       </a>
 
-      <a class="cat-card" href="collection.html#recovery">
+      <a class="cat-card glow-recovery" href="collection.html#recovery">
         <svg viewBox="0 0 64 64" fill="none" stroke="var(--cat-recovery)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
           <path d="M32 10 C 28 14, 28 20, 32 24 C 36 20, 36 14, 32 10 Z"/>
           <path d="M32 24 C 24 24, 20 28, 18 32 C 24 34, 30 30, 32 24 Z"/>
@@ -80,7 +97,7 @@
         <p>Step-down journals for cutting back, one day at a time.</p>
       </a>
 
-      <a class="cat-card" href="collection.html#family">
+      <a class="cat-card glow-family" href="collection.html#family">
         <svg viewBox="0 0 64 64" fill="none" stroke="var(--cat-family)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="32" cy="20" r="8"/>
           <path d="M20 30 C 16 26, 16 20, 20 16"/>
@@ -91,7 +108,7 @@
         <p>The people who shaped you — and the pages that untangle it.</p>
       </a>
 
-      <a class="cat-card" href="collection.html#faith">
+      <a class="cat-card glow-faith" href="collection.html#faith">
         <svg viewBox="0 0 64 64" fill="none" stroke="var(--cat-faith)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
           <path d="M32 8 C 28 12, 28 16, 32 20 C 36 16, 36 12, 32 8 Z"/>
           <path d="M20 22 C 24 18, 28 18, 32 20 C 28 24, 24 24, 20 22 Z"/>
@@ -102,7 +119,7 @@
         <p>WHY, purpose, and the mindset work that holds everything up.</p>
       </a>
 
-      <a class="cat-card" href="collection.html#grief">
+      <a class="cat-card glow-grief" href="collection.html#grief">
         <svg viewBox="0 0 64 64" fill="none" stroke="var(--cat-grief)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
           <path d="M32 50 C 14 38, 10 24, 18 16 C 24 10, 30 13, 32 19 C 34 13, 40 10, 46 16 C 54 24, 50 38, 32 50 Z"/>
           <path d="M28 22 L31 28 L27 32 L34 40" stroke-width="1.4"/>
@@ -111,7 +128,7 @@
         <p>For the losses that don't always get talked about — people, pets, and pieces of yourself.</p>
       </a>
 
-      <a class="cat-card" href="collection.html#daily">
+      <a class="cat-card glow-daily" href="collection.html#daily">
         <svg viewBox="0 0 64 64" fill="none" stroke="var(--cat-daily)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="32" cy="32" r="10"/>
           <path d="M32 12 L32 18 M32 46 L32 52 M12 32 L18 32 M46 32 L52 32 M18 18 L22 22 M46 46 L42 42 M46 18 L42 22 M18 46 L22 42"/>
@@ -120,7 +137,7 @@
         <p>60-day daily journals to check in with yourself, one page at a time.</p>
       </a>
 
-      <a class="cat-card" href="collection.html#badbitch">
+      <a class="cat-card glow-badbitch" href="collection.html#badbitch">
         <svg viewBox="0 0 64 64" fill="none" stroke="var(--cat-badbitch, #8a2f4b)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
           <path d="M32 10 L36 22 L48 22 L38 30 L42 42 L32 34 L22 42 L26 30 L16 22 L28 22 Z"/>
         </svg>
