@@ -11,7 +11,6 @@
 <style>
   nav a.girl-code-link{color:#ff2f8f!important;border-color:#ff2f8f!important;font-weight:800;}
   nav a.girl-code-link:hover{background:#ff2f8f!important;color:#fff!important;}
-
   .nav-wrap{position:relative;}
   .menu-toggle{background:transparent;border:1px solid var(--line);color:var(--muted);font-family:'Karla',sans-serif;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;padding:11px 20px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;}
   .menu-toggle:hover{color:var(--rose);border-color:var(--rose);}
@@ -25,7 +24,6 @@
   .dropdown-menu a.girl-code-link:hover{color:#ff2f8f;background:var(--bg);}
   .dropdown-menu a.glow-up-link{color:#9b7fe0;font-weight:700;}
   .dropdown-menu a.glow-up-link:hover{color:#9b7fe0;background:var(--bg);}
-
   .bundle-section{padding:30px 24px 50px;max-width:1100px;margin:0 auto;}
   .bundle-section .cat-header h2{margin-bottom:4px;}
   .bundle-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:20px;}
@@ -39,6 +37,57 @@
   .bundle-price .was{font-size:14px;font-weight:400;opacity:0.6;text-decoration:line-through;margin-right:6px;}
   .bundle-buy{background:#8a2f4b;color:#fff;font-weight:700;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;padding:9px 18px;border-radius:999px;text-decoration:none;}
   .bundle-buy:hover{opacity:0.88;}
+
+  /* ===== Category color-glow journal cards ===== */
+  :root{
+    --cat-healing-glow:#4ECDC4;
+    --cat-recovery-glow:#5B9DF0;
+    --cat-family-glow:#F2A65A;
+    --cat-faith-glow:#B48EF0;
+    --cat-grief-glow:#C98FA3;
+    --cat-daily-glow:#F0C75E;
+    --cat-badbitch-glow:#FF2F8F;
+    --cat-packets-glow:#7BC99A;
+  }
+  .journal-card{border:2px solid transparent;border-radius:16px;transition:transform 0.2s ease, box-shadow 0.2s ease;}
+  .journal-card:hover{transform:translateY(-4px);}
+  .cat-healing-card{border-color:var(--cat-healing-glow);box-shadow:0 0 16px rgba(78,205,196,0.35);}
+  .cat-healing-card:hover{box-shadow:0 0 26px rgba(78,205,196,0.6);}
+  .cat-recovery-card{border-color:var(--cat-recovery-glow);box-shadow:0 0 16px rgba(91,157,240,0.35);}
+  .cat-recovery-card:hover{box-shadow:0 0 26px rgba(91,157,240,0.6);}
+  .cat-family-card{border-color:var(--cat-family-glow);box-shadow:0 0 16px rgba(242,166,90,0.35);}
+  .cat-family-card:hover{box-shadow:0 0 26px rgba(242,166,90,0.6);}
+  .cat-faith-card{border-color:var(--cat-faith-glow);box-shadow:0 0 16px rgba(180,142,240,0.35);}
+  .cat-faith-card:hover{box-shadow:0 0 26px rgba(180,142,240,0.6);}
+  .cat-grief-card{border-color:var(--cat-grief-glow);box-shadow:0 0 16px rgba(201,143,163,0.35);}
+  .cat-grief-card:hover{box-shadow:0 0 26px rgba(201,143,163,0.6);}
+  .cat-daily-card{border-color:var(--cat-daily-glow);box-shadow:0 0 16px rgba(240,199,94,0.35);}
+  .cat-daily-card:hover{box-shadow:0 0 26px rgba(240,199,94,0.6);}
+  .cat-badbitch-card{border-color:var(--cat-badbitch-glow);box-shadow:0 0 16px rgba(255,47,143,0.35);}
+  .cat-badbitch-card:hover{box-shadow:0 0 26px rgba(255,47,143,0.6);}
+  .cat-packets-card{border-color:var(--cat-packets-glow);box-shadow:0 0 14px rgba(123,201,154,0.3);}
+  .cat-packets-card:hover{box-shadow:0 0 22px rgba(123,201,154,0.55);}
+
+  /* ===== Featured Journal of the Month ===== */
+  .featured-section{max-width:1100px;margin:0 auto;padding:26px 24px 10px;}
+  .featured-journal{position:relative;display:grid;grid-template-columns:220px 1fr;gap:28px;align-items:center;background:linear-gradient(135deg, rgba(255,47,143,0.10), rgba(255,47,143,0.02));border:2.5px solid #ff2f8f;border-radius:22px;padding:26px;box-shadow:0 0 30px rgba(255,47,143,0.45), 0 0 60px rgba(255,47,143,0.15);animation:featuredPulse 3.2s ease-in-out infinite;}
+  @keyframes featuredPulse{
+    0%,100%{box-shadow:0 0 30px rgba(255,47,143,0.45),0 0 60px rgba(255,47,143,0.15);}
+    50%{box-shadow:0 0 42px rgba(255,47,143,0.65),0 0 80px rgba(255,47,143,0.25);}
+  }
+  .featured-badge{position:absolute;top:-15px;left:26px;background:#ff2f8f;color:#fff;font-family:'Karla',sans-serif;font-weight:800;font-size:12.5px;letter-spacing:0.1em;text-transform:uppercase;padding:8px 18px;border-radius:999px;box-shadow:0 4px 14px rgba(255,47,143,0.5);}
+  .featured-cover{width:100%;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,0.4);display:block;}
+  .featured-text h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:32px;margin:6px 0 10px;color:#fff;}
+  .featured-who{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;opacity:0.9;margin-bottom:10px;color:#ffd9ea;}
+  .featured-desc{font-family:'Karla',sans-serif;font-size:15px;line-height:1.7;opacity:0.9;margin-bottom:18px;}
+  .featured-foot{display:flex;align-items:center;gap:18px;}
+  .featured-price{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:#ff2f8f;}
+  .featured-buy{background:#ff2f8f;color:#fff;font-weight:800;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;padding:12px 28px;border-radius:999px;text-decoration:none;box-shadow:0 6px 18px rgba(255,47,143,0.4);}
+  .featured-buy:hover{opacity:0.9;}
+  @media (max-width:640px){
+    .featured-journal{grid-template-columns:1fr;text-align:center;}
+    .featured-foot{justify-content:center;}
+  }
 </style>
 </head>
 <body>
@@ -60,19 +109,40 @@
       </nav>
     </div>
   </header>
-
   <div class="page-head">
     <div class="eyebrow">45 Printable Journals</div>
     <h1>All the pages, all the depths.</h1>
     <p class="page-sub">Pick your category, or scroll through everything.</p>
   </div>
-
+  <!-- ================= JOURNAL OF THE MONTH =================
+       STEPH: to change the featured journal each month, just swap:
+       - the image src on the line below (featured-cover)
+       - the <h2> title
+       - the featured-who line (the "you feel this way" line)
+       - the featured-desc line
+       - the price
+       - the data-slug and href on the Buy button
+       Copy those details straight from whichever journal card you want to feature. -->
+  <div class="featured-section">
+    <div class="featured-journal">
+      <div class="featured-badge">★ Journal of the Month</div>
+      <img class="featured-cover" src="images/deepdive-cover.jpg" alt="The Deep Dive journal cover">
+      <div class="featured-text">
+        <h2>The Deep Dive</h2>
+        <p class="featured-who">You're not fighting. You're not in crisis. But somewhere along the way, you stopped really talking — and you miss it.</p>
+        <p class="featured-desc">A couples questionnaire built for the relationship that's "fine" but has gone quiet. No fake prompts, no forced deep talk — just a safe container to actually ask each other the things you've been avoiding.</p>
+        <div class="featured-foot">
+          <span class="featured-price">$17</span>
+          <a class="buy featured-buy" data-slug="the-deep-dive" href="https://buy.stripe.com/6oUdRb72jebpfAm9QdgUM17">Buy</a>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="bundle-section" id="bundles">
     <div class="cat-header">
       <div><h2>Bundle &amp; Save</h2><p>A few journals put together, picked because they actually go together — not because they're stuck in the same category.</p></div>
     </div>
     <div class="bundle-grid">
-
       <div class="bundle-card">
         <div class="bundle-covers">
           <img src="images/cover-Little-Me-v2.jpg" alt="Little Me cover" loading="lazy">
@@ -89,7 +159,6 @@
         </div>
         <p class="reassure">Save $25 — instant download, all 5 journals</p>
       </div>
-
       <div class="bundle-card">
         <div class="bundle-covers">
           <img src="images/cover-30-Days-Present-v3.jpg" alt="30 Days Present cover" loading="lazy">
@@ -105,7 +174,6 @@
         </div>
         <p class="reassure">Save $22 — instant download, all 4 journals</p>
       </div>
-
       <div class="bundle-card">
         <div class="bundle-covers">
           <img src="images/cover-losing-a-parent.jpg" alt="Losing a Parent cover" loading="lazy">
@@ -121,17 +189,15 @@
         </div>
         <p class="reassure">Save $20 — instant download, all 4 journals</p>
       </div>
-
     </div>
   </div>
-
   <div class="category-block" id="healing">
     <div class="cat-header">
       <svg viewBox="0 0 64 64" fill="none" stroke="var(--cat-healing)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M32 12 C 26 18, 26 26, 32 32 C 38 26, 38 18, 32 12 Z"/><path d="M32 32 C 26 38, 18 38, 12 32 C 18 26, 26 26, 32 32 Z"/><path d="M32 32 C 38 38, 46 38, 52 32 C 46 26, 38 26, 32 32 Z"/><path d="M32 32 C 26 38, 26 46, 32 52 C 38 46, 38 38, 32 32 Z"/><circle cx="32" cy="32" r="2.4" fill="var(--cat-healing)" stroke="none"/></svg>
       <div><h2>Healing &amp; Inner Work</h2><p>Shadow work, shame, and the parts of you that need a witness.</p></div>
     </div>
     <div class="journal-grid">
-      <div class="journal-card">
+      <div class="journal-card cat-healing-card">
   <img class="card-cover" src="images/cover-Little-Me-v2.jpg" alt="Little Me journal cover" loading="lazy">
   <h3>Little Me</h3>
   <p class="card-desc">An inner child journal for healing what your younger self still carries.</p>
@@ -141,7 +207,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-healing-card">
   <img class="card-cover" src="images/Quiet-Moments-Cover.jpg" alt="Quiet Moments journal cover" loading="lazy">
   <h3>Quiet Moments</h3>
   <p class="card-desc">A quiet journal with scripture woven through the pages.</p>
@@ -151,7 +217,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-healing-card">
   <img class="card-cover" src="images/inner-work-cover.jpg" alt="Inner Work journal cover" loading="lazy">
   <h3>Inner Work</h3>
   <p class="card-desc">A Carl Jung–inspired journal for facing what you've buried.</p>
@@ -161,7 +227,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-healing-card">
   <img class="card-cover" src="images/cover-Finding-My-Way-Back-v2.jpg" alt="Finding My Way Back journal cover" loading="lazy">
   <h3>Finding My Way Back</h3>
   <p class="who-for">Some days you're okay. Some days getting out of bed is the whole win. This is for both kinds of days.</p>
@@ -172,7 +238,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-healing-card">
   <img class="card-cover" src="images/cover-Shame-Work-v2.jpg" alt="Shame Work journal cover" loading="lazy">
   <h3>Shame Work</h3>
   <p class="card-desc">Confront shame head-on instead of letting it run the show.</p>
@@ -182,7 +248,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-healing-card">
   <img class="card-cover" src="images/cover-Let-It-Out-v2.jpg" alt="Let It Out journal cover" loading="lazy">
   <h3>Let It Out</h3>
   <p class="card-desc">Journal the things you feel but never say out loud.</p>
@@ -192,7 +258,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-healing-card">
   <img class="card-cover" src="images/cover-Behind-the-Fire-v2.jpg" alt="Behind the Fire journal cover" loading="lazy">
   <h3>Behind the Fire</h3>
   <p class="card-desc">An anger release journal: your feelings, your responsibility, your choice.</p>
@@ -202,7 +268,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-healing-card">
   <img class="card-cover" src="images/cover-Right-Now-Im-Okay-v2.jpg" alt="Right Now I&#x27;m Okay journal cover" loading="lazy">
   <h3>Right Now I&#x27;m Okay</h3>
   <p class="card-desc">A guided journal for the high days and the low ones.</p>
@@ -212,7 +278,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-healing-card">
   <img class="card-cover" src="images/cover-The-Space-Between-v2.jpg" alt="The Space Between journal cover" loading="lazy">
   <h3>The Space Between</h3>
   <p class="card-desc">On being adopted and carrying abandonment.</p>
@@ -222,7 +288,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-healing-card">
   <img class="card-cover" src="images/when-i-couldn_t-say-it-cover.jpg" alt="When I Couldn&#x27;t Say It journal cover" loading="lazy">
   <h3>When I Couldn&#x27;t Say It</h3>
   <p class="card-desc">The apology, the truth, a parent never said out loud.</p>
@@ -232,7 +298,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-healing-card">
   <img class="card-cover" src="images/cover-Before-the-Storm-v2.jpg" alt="Before the Storm journal cover" loading="lazy">
   <h3>Before the Storm</h3>
   <p class="card-desc">A PMDD tracker to understand your patterns before they hit.</p>
@@ -242,7 +308,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-healing-card">
   <img class="card-cover" src="images/settle-cover.jpg" alt="Settle journal cover" loading="lazy">
   <h3>Settle</h3>
   <p class="card-desc">A guide back to your body when everything feels like too much — grounding tools for your nervous system.</p>
@@ -260,7 +326,7 @@
       <div><h2>30-Day Resets &amp; Recovery</h2><p>Step-down journals for cutting back, one day at a time.</p></div>
     </div>
     <div class="journal-grid">
-      <div class="journal-card">
+      <div class="journal-card cat-recovery-card">
   <img class="card-cover" src="images/cover-30-Days-Present-v3.jpg" alt="30 Days Present journal cover" loading="lazy">
   <h3>30 Days Present</h3>
   <p class="card-desc">A 30-day journal to loosen your phone's grip.</p>
@@ -270,7 +336,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-recovery-card">
   <img class="card-cover" src="images/cover-30-Days-Free.jpg" alt="30 Days Free journal cover" loading="lazy">
   <h3>30 Days Free</h3>
   <p class="card-desc">A daily journal for letting go of the habit that's holding you back.</p>
@@ -280,7 +346,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-recovery-card">
   <img class="card-cover" src="images/cover-30-Days-Clear.jpg" alt="30 Days Clear journal cover" loading="lazy">
   <h3>30 Days Clear</h3>
   <p class="card-desc">A daily journal for quitting porn, one day at a time.</p>
@@ -290,7 +356,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-recovery-card">
   <img class="card-cover" src="images/cover-30-days-whole-new.jpg" alt="30 Days Whole journal cover" loading="lazy">
   <h3>30 Days Whole</h3>
   <p class="card-desc">A 30-day journal for working through sex addiction.</p>
@@ -300,7 +366,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-recovery-card">
   <img class="card-cover" src="images/cover-30-Days-Food-Freedom.jpg" alt="30 Days Food Freedom journal cover" loading="lazy">
   <h3>30 Days Food Freedom</h3>
   <p class="card-desc">A 30-day food journal.</p>
@@ -310,7 +376,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-recovery-card">
   <img class="card-cover" src="images/cover-less__1_.jpg" alt="LESS journal cover" loading="lazy">
   <h3>LESS</h3>
   <p class="who-for">You're not ready to quit completely — but you know you want less of it in your life.</p>
@@ -321,7 +387,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-recovery-card">
   <img class="card-cover" src="images/cover-Less-60-Days.jpg" alt="LESS: 60 Days journal cover" loading="lazy">
   <h3>LESS: 60 Days</h3>
   <p class="card-desc">A longer version of Less — an extended harm reduction journal for tracking use and cutting down, over 60 days.</p>
@@ -339,7 +405,7 @@
       <div><h2>Family &amp; Relationships</h2><p>The people who shaped you — and the pages that untangle it.</p></div>
     </div>
     <div class="journal-grid">
-      <div class="journal-card">
+      <div class="journal-card cat-family-card">
   <img class="card-cover" src="images/understanding-us-cover.jpg" alt="Understanding Us journal cover" loading="lazy">
   <h3>Understanding Us</h3>
   <p class="card-desc">For toxic parents, learned behavior, and forgiveness.</p>
@@ -349,7 +415,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-family-card">
   <img class="card-cover" src="images/cover-Still-Standing.jpg" alt="Still Standing journal cover" loading="lazy">
   <h3>Still Standing</h3>
   <p class="who-for">You found out. Now you're trying to figure out if you stay standing — in the relationship, or just in yourself.</p>
@@ -360,7 +426,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-family-card">
   <img class="card-cover" src="images/cover-Deserve-Better.jpg" alt="Deserve Better journal cover" loading="lazy">
   <h3>Deserve Better</h3>
   <p class="card-desc">Hold yourself accountable to boundaries and to your word.</p>
@@ -370,7 +436,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-family-card">
   <img class="card-cover" src="images/they-told-cover.jpg" alt="They Told journal cover" loading="lazy">
   <h3>They Told</h3>
   <p class="card-desc">When someone you trusted shared what wasn't theirs to share.</p>
@@ -380,7 +446,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-family-card">
   <img class="card-cover" src="images/cover-Love-From-a-Distance.jpg" alt="Love From a Distance journal cover" loading="lazy">
   <h3>Love From a Distance</h3>
   <p class="card-desc">For a parent navigating separation from their child.</p>
@@ -390,7 +456,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-family-card">
   <img class="card-cover" src="images/what-they-knew-cover.jpg" alt="What They Knew journal cover" loading="lazy">
   <h3>What They Knew</h3>
   <p class="card-desc">Understanding your parents only knew what they were taught.</p>
@@ -400,7 +466,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-family-card">
   <img class="card-cover" src="images/cover-The-Words-I-Owe-You.jpg" alt="The Words I Owe You journal cover" loading="lazy">
   <h3>The Words I Owe You</h3>
   <p class="card-desc">For the parent in recovery, saying what needs to be said.</p>
@@ -410,7 +476,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-family-card">
   <img class="card-cover" src="images/cover-I-Was-There-Too.jpg" alt="I Was There Too journal cover" loading="lazy">
   <h3>I Was There Too</h3>
   <p class="card-desc">For the adult child who grew up with an addicted parent.</p>
@@ -420,7 +486,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-family-card">
   <img class="card-cover" src="images/deepdive-cover.jpg" alt="The Deep Dive journal cover" loading="lazy">
   <h3>The Deep Dive</h3>
   <p class="who-for">You're not fighting. You're not in crisis. But somewhere along the way, you stopped really talking — and you miss it.</p>
@@ -439,7 +505,7 @@
       <div><h2>Faith, Mindset &amp; Life</h2><p>Purpose, mindset, and the work that holds everything up.</p></div>
     </div>
     <div class="journal-grid">
-      <div class="journal-card">
+      <div class="journal-card cat-faith-card">
   <img class="card-cover" src="images/the-game-of-life-cover.jpg" alt="The Game of Life journal cover" loading="lazy">
   <h3>The Game of Life</h3>
   <p class="card-desc">Manifestation, inspired by Florence Scovel Shinn.</p>
@@ -449,7 +515,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-faith-card">
   <img class="card-cover" src="images/cover-the-code-journal.jpg" alt="The Code Journal journal cover" loading="lazy">
   <h3>The Code Journal</h3>
   <p class="card-desc">A manifesting journal — not a password log.</p>
@@ -459,7 +525,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-faith-card">
   <img class="card-cover" src="images/why-cover.jpg" alt="WHY journal cover" loading="lazy">
   <h3>WHY</h3>
   <p class="card-desc">Recognize the behavior behind the emotion, and release it.</p>
@@ -469,7 +535,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-faith-card">
   <img class="card-cover" src="images/cover-the-story-of-you.jpg" alt="The Story of You journal cover" loading="lazy">
   <h3>The Story of You</h3>
   <p class="card-desc">A memory journal a parent writes for their child.</p>
@@ -479,7 +545,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-faith-card">
   <img class="card-cover" src="images/the-business-idea-cover.jpg" alt="The Business Idea Journal journal cover" loading="lazy">
   <h3>The Business Idea Journal</h3>
   <p class="card-desc">Get every idea on paper, then decide where to start.</p>
@@ -489,7 +555,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-faith-card">
   <img class="card-cover" src="images/cover-pull-your-head-out.jpg" alt="Pull Your Head Out journal cover" loading="lazy">
   <h3>Pull Your Head Out</h3>
   <p class="card-desc">Unpack the habits and emotions keeping you stuck.</p>
@@ -507,7 +573,7 @@
       <div><h2>Grief</h2><p>For the losses that don't always get talked about — people, pets, and pieces of yourself.</p></div>
     </div>
     <div class="journal-grid">
-      <div class="journal-card">
+      <div class="journal-card cat-grief-card">
   <img class="card-cover" src="images/cover-losing-a-pet.jpg" alt="Losing a Pet journal cover" loading="lazy">
   <h3>Losing a Pet</h3>
   <p class="who-for">You lost your best friend, and everyone keeps saying "it's just a pet." It wasn't just a pet.</p>
@@ -518,7 +584,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-grief-card">
   <img class="card-cover" src="images/cover-losing-a-parent.jpg" alt="Losing a Parent journal cover" loading="lazy">
   <h3>Losing a Parent</h3>
   <p class="card-desc">A journal for the loss that changes everything.</p>
@@ -528,7 +594,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-grief-card">
   <img class="card-cover" src="images/cover-losing-a-sibling.jpg" alt="Losing a Sibling journal cover" loading="lazy">
   <h3>Losing a Sibling</h3>
   <p class="card-desc">For losing part of your story — the person who knew you before you became you.</p>
@@ -538,7 +604,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-grief-card">
   <img class="card-cover" src="images/cover-losing-a-best-friend.jpg" alt="Losing a Best Friend journal cover" loading="lazy">
   <h3>Losing a Best Friend</h3>
   <p class="card-desc">For losing the person who knew you best, chosen family or not.</p>
@@ -548,7 +614,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-grief-card">
   <img class="card-cover" src="images/who-i-used-to-be-cover.jpg" alt="Who I Used to Be journal cover" loading="lazy">
   <h3>Who I Used to Be</h3>
   <p class="card-desc">For grieving the person you left behind as you grew.</p>
@@ -558,7 +624,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-grief-card">
   <img class="card-cover" src="images/the-parent-i-didnt-have-cover.jpg" alt="The Parent I Didn&#x27;t Have journal cover" loading="lazy">
   <h3>The Parent I Didn&#x27;t Have</h3>
   <p class="card-desc">For grieving a relationship with a parent that never got the chance to exist.</p>
@@ -576,7 +642,7 @@
       <div><h2>Daily &amp; Interactive</h2><p>60-day daily journals to check in with yourself, one page at a time.</p></div>
     </div>
     <div class="journal-grid">
-      <div class="journal-card">
+      <div class="journal-card cat-daily-card">
   <img class="card-cover" src="images/cover-choose-joy.jpg" alt="Choose Joy journal cover" loading="lazy">
   <h3>Choose Joy</h3>
   <p class="who-for">You want to feel lighter, but "just be grateful" always felt a little empty.</p>
@@ -587,7 +653,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-daily-card">
   <img class="card-cover" src="images/hello-gorgeous-cover.jpg" alt="Hello Gorgeous journal cover" loading="lazy">
   <h3>Hello Gorgeous</h3>
   <p class="card-desc">A 60-day daily journal — check in with yourself, every single day.</p>
@@ -605,7 +671,7 @@
       <div><h2>Bad Bitch Collection</h2><p>Level up your life, your confidence, and your glow — no apologies.</p></div>
     </div>
     <div class="journal-grid">
-      <div class="journal-card">
+      <div class="journal-card cat-badbitch-card">
   <img class="card-cover" src="images/His_Loss_Cover.png" alt="His Loss journal cover" loading="lazy">
   <h3>His Loss</h3>
   <p class="who-for">He walked. Good. Now watch what happens when you stop chasing and start leveling up.</p>
@@ -616,7 +682,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-badbitch-card">
   <img class="card-cover" src="images/Fuck_Them_Cover.png" alt="Fuck Them journal cover" loading="lazy">
   <h3>Fuck Them</h3>
   <p class="card-desc">For anyone praying on your downfall. Keep your plans to yourself until they're done — then let the results speak.</p>
@@ -626,7 +692,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-badbitch-card">
   <img class="card-cover" src="images/Bitch_Please_Cover.png" alt="Bitch Please journal cover" loading="lazy">
   <h3>Bitch Please</h3>
   <p class="card-desc">A self-confidence journal. Catch the negative voice in your head, write it down, and challenge it.</p>
@@ -636,7 +702,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-badbitch-card">
   <img class="card-cover" src="images/My_Best_Life_Cover.png" alt="My Best Life journal cover" loading="lazy">
   <h3>My Best Life</h3>
   <p class="card-desc">A daily journal written as if you're already living your dream life, years from now — manifest it into reality.</p>
@@ -646,7 +712,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-badbitch-card">
   <img class="card-cover" src="images/Make_It_Rain_Cover.png" alt="Make It Rain journal cover" loading="lazy">
   <h3>Make It Rain</h3>
   <p class="who-for">You keep making money and somehow still feel broke. Time to find out why.</p>
@@ -657,7 +723,7 @@
   </div>
   <p class="reassure">Instant download — start writing in 2 minutes</p>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-badbitch-card">
   <img class="card-cover" src="images/Glow_Up_Cover.png" alt="Glow Up journal cover" loading="lazy">
   <h3>Glow Up</h3>
   <p class="card-desc">Beauty tips, daily habits, and journal pages to track what actually works for you.</p>
@@ -669,14 +735,13 @@
 </div>
     </div>
   </div>
-
   <div class="category-block" id="packets">
     <div class="cat-header">
       <svg viewBox="0 0 64 64" fill="none" stroke="var(--cat-daily)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="10" width="32" height="44" rx="3"/><path d="M24 8 L24 14 M40 8 L40 14"/><path d="M22 24 L28 30 L42 18" stroke-width="2"/><path d="M22 38 L34 38 M22 44 L30 44"/></svg>
       <div><h2>Tracker &amp; Challenge Packets</h2><p>The companion tools for your 30-day journals — a tracker, a mindset reset, a meditation, a letter to yourself, and more, all in one download.</p></div>
     </div>
     <div class="journal-grid">
-      <div class="journal-card">
+      <div class="journal-card cat-packets-card">
   <img class="card-cover" src="preview_mockup_30_days_free.png" alt="30 Days Free — Packet" loading="lazy">
   <h3>30 Days Free — Packet</h3>
   <p class="card-desc">Tracker, challenge page, ritual, letter, and more — for your substance recovery journal.</p>
@@ -685,7 +750,7 @@
     <a class="buy" data-slug="30-days-free-packet" href="https://buy.stripe.com/5kQ8wReuL7N12NA5zXgUM0S">Buy</a>
   </div>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-packets-card">
   <img class="card-cover" src="preview_mockup_30_days_clear.png" alt="30 Days Clear — Packet" loading="lazy">
   <h3>30 Days Clear — Packet</h3>
   <p class="card-desc">Tracker, challenge page, ritual, letter, and more — for your pornography recovery journal.</p>
@@ -694,7 +759,7 @@
     <a class="buy" data-slug="30-days-clear-packet" href="https://buy.stripe.com/bJedRbaevc3hcoa5zXgUM0T">Buy</a>
   </div>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-packets-card">
   <img class="card-cover" src="preview_mockup_30_days_food_freedom.png" alt="30 Days Food Freedom — Packet" loading="lazy">
   <h3>30 Days Food Freedom — Packet</h3>
   <p class="card-desc">Tracker, challenge page, ritual, letter, and more — for your food freedom journal.</p>
@@ -703,7 +768,7 @@
     <a class="buy" data-slug="30-days-food-freedom-packet" href="https://buy.stripe.com/eVqbJ3gCT2sH87U6E1gUM0U">Buy</a>
   </div>
 </div>
-      <div class="journal-card">
+      <div class="journal-card cat-packets-card">
   <img class="card-cover" src="preview_mockup_30_days_whole.png" alt="30 Days Whole — Packet" loading="lazy">
   <h3>30 Days Whole — Packet</h3>
   <p class="card-desc">Tracker, challenge page, ritual, letter, and more — for your sex addiction recovery journal.</p>
@@ -714,7 +779,6 @@
 </div>
     </div>
   </div>
-
 </div>
 <script>
 function toggleMainMenu(){
