@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Before Making a Scene, Ask If This Moment Deserves One — I Like It Deep</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  :root{
+    --bg:#2E2D33;
+    --bg-soft:#38373E;
+    --rose:#8a2f4b;
+    --rose-soft:#c98aa0;
+    --blush:#f2b8c6;
+    --cream:#FAF6EF;
+    --muted:#b9b4bc;
+    --line:rgba(250,246,239,0.10);
+  }
+  .nav-wrap{position:relative;}
+  .menu-toggle{background:transparent;border:1px solid var(--line);color:var(--muted);font-family:'Karla',sans-serif;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;padding:11px 20px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;}
+  .menu-toggle:hover{color:var(--rose);border-color:var(--rose);}
+  .menu-arrow{transition:transform 0.2s ease;font-size:11px;}
+  .menu-toggle[aria-expanded="true"] .menu-arrow{transform:rotate(180deg);}
+  .dropdown-menu{display:none;flex-direction:column;position:absolute;top:calc(100% + 10px);right:0;background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:8px;min-width:210px;z-index:50;box-shadow:0 14px 34px rgba(0,0,0,0.4);}
+  .dropdown-menu.open{display:flex;}
+  .dropdown-menu a{padding:13px 16px;border-radius:10px;color:var(--muted);text-decoration:none;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;}
+  .dropdown-menu a:hover{background:var(--bg);color:var(--rose);}
+  .dropdown-menu a.girl-code-link{color:#ff2f8f;font-weight:700;}
+  .dropdown-menu a.girl-code-link:hover{color:#ff2f8f;background:var(--bg);}
+  .dropdown-menu a.glow-up-link{color:#9b7fe0;font-weight:700;}
+  .dropdown-menu a.glow-up-link:hover{color:#9b7fe0;background:var(--bg);}
+
+  .post-wrap{max-width:700px;margin:0 auto;padding:40px 22px 10px;}
+  .back-link{display:inline-flex;align-items:center;gap:6px;font-family:'Karla',sans-serif;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:var(--rose-soft);text-decoration:none;margin-bottom:28px;}
+  .back-link:hover{color:var(--blush);}
+  .post-date{font-family:'Karla',sans-serif;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--rose-soft);margin-bottom:12px;}
+  .post-title{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(28px,6vw,42px);line-height:1.15;color:var(--cream);margin-bottom:14px;}
+  .post-byline{font-family:'Karla',sans-serif;font-style:italic;font-size:14px;color:var(--muted);margin-bottom:28px;}
+  .post-image{width:100%;border-radius:16px;overflow:hidden;margin-bottom:34px;box-shadow:0 14px 34px rgba(0,0,0,0.35);}
+  .post-image img{width:100%;display:block;object-fit:cover;}
+  .post-body{font-family:'Karla',sans-serif;font-size:16.5px;line-height:1.85;color:var(--cream);}
+  .post-body p{margin-bottom:22px;}
+  .post-aside{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--muted);border-top:1px solid var(--line);padding-top:22px;margin-top:8px;}
+  .back-to-top{display:inline-flex;align-items:center;gap:6px;font-family:'Karla',sans-serif;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--rose-soft);text-decoration:none;border:1px solid var(--line);border-radius:24px;padding:9px 18px;margin:6px 0 30px;}
+  .back-to-top:hover{color:var(--blush);border-color:var(--rose-soft);}
+
+  .related-wrap{max-width:1000px;margin:60px auto 0;padding:0 22px 70px;}
+  .related-eyebrow{text-align:center;font-family:'Karla',sans-serif;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:var(--rose-soft);margin-bottom:8px;}
+  .related-title{text-align:center;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(22px,4vw,30px);color:var(--cream);margin-bottom:34px;}
+  .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  @media(max-width:800px){.related-grid{grid-template-columns:1fr;max-width:360px;margin:0 auto;}}
+  .journal-card{background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;}
+  .journal-card .card-cover{width:100%;height:190px;object-fit:cover;border-radius:10px;display:block;margin-bottom:14px;box-shadow:0 4px 14px rgba(0,0,0,0.25);}
+  .journal-card h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:19px;color:var(--cream);margin-bottom:6px;}
+  .journal-card .card-desc{font-family:'Karla',sans-serif;font-size:13.5px;color:var(--muted);margin-bottom:16px;flex:1;}
+  .journal-card .card-foot{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}
+  .journal-card .price{font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--rose-soft);}
+  .journal-card .buy{background:var(--rose);color:var(--cream);font-weight:700;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;padding:9px 18px;border-radius:999px;text-decoration:none;}
+  .journal-card .reassure{font-family:'Karla',sans-serif;font-size:11.5px;color:var(--muted);opacity:0.75;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+   <div class="logo"><img src="images/logo.png" alt="I Like It Deep logo" style="height:50px;"></div>
+    <div class="nav-wrap">
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainMenu" onclick="toggleMainMenu()">Menu <span class="menu-arrow">▾</span></button>
+      <nav id="mainMenu" class="dropdown-menu">
+        <a href="index.html">Home</a>
+        <a href="collection.html">Journals</a>
+        <a href="blog.html">Blog</a>
+        <a href="girl-code.html" class="girl-code-link">Girl Code</a>
+        <a href="glow-up.html" class="glow-up-link">Glow Up</a>
+        <a href="bookmarks.html">Bookmarks</a>
+        <a href="coloring-pages.html">Coloring Pages</a>
+        <a href="about.html">About</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="index.html#request">Request a Journal</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="post-wrap" id="top">
+    <a href="blog.html" class="back-link">&larr; Back to Blog</a>
+    <div class="post-date">August 29, 2026</div>
+    <h1 class="post-title">Before Making a Scene, Ask If This Moment Deserves One</h1>
+    <p class="post-byline">— S, founder of I Like It Deep</p>
+
+    <div class="post-image">
+      <img src="images/before-making-a-scene.png" alt="Fictional AI-generated representation of making a scene in public">
+    </div>
+
+    <div class="post-body">
+      <p>"Before making a scene, ask if this moment deserves one." I just read that on my Chani app. I could use this quote day after day. I always love making a scene when it's not even necessary. Why though? Because I need the extra attention? Or because I need to prove a point?</p>
+
+      <p>How do I break it down enough to actually reflect on past actions and adjust them to fit my new script — the one where I focus on me? I can still address my needs in a calm way, or even a slightly bitchy tone, without turning it into a whole scene with other eyes witnessing and having to get involved. My impulsive behavior makes me want to tattoo that quote on myself just so I'm reminded of it often. It's really got my attention — I want to be a better person. I feel like I'd get so much more accomplished in life without the dramatic tantrums, without fighting over things that aren't even worth my time. I'm just very passionate about certain things.</p>
+
+      <p>Lately, when depression creeps in, I lack the motivation to give a fuck about anything — unless it's something that brings up anger or deep sadness. Everything else, I try not to care. But when something personally hurts me, my black-and-white thinking kicks in, and I get stuck on it until the next day. Then it's a new day, new Stephanie — almost like the lash-out never even happened, just gone. I have to remind myself to have compassion sometimes, for what my words do to other people during a "split." Even though in my head it's a new day, my words might still be sitting in someone else's mind, depending on how severe I got in that moment.</p>
+
+      <p>I am extremely selfish — I think about myself almost 90% of the time. That other 10% might go to whoever was in my storm the day before, depending on how they treat me the following day. It shouldn't ever get swept under the rug, and it shouldn't go unaddressed — my behavior isn't something that should be tolerated either. I can understand, from the other person's side, how this kind of thing would make someone think less and less of me. Especially if it keeps happening.</p>
+
+      <p>I used to think of it as just an exciting rollercoaster to live inside — my emotions — not really thinking about what it does to someone else's wellbeing. This is actually the first time I've ever admitted that out loud, or seen the other side of it. It's kind of wild how selfish and self-absorbed I've been, only just noticing it at 38.</p>
+
+      <p>As much as I love the "little brat who always gets what she wants" mindset, in reality, it's not working out that way at all. Not the affirmations in the mirror trying to change my identity into someone successful or beautiful, not wasting money on Etsy spells to make my man love me. It's ridiculous. Why can't I just be comfortable being Stephanie, and have real compassion for other people? Is that something you have to learn?</p>
+
+      <p>I have sympathy for people — I feel bad when things are going wrong in their lives, I want to help them. But after I do something to hurt someone, why do I lack the compassion for them afterward? Do I think they truly deserved the lashing? Do I feel above them, like I don't owe an apology? Sweeping it under the rug doesn't address my behavior. I need to actually address it.</p>
+
+      <p>Talk about some deep revelations today. Thank you, Notes app, for letting me pick my own brain. I'm kind of dumbfounded that I'm even doing this, because it's deep. It's an uneasy feeling too — I feel anxious in my head, and my jaw is definitely clenched writing this. I'm not even sure where to go from here. I'm scared to keep going. I can feel the waterworks coming, which is also a weird feeling. I hate crying — it makes me feel weak and powerless. I feel like I'm on the verge of crying about 70% of the day lately.</p>
+
+      <p>It's just a lot of guilt, shame, anger, and deep sadness that I don't know how to release. It's stuck inside me, wanting to come out, but I keep it hidden from my own mind. If I go there, that means I have to actually let myself heal. These days it's more comfortable to sit in this awful feeling than to make it go away. My whole site is built around going deep, and here I am too scared to actually touch the subjects that pass through my mind every day — the ones that would make me crumble to the floor if I ever talked about them out loud. And yet I choose to sit in the misery instead. My heart can't handle it. But I know that no matter what I do, or where I go in life, it's going to follow me until I actually talk about it with someone. I carry so much shame around this that it easily suffocates me.</p>
+
+      <p>I never imagined my life would look like this. This world is cruel, and there are pieces of my past — memories of a life I gave up — that still live in me. When Google shows me old photo memories, I have to delete them. It's painful being reminded of hurt that's still lingering inside.</p>
+    </div>
+
+    <a href="#top" class="back-to-top">&uarr; Back to top</a>
+  </div>
+
+  <div class="related-wrap">
+    <div class="related-eyebrow">You Might Also Need</div>
+    <div class="related-title">Journals That Relate</div>
+    <div class="related-grid">
+
+      <div class="journal-card">
+        <img class="card-cover" src="images/why-cover.jpg" alt="WHY journal cover" loading="lazy">
+        <h3>WHY</h3>
+        <p class="card-desc">Recognize the behavior behind the emotion, and release it.</p>
+        <div class="card-foot">
+          <span class="price">$17</span>
+          <a class="buy" href="https://buy.stripe.com/dRm4gBcmD6IX87U1jHgUM0A">Buy</a>
+        </div>
+        <p class="reassure">Instant download — start writing in 2 minutes</p>
+      </div>
+
+      <div class="journal-card">
+        <img class="card-cover" src="images/cover-Shame-Work-v2.jpg" alt="Shame Work journal cover" loading="lazy">
+        <h3>Shame Work</h3>
+        <p class="card-desc">Confront shame head-on instead of letting it run the show.</p>
+        <div class="card-foot">
+          <span class="price">$17</span>
+          <a class="buy" href="https://buy.stripe.com/fZu9AV1HZ0kzdse4vTgUM0c">Buy</a>
+        </div>
+        <p class="reassure">Instant download — start writing in 2 minutes</p>
+      </div>
+
+      <div class="journal-card">
+        <img class="card-cover" src="images/cover-The-Space-Between-v2.jpg" alt="The Space Between journal cover" loading="lazy">
+        <h3>The Space Between</h3>
+        <p class="card-desc">On being adopted and carrying abandonment.</p>
+        <div class="card-foot">
+          <span class="price">$17</span>
+          <a class="buy" href="https://buy.stripe.com/5kQ4gB4Ub2sH1Jw3rPgUM0g">Buy</a>
+        </div>
+        <p class="reassure">Instant download — start writing in 2 minutes</p>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-disclaimer">
+      These journals are meant to help you grow and work through life's challenges — they're meant to complement professional care, not replace it. We all deserve to be truly happy and like being in the skin we chose.
+      <br><br><a href="disclaimer.html" style="color:var(--muted);">Disclaimer &amp; Terms</a> &nbsp;·&nbsp; <a href="privacy.html" style="color:var(--muted);">Privacy Policy</a>
+    </div>
+  </footer>
+</div>
+<script>
+function toggleMainMenu(){
+  var menu = document.getElementById('mainMenu');
+  var btn = document.getElementById('menuToggle');
+  var isOpen = menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+}
+document.addEventListener('click', function(e){
+  var wrap = document.querySelector('.nav-wrap');
+  if(wrap && !wrap.contains(e.target)){
+    document.getElementById('mainMenu').classList.remove('open');
+    document.getElementById('menuToggle').setAttribute('aria-expanded', 'false');
+  }
+});
+</script>
+</body>
+</html>
