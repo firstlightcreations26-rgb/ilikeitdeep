@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>This Old Man Is Testing Me — I Like It Deep</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  :root{
+    --bg:#2E2D33;
+    --bg-soft:#38373E;
+    --rose:#8a2f4b;
+    --rose-soft:#c98aa0;
+    --blush:#f2b8c6;
+    --cream:#FAF6EF;
+    --muted:#b9b4bc;
+    --line:rgba(250,246,239,0.10);
+  }
+  .nav-wrap{position:relative;}
+  .menu-toggle{background:transparent;border:1px solid var(--line);color:var(--muted);font-family:'Karla',sans-serif;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;padding:11px 20px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;}
+  .menu-toggle:hover{color:var(--rose);border-color:var(--rose);}
+  .menu-arrow{transition:transform 0.2s ease;font-size:11px;}
+  .menu-toggle[aria-expanded="true"] .menu-arrow{transform:rotate(180deg);}
+  .dropdown-menu{display:none;flex-direction:column;position:absolute;top:calc(100% + 10px);right:0;background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:8px;min-width:210px;z-index:50;box-shadow:0 14px 34px rgba(0,0,0,0.4);}
+  .dropdown-menu.open{display:flex;}
+  .dropdown-menu a{padding:13px 16px;border-radius:10px;color:var(--muted);text-decoration:none;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;}
+  .dropdown-menu a:hover{background:var(--bg);color:var(--rose);}
+  .dropdown-menu a.girl-code-link{color:#ff2f8f;font-weight:700;}
+  .dropdown-menu a.girl-code-link:hover{color:#ff2f8f;background:var(--bg);}
+  .dropdown-menu a.glow-up-link{color:#9b7fe0;font-weight:700;}
+  .dropdown-menu a.glow-up-link:hover{color:#9b7fe0;background:var(--bg);}
+
+  .post-wrap{max-width:700px;margin:0 auto;padding:40px 22px 10px;}
+  .back-link{display:inline-flex;align-items:center;gap:6px;font-family:'Karla',sans-serif;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;color:var(--rose-soft);text-decoration:none;margin-bottom:28px;}
+  .back-link:hover{color:var(--blush);}
+  .post-date{font-family:'Karla',sans-serif;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--rose-soft);margin-bottom:12px;}
+  .post-title{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(28px,6vw,42px);line-height:1.15;color:var(--cream);margin-bottom:14px;}
+  .post-byline{font-family:'Karla',sans-serif;font-style:italic;font-size:14px;color:var(--muted);margin-bottom:28px;}
+  .post-image{width:100%;border-radius:16px;overflow:hidden;margin-bottom:34px;box-shadow:0 14px 34px rgba(0,0,0,0.35);}
+  .post-image img{width:100%;display:block;object-fit:cover;}
+  .post-body{font-family:'Karla',sans-serif;font-size:16.5px;line-height:1.85;color:var(--cream);}
+  .post-body p{margin-bottom:22px;}
+  .back-to-top{display:inline-flex;align-items:center;gap:6px;font-family:'Karla',sans-serif;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--rose-soft);text-decoration:none;border:1px solid var(--line);border-radius:24px;padding:9px 18px;margin:6px 0 30px;}
+  .back-to-top:hover{color:var(--blush);border-color:var(--rose-soft);}
+
+  .related-wrap{max-width:1000px;margin:60px auto 0;padding:0 22px 70px;}
+  .related-eyebrow{text-align:center;font-family:'Karla',sans-serif;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:var(--rose-soft);margin-bottom:8px;}
+  .related-title{text-align:center;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(22px,4vw,30px);color:var(--cream);margin-bottom:34px;}
+  .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  @media(max-width:800px){.related-grid{grid-template-columns:1fr;max-width:360px;margin:0 auto;}}
+  .journal-card{background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;}
+  .journal-card .card-cover{width:100%;height:190px;object-fit:cover;border-radius:10px;display:block;margin-bottom:14px;box-shadow:0 4px 14px rgba(0,0,0,0.25);}
+  .journal-card h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:19px;color:var(--cream);margin-bottom:6px;}
+  .journal-card .card-desc{font-family:'Karla',sans-serif;font-size:13.5px;color:var(--muted);margin-bottom:16px;flex:1;}
+  .journal-card .card-foot{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}
+  .journal-card .price{font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--rose-soft);}
+  .journal-card .buy{background:var(--rose);color:var(--cream);font-weight:700;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;padding:9px 18px;border-radius:999px;text-decoration:none;}
+  .journal-card .reassure{font-family:'Karla',sans-serif;font-size:11.5px;color:var(--muted);opacity:0.75;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+   <div class="logo"><img src="images/logo.png" alt="I Like It Deep logo" style="height:50px;"></div>
+    <div class="nav-wrap">
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainMenu" onclick="toggleMainMenu()">Menu <span class="menu-arrow">▾</span></button>
+      <nav id="mainMenu" class="dropdown-menu">
+        <a href="index.html">Home</a>
+        <a href="collection.html">Journals</a>
+        <a href="blog.html">Blog</a>
+        <a href="girl-code.html" class="girl-code-link">Girl Code</a>
+        <a href="glow-up.html" class="glow-up-link">Glow Up</a>
+        <a href="bookmarks.html">Bookmarks</a>
+        <a href="coloring-pages.html">Coloring Pages</a>
+        <a href="about.html">About</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="index.html#request">Request a Journal</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="post-wrap" id="top">
+    <a href="blog.html" class="back-link">&larr; Back to Blog</a>
+    <div class="post-date">August 26, 2026</div>
+    <h1 class="post-title">This Old Man Is Testing Me</h1>
+    <p class="post-byline">— S, founder of I Like It Deep</p>
+
+    <div class="post-image">
+      <img src="images/old-man-neighbor.png" alt="Fictional AI-generated representation of a tense driveway confrontation with a neighbor">
+    </div>
+
+    <div class="post-body">
+      <p>I swear this old man is testing me every single day.</p>
+
+      <p>I moved into a townhome I'm renting from my old dog sitter. It's closer to my boyfriend's house, and it's in a nice area. The guy next door is in his 60s, retired, and apparently has nothing better to do than harass women.</p>
+
+      <p>The first incident happened over my girlfriend parking in front of the place I live, because there was already a car in our driveway. She wasn't in anyone's way, wasn't bothering a soul. But Mr. I-Police-This-Entire-Area starts screaming at her to move her car. She's more than willing — she's already halfway into her vehicle to do it — and I come outside because I hear the commotion. I ask what's going on. This old fart runs up and gets an exact inch from my face, trying to intimidate me by talking shit. My hand was clenched the whole time because I wanted to hit him so bad. I've never had anyone that close to my face in my life, and this man is at least 6 feet tall. I'm 4'9". He tells me he listens to me when I'm outside talking and thinks I'm doing "illegal shit," just running his mouth off nothing. I'm not the type to sit there and be submissive, so I gave it right back to him. He'd walk away saying stuff like "just you wait, you'll be done next month," go inside, then come back out to talk more shit.</p>
+
+      <p>Eventually his wife comes out to "diffuse" it. Her excuse: "he's got PTSD." I told her I don't care what he's got — he shouldn't ever act like that toward anyone, let alone a woman. She kept pushing it, and I wasn't falling for any of it. He's aggressive, and that was so uncalled for. While he's back inside, she tells me they "think there's illegal things going on" since I moved in — more traffic coming through, and I can't be "running a business" out of a townhome association. I stated the facts: I'm not running any business, and what I do is none of her business when it doesn't affect her. Then she claims I was doing laundry too late at night, that she could hear me outside with a friend going through clothes we wanted to get rid of, and that laundry can't happen past 11pm — and I definitely can't be doing friends' laundry for money. I told her again: what I do doesn't affect her, so she should mind her own business. Nothing was resolved. They were stuck on stupid, and I wasn't going to cave to fit their needs. I wasn't doing anything wrong.</p>
+
+      <p>The next incident, I was grooming a friend's dog. As they're picking up their dog, this man comes outside with his own dog off leash. I told him to back up and leash it — who knows how dogs will react to each other. He gets in my face again trying to intimidate me, then tells my friend, "you can go then, leave, byyyyyyyyeeee, I'm not in her way" — like an actual child. I was embarrassed for him.</p>
+
+      <p>A few days later, there's a note on the door asking the guy I live with to sit down with the wife. Basically, I'm told to avoid this man at all costs and "keep the peace." First off — I'm never the one starting anything. He's the aggressor. I just stand my ground and I'm not going to let some bully harass me. He'll stand across the driveway and stare into my window. One time my window was open, and I took my phone out and pretended to record him — called him a fucking stalker. He walked away. I'm not the only one either — the neighbors on the other side of us, their daughter got treated the same way, except he threatened to beat her up. This man genuinely thinks he's in charge of this little shared area and that it's okay to bully women. And he still hasn't put up a camera, for some reason. I've got nothing to hide — be my guest, let a camera catch his behavior when shit hits the fan.</p>
+
+      <p>I'm pretty sure the real reason he doesn't like me is because he heard me tell his dogs to shut up once. I love dogs, they're amazing to me — but if you're outside and your dogs are barking hysterically, yeah, make them shut the hell up. Not everyone needs to hear that 24/7.</p>
+
+      <p>Things settled down a bit and I kept my distance. But today, once again, I'm doing my makeup, I look out the window, and there's the creeper — standing outside pretending to look at the grass, but positioned right across the driveway from my window. I find it hilarious that every time I'm alone he's fine to confront me, but the second my boyfriend pulls up, or he even sees him, he goes and hides. I'd be embarrassed if that's how my significant other acted in public. I told his wife that day — she should be embarrassed too. It's disgusting that she tolerates that behavior. And somehow I'm the bad guy who has to watch how she acts.</p>
+
+      <p>Even if I didn't live here and a brand new family moved in, there'd still be more traffic — that's just life. Cars come and go. Sorry I have things going on in my life and you two just want to be creepy and stalk your neighbors. I'm confrontational, and I will defend myself if I need to. Thankfully I've got pepper spray now, so if he plans to approach me again — bring it, old man. I won't feel bad about it at all.</p>
+
+      <p>I should've called the cops the very first time this happened, to nip it in the bud right away. I didn't expect it to keep going on this long. It's sick, honestly — disturbing. I really wish this man had a hobby, or friends. Maybe his whole life wouldn't revolve around knowing what I'm doing, or peeking in my window like a creep.</p>
+    </div>
+
+    <a href="#top" class="back-to-top">&uarr; Back to top</a>
+  </div>
+
+  <div class="related-wrap">
+    <div class="related-eyebrow">You Might Also Need</div>
+    <div class="related-title">Journals That Relate</div>
+    <div class="related-grid">
+
+      <div class="journal-card">
+        <img class="card-cover" src="images/cover-Behind-the-Fire-v2.jpg" alt="Behind the Fire journal cover" loading="lazy">
+        <h3>Behind the Fire</h3>
+        <p class="card-desc">An anger release journal: your feelings, your responsibility, your choice.</p>
+        <div class="card-foot">
+          <span class="price">$17</span>
+          <a class="buy" href="https://buy.stripe.com/7sYcN786nfftbk64vTgUM0e">Buy</a>
+        </div>
+        <p class="reassure">Instant download — start writing in 2 minutes</p>
+      </div>
+
+      <div class="journal-card">
+        <img class="card-cover" src="images/cover-Deserve-Better.jpg" alt="Deserve Better journal cover" loading="lazy">
+        <h3>Deserve Better</h3>
+        <p class="card-desc">Hold yourself accountable to boundaries and to your word.</p>
+        <div class="card-foot">
+          <span class="price">$17</span>
+          <a class="buy" href="https://buy.stripe.com/8x2dRb9ar1oDgEq3rPgUM0s">Buy</a>
+        </div>
+        <p class="reassure">Instant download — start writing in 2 minutes</p>
+      </div>
+
+      <div class="journal-card">
+        <img class="card-cover" src="images/Bitch_Please_Cover.png" alt="Bitch Please journal cover" loading="lazy">
+        <h3>Bitch Please</h3>
+        <p class="card-desc">A self-confidence journal. Catch the negative voice in your head, write it down, and challenge it.</p>
+        <div class="card-foot">
+          <span class="price">$17</span>
+          <a class="buy" href="https://buy.stripe.com/aFa7sN3Q70kz9bY3rPgUM13">Buy</a>
+        </div>
+        <p class="reassure">Instant download — start writing in 2 minutes</p>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-disclaimer">
+      These journals are meant to help you grow and work through life's challenges — they're meant to complement professional care, not replace it. We all deserve to be truly happy and like being in the skin we chose.
+      <br><br><a href="disclaimer.html" style="color:var(--muted);">Disclaimer &amp; Terms</a> &nbsp;·&nbsp; <a href="privacy.html" style="color:var(--muted);">Privacy Policy</a>
+    </div>
+  </footer>
+</div>
+<script>
+function toggleMainMenu(){
+  var menu = document.getElementById('mainMenu');
+  var btn = document.getElementById('menuToggle');
+  var isOpen = menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+}
+document.addEventListener('click', function(e){
+  var wrap = document.querySelector('.nav-wrap');
+  if(wrap && !wrap.contains(e.target)){
+    document.getElementById('mainMenu').classList.remove('open');
+    document.getElementById('menuToggle').setAttribute('aria-expanded', 'false');
+  }
+});
+</script>
+</body>
+</html>
